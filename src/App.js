@@ -1,10 +1,11 @@
 import GlobalStyle from "./Styles/globalStyles";
+import Footer from "./Components/Footer/index";
 
 function App() {
   return (
     <div>
       <GlobalStyle />
-      <h1>Hello Mes</h1>
+      <Footer />
     </div>
   );
 }
