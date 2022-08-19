@@ -7,7 +7,7 @@ export const Container = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -37,6 +37,7 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
   .select-container {
     display: flex;
     align-items: start;
+    outline: none;
   }
 
   .contact-select {
@@ -61,7 +62,7 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
 export const ContactSocialMediaContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
 
   .contact-list {
     width: 100%;
@@ -82,37 +83,38 @@ export const ContactSocialMediaContainer = styled.div`
 
 export const GeneralKnowledgeContainer = styled.div`
   text-align: left;
-  width: 80%;
+  width: 100%;
 
   .contact-list {
     padding: 0;
   }
 
   .contact-item {
-    font-size: ${fontSizes.xxxs};
+    font-size: ${fontSizes.fontSize0};
     margin-bottom: 18px;
   }
 
   .contact-item_link {
-    color: ${colors.tertiary};
-    opacity: 0.65;
+    color: ${colors.opacityColor};
   }
 `;
 
 export const AboutCompanyContainer = styled.div`
-  font-size: ${fontSizes.xxs};
+  font-size: ${fontSizes.fontSize1};
+  display: flex;
   width: 100%;
+  justify-content: space-around;
 
   .about-company-list {
     width: 100%;
     padding: 0;
     text-align: center;
-    font-size: ${fontSizes.xxxs};
+    font-size: ${fontSizes.fontSize0};
     font-weight: 700;
   }
 
   .about-company_item {
-    font-size: ${fontSizes.xxxs};
+    font-size: ${fontSizes.fontSize0};
     margin-bottom: 18px;
     width: 100%;
   }
@@ -120,12 +122,11 @@ export const AboutCompanyContainer = styled.div`
   .company-city-list {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    padding: 0;
+    padding: 10px;
   }
 
   .company-city_item {
-    font-size: ${fontSizes.xxxs};
+    font-size: ${fontSizes.fontSize0};
     width: 100%;
   }
 `;

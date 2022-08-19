@@ -17,17 +17,17 @@ export const ContactInWebsite = [
   {
     title: "Contact",
     link: "",
-    iconVisible: false,
+    isIconVisible: false,
   },
   {
     title: "Careers",
     link: "",
-    iconVisible: true,
+    isIconVisible: true,
   },
   {
     title: "Subscribe",
     link: "",
-    iconVisible: true,
+    isIconVisible: true,
   },
 ];
 
