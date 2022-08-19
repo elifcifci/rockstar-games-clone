@@ -6,4 +6,14 @@ export const Container = styled(motion.nav)`
 width: 100%;
 height: 60px;
 border-bottom: solid 2px ${colors.border};
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+img{
+border-radius: 15%;
+width: 35px;
+}
 `
+
+

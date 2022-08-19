@@ -3,11 +3,10 @@ import {Button, IconParts} from "./style"
 
 export const MenuToggleIcon = ({ toggle }) => (
   <Button onClick={toggle}>
-    <div>
       <IconParts
         variants={{
           closed: { opacity: 1 },
-          open: { y: 7, type: "tween"}
+          open: { y: 8}
         }}
       />
       <IconParts
@@ -19,9 +18,8 @@ export const MenuToggleIcon = ({ toggle }) => (
       <IconParts
         variants={{
           closed: { opacity: 1 },
-          open: { y: -7 , type: "tween"}
+          open: { y: -8}
         }}
       />
-    </div>
   </Button>
 );

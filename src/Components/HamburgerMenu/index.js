@@ -5,11 +5,11 @@ import { Container } from "./styles";
 import { useCycle } from "framer-motion";
 
 
-export default function HamburgerMenu() {
+export default function HamburgerMenu({click}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <Container initial={false} animate={isOpen ? "open" : "closed"}>
+    <Container onClick={click} initial={false} animate={isOpen ? "open" : "closed"}>
       <MenuItem/>
       <MenuToggleIcon toggle={() => toggleOpen()} />
     </Container>

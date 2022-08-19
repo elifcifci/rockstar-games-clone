@@ -9,20 +9,15 @@ export const Button = styled(motion.button)`
     -moz-user-select: none;
     -ms-user-select: none;
     cursor: pointer;
-    position: absolute;
-    top: 18px;
-    left: 15px;
-    width: 50px;
+    width: auto;
     height: 50px;
     border-radius: 50%;
     background: transparent;
-    z-index: 9
-  
 `
 export const IconParts = styled(motion.div)`
     width: 24px;
     height: 2px;
-    margin-bottom: 5px; 
+    margin-bottom: 6px; 
     border-radius: 1px;
     background-color: white;
 

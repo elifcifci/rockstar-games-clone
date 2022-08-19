@@ -1,13 +1,13 @@
 import GlobalStyle from "./Styles/globalStyles";
 
-import Navigation from "./Components/Navigation";
+import Header from "./Components/Header";
 import Footer from "./Components/Footer/index";
 
 function App() {
   return (
     <div>
       <GlobalStyle />
-      <Navigation />
+      <Header />
       <Footer />
     </div>
   );
