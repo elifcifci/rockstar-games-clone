@@ -22,7 +22,7 @@ export const menuItems =[
     {
         title: "Support",
         link: "",
-        isIconVisible: false,
+        isIconVisible: true,
     },
     {
         title: "Social Club",

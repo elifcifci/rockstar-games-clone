@@ -2,18 +2,18 @@ import React from "react";
 import SearchInput from "./SearchInput";
 import { menuItems } from "../../Constants/Navbar";
 import { generalIcons } from "../../Constants/generalIcons";
-import { Container } from "./styles";
+import { Container, NavbarMenuConfig } from "./styles";
 
-export default function NavbarMenu() {
+export default function MenuItem() {
   let svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
 
   let createMenuItem = menuItems.map((item) => {
     return (
-      <li className="menu-item" key={item.title}>
+      <li className="list-item" key={item.title}>
         <a href={item.link}>
           <span>{item.title}</span>
           {item.isIconVisible && (
-            <svg className="menu-icon" viewBox={svgNeeds[0]}>
+            <svg className="list-icon" viewBox={svgNeeds[0]}>
               <path d={svgNeeds[1]} />
             </svg>
           )}
@@ -23,9 +23,8 @@ export default function NavbarMenu() {
   });
 
   return (
-    <Container>
-      <SearchInput />
-
+    <Container variants={NavbarMenuConfig}>
+      <SearchInput/>
       <ul>{createMenuItem}</ul>
     </Container>
   );
