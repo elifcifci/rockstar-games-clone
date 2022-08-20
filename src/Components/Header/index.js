@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <Container>
       <HamburgerMenu click={closeVisibility} />
-      <a href="">
+      <a href="/">
         <img src={generalIcons[0].img[4]}/>
       </a>
       <Account visibility={isVisible} click={updateVisibility} />

@@ -1,42 +1,50 @@
-export const menuItems =[
-    {
-        title: "Newswire",
-        link: "",
-        isIconVisible: false,
-    },
-    {
-        title: "Games",
-        link: "",
-        isIconVisible: false,
-    },
-    {
-        title: "Videos",
-        link: "",
-        isIconVisible: false,
-    },
-    {
-        title: "Downloads",
-        link: "",
-        isIconVisible: false,
-    },
-    {
-        title: "Support",
-        link: "",
-        isIconVisible: true,
-    },
-    {
-        title: "Social Club",
-        link: "",
-        isIconVisible: true,
-    },
-    {
-        title: "Launcher",
-        link: "",
-        isIconVisible: true,
-    },
-    {
-        title: "Store",
-        link: "",
-        isIconVisible: true,
-    },
-]
+export const menuItems = [
+  {
+    id: "newswire",
+    title: "Newswire",
+    link: "/newswire",
+    isIconVisible: false,
+  },
+  {
+    id: "games",
+    title: "Games",
+    link: "/games",
+    isIconVisible: false,
+  },
+  {
+    id: "videos",
+    title: "Videos",
+    link: "/videos",
+    isIconVisible: false,
+  },
+  {
+    id: "downloads",
+    title: "Downloads",
+    link: "/downloads",
+    isIconVisible: false,
+  },
+  {
+    id: "support",
+    title: "Support",
+    link: "/support",
+    isIconVisible: true,
+  },
+  {
+    id: "socialClub",
+    title: "Social Club",
+    link: "/socialClub",
+    isIconVisible: true,
+  },
+  {
+    id: "launcher",
+    title: "Launcher",
+    link: "/launcher",
+    isIconVisible: true,
+  },
+  {
+    id: "store",
+    title: "Store",
+    link: "/store",
+    isIconVisible: true,
+  },
+];

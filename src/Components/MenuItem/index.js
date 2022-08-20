@@ -1,6 +1,6 @@
 import React from "react";
 import SearchInput from "./SearchInput";
-import { menuItems } from "../../Constants/Navbar";
+import { menuItems } from "../../Constants/navbar";
 import { generalIcons } from "../../Constants/generalIcons";
 import { Container, NavbarMenuConfig } from "./styles";
 
