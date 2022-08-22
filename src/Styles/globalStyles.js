@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
         color: ${colors.text};
         font-family: helvetica;
         box-sizing: border-box;
+        margin: 0;
     }
 
     a{
