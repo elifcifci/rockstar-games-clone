@@ -1,5 +1,5 @@
 // First users view 19 cards. When users click the "more stories" button add 20 more cards on the page
-export const mainPhotograph = [
+export const newswireConstants = [
   {
     id: "0",
     title: "GTA Online",
