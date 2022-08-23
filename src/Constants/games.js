@@ -4,7 +4,7 @@ const ratingImgs= {
     mature: "https://media-rockstargames-com.akamaized.net/mfe2/components/1450c71/img/a816ad46b6f08d4414b8.svg",
 }
 
-export const mainPhotograph = [
+export const gamesConstant = [
     {
         id: "0",
         title: "Red Dead Redemption 2",
