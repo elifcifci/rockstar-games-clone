@@ -59,7 +59,7 @@ export const NewswirePageLink = styled(motion.a)`
   align-items: center;
 
   .link-text {
-    z-index: 1;
+    z-index: 2;
     margin: 0 0 3px 0;
   }
 `;
@@ -70,6 +70,7 @@ export const NewswirePageLinkAnimate = styled(motion.div)`
   height: 4px;
   border-radius: 4px;
   position: absolute;
+  z-index: 1;
 `;
 
 export const GameContainer = styled.div`

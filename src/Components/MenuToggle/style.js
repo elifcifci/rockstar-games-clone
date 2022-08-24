@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Button = styled(motion.button)`
-
+position: relative;
+z-index: 3; 
     outline: none;
     border: none;
     -webkit-user-select: none;

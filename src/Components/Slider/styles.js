@@ -2,14 +2,6 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { colors, fontSizes } from "../../Styles/globalStyles";
 
-// export const SliderContainer = styled(motion.div)`
-//   cursor: pointer;
-//   overflow: hidden;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   `;
-
 export const Container = styled(motion.div)`
   width: 100%;
   display: flex;
@@ -30,6 +22,7 @@ export const WatchButton = styled(motion.button)`
 
 export const SliderContainer = styled(motion.div)`
   width: 100%;
+  margin-top: 60px;
 
   .slider-content {
     display: flex;
@@ -66,7 +59,6 @@ export const SliderContainer = styled(motion.div)`
   .activeImage {
     display: inline-block;
     width: 100%;
-    position: relative;
   }
 
   .inactiveImages {
@@ -78,20 +70,15 @@ export const ButtonContainer = styled(motion.div)`
   padding: 32px 0 32px 0;
   display: flex;
   width: 80%;
-  
+
   .button-label {
     height: 20px;
     cursor: pointer;
     width: 1.5rem;
     margin-right: 8px;
-
-    border: solid 2px blue;
-
-    
   }
   .slider_button {
-    border: solid;
-    border: solid 2px red;
+    display: inline-block;
     background-color: ${colors.opacityColor};
     margin-right: 8px;
     height: 2px;

@@ -9,10 +9,16 @@ border-bottom: solid 2px ${colors.border};
 display: flex;
 justify-content: space-around;
 align-items: center;
+background-color:  ${colors.backgroundColor};
+position: relative;
+top: 0;
+z-index: 3;
 
 img{
 border-radius: 15%;
 width: 35px;
+position: relative;
+z-index: 3;
 }
 `
 

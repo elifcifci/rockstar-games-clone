@@ -1,6 +1,10 @@
 import styled from "styled-components";
-import {colors, fontSizes} from "../../Styles/globalStyles"
-export const Container = styled.div``;
+import { colors, fontSizes } from "../../Styles/globalStyles";
+
+export const Container = styled.div`
+position: relative;
+z-index: 3;
+`;
 
 export const AccountIcon = styled.svg`
   width: 36px;
@@ -35,22 +39,21 @@ export const AccountContainer = styled.div`
   right: 30px;
   box-shadow: 0 10px 30px rgb(0 0 0 / 50%);
   background: ${colors.backgroundColor};
-  z-index: 1;
+  z-index: 2;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
-
-  .account-list{
+  .account-list {
     padding: 0;
-    margin-top : 0;
+    margin-top: 0;
   }
-  .account-list--border{
+  .account-list--border {
     border-bottom: 1px solid ${colors.opacityColor};
-    border-bottom: 1px solid hsla(0,0%,85%,.1)
-}
-  .account-list_item{
+    border-bottom: 1px solid hsla(0, 0%, 85%, 0.1);
+  }
+  .account-list_item {
     opacity: 0.8;
     padding: 18px 32px 18px 32px;
-    font-size: ${fontSizes.fontSize2}
+    font-size: ${fontSizes.fontSize2};
   }
 `;
