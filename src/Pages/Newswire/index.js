@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { countCardsNumber } from "../../Components/Newswire/cardCounter";
 import { CreateNewswireCards } from "../../Components/Newswire/index";
 import { MoreStoriesButton } from "../../Components/Buttons/MoreStoriesButton";

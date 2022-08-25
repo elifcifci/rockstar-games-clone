@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "./styles";
 import { countCardsNumber } from "../../Components/Newswire/cardCounter";
 import { CreateNewswireCards } from "../../Components/Newswire/index";
-import { Button } from "../../Components/Button";
+import { ViewMoreButton } from "../../Components/Buttons/ViewMoreButton";
 
 function NewswirePreview() {
   let countedCards = countCardsNumber(6);
@@ -11,7 +11,7 @@ function NewswirePreview() {
     <Container>
       <h2>Newswire</h2>
       <CreateNewswireCards showThisCards={[...countedCards]} />
-      <Button text={"View More"} link={"/newswire"} />
+      <ViewMoreButton text={"View More"} link={"/newswire"} />
     </Container>
   );
 }

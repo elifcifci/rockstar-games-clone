@@ -1,6 +1,6 @@
 import React from "react";
 import { gamesPreviewConstant } from "../../Constants/gamesPreview";
-import { Button } from "../../Components/Button";
+import { ViewMoreButton } from "../../Components/Buttons/ViewMoreButton";
 import { GameContainer } from "./styles";
 
 function GamesPreview() {
@@ -14,7 +14,7 @@ function GamesPreview() {
     <GameContainer>
       <h2>Featured Games</h2>
       <div className="imgContainer">{getPreviewGames}</div>
-      <Button text={"View More"} link={"/games"} />
+      <ViewMoreButton text={"View More"} link={"/games"} />
     </GameContainer>
   );
 }

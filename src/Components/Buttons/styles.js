@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { colors } from "../../Styles/globalStyles";
 
-export const NewswirePageLink = styled(motion.a)`
+export const NewswireButtonContainer = styled(motion.a)`
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
@@ -15,6 +15,11 @@ export const NewswirePageLink = styled(motion.a)`
 `;
 
 export const NewswireButton = styled(motion.button)`
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 2;
+  margin: 0 0 3px 0;
 `;
 
 export const NewswirePageLinkAnimate = styled(motion.div)`
