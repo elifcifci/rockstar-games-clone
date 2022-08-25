@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import { colors, fontSizes } from "../../Styles/globalStyles";
 
 export const Container = styled.div`
@@ -17,6 +16,34 @@ export const Container = styled.div`
   time {
     font-size: ${fontSizes.fontSize1};
     color: ${colors.opacityColor};
+  }
+
+  .first-newswire {
+    margin-bottom: 55px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .first-newswire_img {
+    width: 100%;
+  }
+  .first-announcement {
+    font-size: ${fontSizes.fontSize5};
+    font-weight: bold;
+    width: 80%;
+  }
+
+  .first-newswire-detail {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-newswire-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .innerContainer {
@@ -49,52 +76,5 @@ export const Container = styled.div`
   .announcement {
     font-size: ${fontSizes.fontSize4};
     width: 80%;
-  }
-`;
-
-export const NewswirePageLink = styled(motion.a)`
-  width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-
-  .link-text {
-    z-index: 2;
-    margin: 0 0 3px 0;
-  }
-`;
-
-export const NewswirePageLinkAnimate = styled(motion.div)`
-  background-color: ${colors.secondary};
-  width: 75px;
-  height: 4px;
-  border-radius: 4px;
-  position: absolute;
-  z-index: 1;
-`;
-
-export const GameContainer = styled.div`
-  margin-top: 64px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  h2 {
-    width: 80%;
-  }
-
-  .imgContainer {
-    width: 80%;
-    display: grid;
-    grid-template-columns:  auto auto;
-    justify-content: space-evenly;
-    grid-gap: 25px;
-    margin-bottom: 32px;
-  }
-
-  .gameImg {
-    width: 100%;
-    border-radius: 7px;
   }
 `;

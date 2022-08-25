@@ -4,14 +4,6 @@ import { Container, AccountIcon, AccountContainer } from "./styles";
 import { colors } from "../../Styles/globalStyles";
 
 export default function Account({ visibility, click }) {
-  console.log("visibility: ", visibility);
-
-  let animations = {
-    initial: {},
-    animated: {
-      whileHover: {},
-    },
-  };
   return (
     <Container>
       <AccountIcon

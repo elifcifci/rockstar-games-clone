@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { countCardsNumber } from "../../Components/Newswire/cardCounter";
 import { CreateNewswireCards } from "../../Components/Newswire/index";
-import { Button } from "../../Components/Button";
+import { MoreStoriesButton } from "../../Components/Buttons/MoreStoriesButton";
+import { newswireConstants } from "../../Constants/newswire";
 
 function Newswire() {
   let [counter, setCounter] = useState(19);
-  useEffect(() => {
-    console.log("counter: ", counter);
-  }, [counter]);
+  const newswireConstantsLength = newswireConstants.length;
+  let countedCards =countCardsNumber(counter);
 
   let updateCounter = () => {
-    setCounter((counter += 20));
+    let updatedCounter = counter + 20;
+
+    updatedCounter <= newswireConstantsLength
+      ? setCounter((counter += 20))
+      : setCounter(newswireConstantsLength);
   };
 
-  console.log("TEST");
-
-  let countedCards = countCardsNumber(counter);
   return (
     <>
-      <CreateNewswireCards showThisCards={[...countedCards]} />
-      <Button onClick={updateCounter} text={"More Stories"}/>
+      <CreateNewswireCards showThisCards={[...countedCards]} mainConstantLength = {newswireConstantsLength}/>
+      <MoreStoriesButton click={updateCounter} text={"More Stories"} />
     </>
   );
 }
