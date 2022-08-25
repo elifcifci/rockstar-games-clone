@@ -30,6 +30,7 @@ function App() {
           <Route path="/socialClub" exact element={<SocialClub />} />
           <Route path="/launcher" exact element={<Launcher />} />
           <Route path="/store" exact element={<Store />} />
+          <Route path="/:id" exact element={<Newswire />} />
         </Routes>
         <Footer />
       </Router>
