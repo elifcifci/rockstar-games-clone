@@ -25,36 +25,53 @@ const Slider = ({
   useEffect(() => {
     let goThere = activeIndex * carouselWidth.current.offsetWidth;
     setDragLimit(goThere);
+
+    console.log(
+      "offsetWidth: ",
+      carouselWidth.current.offsetWidth,
+      "scrollWidth : ",
+      carouselWidth.current.scrollWidth
+    );
   }, [activeIndex]);
 
+  let slideWithArrows = (event) => {
+    event.target.id == 0 && activeIndex !== 0
+      ? setActiveIndex((previous) => previous - 1)
+      : event.target.id == 1 &&
+        activeIndex !== constants.length - 1 &&
+        setActiveIndex((previous) => previous + 1);
+  };
+
   return (
-    <Carousel ref={carouselWidth}>
+    <Carousel
+      ref={carouselWidth}
+      className={
+        visibleForInsidePage ? "inside-page-container" : "top-page-container"
+      }
+    >
       {visibleForInsidePage && (
         <div className="slider-header">
           <div className="slider-header_title">{sliderTitle}</div>
-          <SliderArrows click={() => console.log("click")} />
+          <SliderArrows click={slideWithArrows} />
         </div>
       )}
 
       <SliderContent
-        isForInsidePage={
-          visibleForInsidePage
-            ? true
-            : false
-        }
+        isForInsidePage={visibleForInsidePage ? true : false}
         limit={dragLimit}
         screenWidth={width}
         constants={constants}
       />
 
-      {visibleTopSlidersButtons && <WatchNowButton />}
-
       {visibleTopSlidersButtons && (
-        <SliderButtons
-          activeIndex={activeIndex}
-          constants={constants}
-          click={(event) => setActiveIndex(event.target.id)}
-        />
+        <>
+          <WatchNowButton />
+          <SliderButtons
+            activeIndex={activeIndex}
+            constants={constants}
+            click={(event) => setActiveIndex(event.target.id)}
+          />
+        </>
       )}
     </Carousel>
   );

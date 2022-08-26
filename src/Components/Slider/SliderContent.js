@@ -7,7 +7,6 @@ export const SliderContent = ({
   constants,
   isForInsidePage,
 }) => {
-  
   let createCarousel = constants.map((constant) => {
     return (
       <div
@@ -33,27 +32,27 @@ export const SliderContent = ({
             }
             src={constant.link}
           />
-          <div
-            className={
-              isForInsidePage
-                ? "slider-inside-page_detail"
-                : "slider-top-page_detail"
-            }
-          >
-            <div className="inner-carousel_figcaption">
-              {constant.description}
-            </div>
-
-            <h2
+          {constant.title && (
+            <div
               className={
                 isForInsidePage
-                  ? "slider-inside-page_title"
-                  : "slider-top-page_title"
+                  ? "slider-inside-page_detail"
+                  : "slider-top-page_detail"
               }
             >
-              {constant.title}
-            </h2>
-          </div>
+              <div className="inner-carousel_figcaption">{constant.title}</div>
+
+              <h2
+                className={
+                  isForInsidePage
+                    ? "slider-inside-page_title"
+                    : "slider-top-page_title"
+                }
+              >
+                {constant.description}
+              </h2>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -63,8 +62,12 @@ export const SliderContent = ({
     <>
       <InnerCarousel
         drag="x"
-        dragConstraints={{ right: 0, left: -screenWidth }}
-        animate={{ x: -limit }}
+        dragConstraints={
+          isForInsidePage
+            ? { right: 1, left: -5 }
+            : { right: 0, left: -screenWidth }
+        }
+        animate={{ x:( -limit ) }}
         transition={{ duration: 0.3 }}
         className={isForInsidePage && "slider-inside-page-container"}
       >

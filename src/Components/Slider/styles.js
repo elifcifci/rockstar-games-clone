@@ -8,14 +8,15 @@ export const Carousel = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 25px;
+  margin-bottom: 32px;
 
   .slider-inside-page-container {
     width: 80%;
     margin: 0 25px 0 4px;
     border-radius: 10px;
+    background-color: ${colors.cardBackground};
   }
-  
+
   .carousel_watch-button {
     font-size: ${fontSizes.fontSize2};
     font-weight: bold;
@@ -25,8 +26,9 @@ export const Carousel = styled(motion.div)`
   }
 
   .slider-header {
+    margin-top: 25px;
     width: 80%;
-    margin-bottom: 25px ;
+    margin-bottom: 25px;
     display: grid;
     grid-template-columns: 4fr 1fr;
   }
@@ -40,7 +42,6 @@ export const Carousel = styled(motion.div)`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border: solid;
   }
 `;
 
@@ -71,7 +72,17 @@ export const ButtonContainer = styled(motion.div)`
   }
 `;
 
-export const ArrowButtonContainer = styled.div``;
+export const ArrowButtonContainer = styled.div`
+  .slider_left-arrow {
+    width: 13px;
+    fill: white;
+  }
+
+  .slider_right-arrow {
+    width: 13px;
+    fill: white;
+  }
+`;
 
 export const InnerCarousel = styled(motion.div)`
   display: flex;
@@ -79,6 +90,34 @@ export const InnerCarousel = styled(motion.div)`
 
   .slider-inside-page-container {
     min-width: 100%;
+    margin: 0 25px 0 4px;
+    border-radius: 10px;
+    border: 1px solid ${colors.border};
+    background-color: ${colors.cardBackground};
+  }
+
+  .slider-inside-page_image {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 0;
+  }
+
+  .slider-inside-page_detail {
+    padding: 24px 16px 24px 16px;
+  }
+
+  .slider-inside-page-inner-content {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider-inside-page_title {
+    font-size: ${fontSizes.fontSize2};
+    margin-top: 5px;
+    margin-bottom: 25px;
   }
 
   .slider-top-page-container {
@@ -89,26 +128,11 @@ export const InnerCarousel = styled(motion.div)`
     margin: 0;
   }
 
-  .slider-inside-page-inner-content{
-    width: 100%;
-    border: 1px solid ${colors.border};
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .slider-top-page-inner-content{
+  .slider-top-page-inner-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .slider-inside-page_image {
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-bottom: 0;
   }
 
   .slider-top-page_image {
@@ -116,11 +140,6 @@ export const InnerCarousel = styled(motion.div)`
     padding-bottom: 32px;
   }
 
-  .slider-inside-page_detail {
-    padding: 24px 19px 24px 19px;
-    
-  }
-  
   .slider-top-page_detail {
     font-size: ${fontSizes.fontSize3};
     width: 80%;
@@ -128,18 +147,12 @@ export const InnerCarousel = styled(motion.div)`
     flex-direction: column;
   }
 
-  .slider-inside-page_title {
-    font-size:${fontSizes.fontSize2} ;
-    margin-top: 5px;
-    margin-bottom: 25px;
+  .slider-top-page_title {
+    margin: 10px 0 25px 0;
   }
 
   .inner-carousel_figcaption {
     font-size: ${fontSizes.fontSize1};
     font-weight: bold;
-  }
-
-  .slider-top-page_title {
-    margin: 10px 0 25px 0;
   }
 `;
