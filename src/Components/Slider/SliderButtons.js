@@ -1,28 +1,30 @@
 import React from "react";
 import { ButtonContainer } from "./styles";
 
-function SliderButtons({ activeIndex, onclick, sliderConstants }) {
+function SliderButtons({ activeIndex, click, constants }) {
   return (
     <ButtonContainer>
-      {sliderConstants.map((constants, index) => {
-        return (
-          <label
-            key={index}
-            htmlFor={constants.id}
-            className="button-label"
-            onClick={() => onclick(index)}
-          >
-            <span
-              id={constants.id}
-              className={`${
-                activeIndex === index
-                  ? "slider_button active-dot"
-                  : "slider_button"
-              }`}
-            />
-          </label>
-        );
-      })}
+{constants.map((constant, index) => {
+  return (
+    <label
+      key={index}
+      id={constant.id}
+      htmlFor={constant.id}
+      className="button-label"
+      onClick={click}
+    >
+      <span
+        id={constant.id}
+        className={`${
+          activeIndex == index
+            ? "slider_button active-dot"
+            : "slider_button"
+        }`}
+      />
+    </label>
+  );
+})}
+
     </ButtonContainer>
   );
 }

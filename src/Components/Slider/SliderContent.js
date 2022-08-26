@@ -1,27 +1,75 @@
 import React from "react";
-import { SliderContainer } from "./styles";
+import { InnerCarousel } from "./styles";
 
-const SliderContent = ({ activeIndex, sliderConstants }) => {
-  let result = sliderConstants.map((constant, index) => {
+export const SliderContent = ({
+  limit,
+  screenWidth,
+  constants,
+  isForInsidePage,
+}) => {
+  
+  let createCarousel = constants.map((constant) => {
     return (
       <div
-        key={index}
-        className={`slider-content  ${
-          index === activeIndex ? "activeImage" : "inactiveImages"
-        }`}
+        key={constant.id}
+        className={
+          isForInsidePage
+            ? "slider-inside-page-container"
+            : "slider-top-page-container"
+        }
       >
-        <img className="slider-content_image" src={constant.link} alt="" />
-        <div className="slider-content-detail">
-          <div className="slider-content_description">
-            {constant.description}
+        <div
+          className={
+            isForInsidePage
+              ? "slider-inside-page-inner-content"
+              : "slider-top-page-inner-content"
+          }
+        >
+          <img
+            className={
+              isForInsidePage
+                ? "slider-inside-page_image"
+                : "slider-top-page_image"
+            }
+            src={constant.link}
+          />
+          <div
+            className={
+              isForInsidePage
+                ? "slider-inside-page_detail"
+                : "slider-top-page_detail"
+            }
+          >
+            <div className="inner-carousel_figcaption">
+              {constant.description}
+            </div>
+
+            <h2
+              className={
+                isForInsidePage
+                  ? "slider-inside-page_title"
+                  : "slider-top-page_title"
+              }
+            >
+              {constant.title}
+            </h2>
           </div>
-          <h2 className="slider-content_title ">{constant.title}</h2>
         </div>
       </div>
     );
   });
 
-  return <SliderContainer>{result}</SliderContainer>;
+  return (
+    <>
+      <InnerCarousel
+        drag="x"
+        dragConstraints={{ right: 0, left: -screenWidth }}
+        animate={{ x: -limit }}
+        transition={{ duration: 0.3 }}
+        className={isForInsidePage && "slider-inside-page-container"}
+      >
+        {createCarousel}
+      </InnerCarousel>
+    </>
+  );
 };
-
-export default SliderContent;

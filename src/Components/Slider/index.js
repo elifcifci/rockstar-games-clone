@@ -1,44 +1,63 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import SliderContent from "./SliderContent";
-import { sliderConstants } from "../../Constants/slider";
+import React, { useEffect, useRef, useState } from "react";
 import SliderButtons from "./SliderButtons";
-import { colors } from "../../Styles/globalStyles";
+import SliderArrows from "./SliderArrows";
+import { SliderContent } from "./SliderContent";
+import { WatchNowButton } from "../../Components/Buttons/WatchNowButton";
+import { Carousel } from "./styles";
 
-import { WatchButton, Container } from "./styles";
-
-function Slider() {
+const Slider = ({
+  constants,
+  sliderTitle,
+  visibleTopSlidersButtons,
+  visibleForInsidePage,
+}) => {
+  const carouselWidth = useRef();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [width, setWidth] = useState(0);
+  const [dragLimit, setDragLimit] = useState(0);
+
+  useEffect(() => {
+    setWidth(
+      carouselWidth.current.scrollWidth - carouselWidth.current.offsetWidth
+    );
+  }, []);
+
+  useEffect(() => {
+    let goThere = activeIndex * carouselWidth.current.offsetWidth;
+    setDragLimit(goThere);
+  }, [activeIndex]);
 
   return (
-    <Container>
+    <Carousel ref={carouselWidth}>
+      {visibleForInsidePage && (
+        <div className="slider-header">
+          <div className="slider-header_title">{sliderTitle}</div>
+          <SliderArrows click={() => console.log("click")} />
+        </div>
+      )}
+
       <SliderContent
-        activeIndex={activeIndex}
-        sliderConstants={sliderConstants}
+        isForInsidePage={
+          visibleForInsidePage
+            ? true
+            : false
+        }
+        limit={dragLimit}
+        screenWidth={width}
+        constants={constants}
       />
-      <WatchButton
-        initial={{
-          background: colors.backgroundColor,
-          color: "white",
-          border: "1px solid white",
-        }}
-        whileHover={{
-          background: colors.secondary,
-          color: "black",
-          border: `1px solid ${colors.secondary}`,
-        }}
-        className="carousel_watch-button"
-        type="button"
-      >
-        WATCH NOW
-      </WatchButton>
-      <SliderButtons
-        activeIndex={activeIndex}
-        sliderConstants={sliderConstants}
-        onclick={(activeIndex) => setActiveIndex(activeIndex)}
-      />
-    </Container>
+
+      {visibleTopSlidersButtons && <WatchNowButton />}
+
+      {visibleTopSlidersButtons && (
+        <SliderButtons
+          activeIndex={activeIndex}
+          constants={constants}
+          click={(event) => setActiveIndex(event.target.id)}
+        />
+      )}
+    </Carousel>
   );
-}
+};
 
 export default Slider;
