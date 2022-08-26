@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import { colors, fontSizes } from "../../Styles/globalStyles";
 
+export const MainContainer = styled.div`
+  .top-page-container {
+    background-color: ${colors.cardBackground};
+    margin-bottom: 0px;
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${colors.backgroundColor};
 
   h3 {
     padding-right: 12px;
@@ -65,7 +71,7 @@ export const GameContainer = styled.div`
   .imgContainer {
     width: 80%;
     display: grid;
-    grid-template-columns:  auto auto;
+    grid-template-columns: auto auto;
     justify-content: space-evenly;
     grid-gap: 25px;
     margin-bottom: 32px;

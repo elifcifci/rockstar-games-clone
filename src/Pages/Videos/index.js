@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "../../Components/Slider";
 import { sliderConstants, videos } from "../../Constants/video";
-import { Container } from "./styles";
+import { VideosContainer } from "./styles";
 
 function Videos() {
   return (
-    <Container>
+    <VideosContainer>
       <Slider constants={sliderConstants} visibleTopSlidersButtons={true} />
       <Slider
         constants={videos.redDeadOnline.cardDetails}
@@ -28,7 +28,7 @@ function Videos() {
         sliderTitle={videos.byGame.title}
         visibleForInsidePage={true}
       />
-    </Container>
+    </VideosContainer>
   );
 }
 

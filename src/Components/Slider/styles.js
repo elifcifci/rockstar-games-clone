@@ -31,6 +31,7 @@ export const Carousel = styled(motion.div)`
     margin-bottom: 25px;
     display: grid;
     grid-template-columns: 4fr 1fr;
+    grid-gap: 4px;
   }
 
   .slider-header_title {
@@ -73,14 +74,13 @@ export const ButtonContainer = styled(motion.div)`
 `;
 
 export const ArrowButtonContainer = styled.div`
-  .slider_left-arrow {
+  .slider-arrow {
     width: 13px;
     fill: white;
   }
 
-  .slider_right-arrow {
-    width: 13px;
-    fill: white;
+  .disabled-arrow {
+    fill: ${colors.opacityColor};
   }
 `;
 

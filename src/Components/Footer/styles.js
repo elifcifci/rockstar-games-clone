@@ -3,19 +3,22 @@ import { colors, fontSizes } from "../../Styles/globalStyles";
 
 export const Container = styled.div`
   height: 100vh;
-  padding: 50px 20px 50px 20px;
+  margin-top: 32px;
+  padding: 64px 20px 50px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: ${colors.cardBackground};
+
 `;
 
 export const ContactInWebsiteAndLanguagesContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
-  padding: 30px 0 0 0;
+  padding: 0;
 
   .contact-list {
     list-style-type: none;

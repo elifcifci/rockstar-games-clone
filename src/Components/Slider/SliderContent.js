@@ -41,7 +41,6 @@ export const SliderContent = ({
               }
             >
               <div className="inner-carousel_figcaption">{constant.title}</div>
-
               <h2
                 className={
                   isForInsidePage
