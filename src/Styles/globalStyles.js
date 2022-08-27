@@ -10,6 +10,7 @@ export const colors = {
   border: "#282828",
   cardBackground: "#000",
   text: "#fff",
+  text2: "#e8e8e8"
 };
 
 export const fontSizes = {
