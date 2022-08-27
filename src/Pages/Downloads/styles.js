@@ -22,8 +22,54 @@ export const TopGameContainer = styled.div`
     font-size: ${fontSizes.fontSize6};
   }
 
-  .top-game_paragraph{
+  .top-game_paragraph {
     line-height: 1.4rem;
     color: ${colors.text2};
+  }
+`;
+
+export const FeaturedAndMiscellaneousContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .content_title {
+    font-size: ${fontSizes.fontSize5};
+    margin-bottom: 25px;
+    padding: 50px 0 0 0;
+    width: 82%;
+
+  }
+
+  .content-type {
+    font-size: ${fontSizes.fontSize2};
+    font-weight: normal;
+    width: 80%;
+  }
+
+  .featured-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 0px 0 30px 0;
+  }
+
+  .featured_img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .miscellaneous-content {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .miscellaneous_img {
+    width: 100%;
+    border-radius: 10px;
   }
 `;
