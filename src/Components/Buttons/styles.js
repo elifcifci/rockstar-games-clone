@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { colors } from "../../Styles/globalStyles";
+import { colors, fontSizes } from "../../Styles/globalStyles";
 
 export const NewswireButtonContainer = styled(motion.a)`
   width: 100%;
@@ -29,4 +29,12 @@ export const NewswirePageLinkAnimate = styled(motion.div)`
   border-radius: 4px;
   position: absolute;
   z-index: 1;
+`;
+
+export const Button = styled(motion.button)`
+  font-size: ${fontSizes.fontSize2};
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 16px 48px 16px 48px;
+  width: 80%;
 `;

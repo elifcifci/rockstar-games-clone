@@ -17,14 +17,6 @@ export const Carousel = styled(motion.div)`
     background-color: ${colors.cardBackground};
   }
 
-  .carousel_watch-button {
-    font-size: ${fontSizes.fontSize2};
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 16px 48px 16px 48px;
-    width: 80%;
-  }
-
   .slider-header {
     margin-top: 25px;
     width: 80%;
