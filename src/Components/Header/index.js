@@ -1,8 +1,10 @@
 import React , { useState } from "react";
+
 import Account from "../Account";
-import { Container } from "./styles";
 import HamburgerMenu from "../HamburgerMenu"
+
 import {generalIcons} from "../../Constants/generalIcons"
+import { Container } from "./styles";
 
 export default function Header() {
   let [isVisible, setIsVisible] = useState(false);

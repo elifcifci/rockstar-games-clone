@@ -1,11 +1,6 @@
 // First users view 19 cards. When users click the "more stories" button add 20 more cards on the page
-const ratingImgs = {
-  teen: "https://media-rockstargames-com.akamaized.net/mfe2/components/1450c71/img/24d49820dabbd2748db5.svg",
-  mature:
-    "https://media-rockstargames-com.akamaized.net/mfe2/components/1450c71/img/a816ad46b6f08d4414b8.svg",
-};
 
-export const gamesConstant = {
+export const downloadsConstant = {
   topGame: {
     img: "https://media-rockstargames-com.akamaized.net/mfe2/sites-rockstargames-downloads/b9e9b05/img/4008775794df379a870b.jpg",
     title: "Red Dead Redemption 2",
@@ -43,16 +38,19 @@ export const gamesConstant = {
       id: "0",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/bully.jpg",
       selectRetailer: ["Warehouse (PC)"],
+      isOpen: false,
     },
     {
       id: "1",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/reddeadredemption2.jpg",
       selectRetailer: ["Rockstar (PS)"],
+      isOpen: false,
     },
     {
       id: "2",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/V.jpg",
       selectRetailer: ["Warehouse (PC)", "Steam (PC)", "Amazon (PC)"],
+      isOpen: false,
     },
     {
       id: "3",
@@ -63,6 +61,7 @@ export const gamesConstant = {
         "Amazon US (PC)",
         "Amazon UK (PC)",
       ],
+      isOpen: false,
     },
     {
       id: "4",
@@ -73,11 +72,13 @@ export const gamesConstant = {
         "Amazon US (PC)",
         "Amazon UK (PC)",
       ],
+      isOpen: false,
     },
     {
       id: "5",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/episodesfromlibertycity.jpg",
       selectRetailer: ["Warehouse (PC)", "Steam (PC)", "Amazon US (PC)"],
+      isOpen: false,
     },
     {
       id: "6",
@@ -88,11 +89,13 @@ export const gamesConstant = {
         "Amazon (PC)",
         "Warehouse (Mac)",
       ],
+      isOpen: false,
     },
     {
       id: "7",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/sanandreas.jpg",
       selectRetailer: ["Warehouse (PC)", "Steam (PC)", "Amazon (PC)"],
+      isOpen: false,
     },
   ],
 
@@ -101,31 +104,37 @@ export const gamesConstant = {
       id: "0",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/rdr2-companion.png",
       selectRetailer: ["iOS"],
+      isOpen: false,
     },
     {
       id: "1",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/bully.png",
       selectRetailer: ["iOS", "Android"],
+      isOpen: false,
     },
     {
       id: "2",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/gtalcs.png",
       selectRetailer: ["iOS", "Android", "Kindle"],
+      isOpen: false,
     },
     {
       id: "3",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/sanandreas.png",
       selectRetailer: ["iOS", "Android", "Windows Phone", "Kindle"],
+      isOpen: false,
     },
     {
       id: "4",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/gtaiii.png",
       selectRetailer: ["iOS", "Android", "Kindle"],
+      isOpen: false,
     },
     {
       id: "5",
       img: "https://www.rockstargames.com/img/global/downloads/apps/ifruit.png",
       selectRetailer: ["iOS", "Android", "Windows Phone", "Kindle", "PS Vita"],
+      isOpen: false,
     },
     {
       id: "6",
@@ -138,11 +147,13 @@ export const gamesConstant = {
         "PS",
         "Mac",
       ],
+      isOpen: false,
     },
     {
       id: "7",
       img: "https://www.rockstargames.com/img/global/downloads/apps/gtavicecity.png",
       selectRetailer: ["iOS", "Android", "Kindle"],
+      isOpen: false,
     },
   ],
 

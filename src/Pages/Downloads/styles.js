@@ -73,3 +73,42 @@ export const FeaturedAndMiscellaneousContainer = styled.div`
     border-radius: 10px;
   }
 `;
+
+export const PcAndMobileGamesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 70px;
+
+  .content-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .inner-container{
+    display: grid;
+    grid-template-row: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .content-img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .top-game-detail {
+    width: 80%;
+  }
+
+  .top-game_title {
+    margin: 0;
+    line-height: 3rem;
+    font-size: ${fontSizes.fontSize6};
+  }
+
+  .top-game_paragraph {
+    line-height: 1.4rem;
+    color: ${colors.text2};
+  }
+`;

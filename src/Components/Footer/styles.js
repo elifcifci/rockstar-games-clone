@@ -39,22 +39,24 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
 
   .select-container {
     display: flex;
+    justify-content: space-between;
     align-items: start;
-    outline: none;
   }
-
+  
   .contact-select {
+    border: solid;
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: 1px solid rgba(0, 0, 0, 0);
     font-size: 16px;
     width: 80%;
-
+    outline: none;
   }
 
   .contact-select_options {
     background-color: ${colors.backgroundColor};
     border: 1px solid ${colors.backgroundColor};
+    outline: none;
 
     $:hover {
       background-color: ${colors.secondary};

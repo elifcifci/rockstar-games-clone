@@ -1,24 +1,19 @@
 import React from "react";
 import { generalIcons } from "../../Constants/generalIcons";
 import {
-  ContactInWebsite,
-  languages,
-  contactSocialMedia,
-  GeneralKnowledge,
-  AboutCompany,
-} from "../../Constants/footer";
-import {
   Container,
   ContactInWebsiteAndLanguagesContainer,
   ContactSocialMediaContainer,
   GeneralKnowledgeContainer,
   AboutCompanyContainer,
 } from "./styles";
+import { footerConstants } from "../../Constants/footer";
+import Dropdown from "../../Components/Dropdown";
 
 export default function Footer() {
   let svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
 
-  let createContactPagesList = ContactInWebsite.map((item) => {
+  let createContactPagesList = footerConstants.contactInWebsite.map((item) => {
     return (
       <li className="contact-item" key={item.title}>
         <a href={item.link}>
@@ -33,47 +28,41 @@ export default function Footer() {
     );
   });
 
-  let createSocialMediaContact = contactSocialMedia.map((contact) => {
-    return (
-      <li className="contact-item" key={contact.title}>
-        <a href={contact.link}>
-          <svg className="contact-icon" viewBox={contact.viewBox}>
-            <path d={contact.path} />
-          </svg>
-        </a>
-      </li>
-    );
-  });
+  let createSocialMediaContact = footerConstants.contactSocialMedia.map(
+    (contact) => {
+      return (
+        <li className="contact-item" key={contact.title}>
+          <a href={contact.link}>
+            <svg className="contact-icon" viewBox={contact.viewBox}>
+              <path d={contact.path} />
+            </svg>
+          </a>
+        </li>
+      );
+    }
+  );
 
-  let getOptions = languages.map((language) => {
-    return (
-      <option
-        key={language.title}
-        className="contact-select_options"
-        value={language.title}
-      >
-        {language.language}
-      </option>
-    );
-  });
+  let createGeneralKnowledgeLinkList = footerConstants.generalKnowledge.map(
+    (knowledge) => {
+      return (
+        <li key={knowledge.title} className="contact-item">
+          <a className="contact-item_link" href={knowledge.link}>
+            {knowledge.title}
+          </a>
+        </li>
+      );
+    }
+  );
 
-  let createGeneralKnowledgeLinkList = GeneralKnowledge.map((knowledge) => {
-    return (
-      <li key={knowledge.title} className="contact-item">
-        <a className="contact-item_link" href={knowledge.link}>
-          {knowledge.title}
-        </a>
-      </li>
-    );
-  });
-
-  let createCompanyCityList = AboutCompany.cities.map((city) => {
-    return (
-      <li key={city} className="company-city_item">
-        {city}
-      </li>
-    );
-  });
+  let createCompanyCityList = footerConstants.aboutCompany.cities.map(
+    (city) => {
+      return (
+        <li key={city} className="company-city_item">
+          {city}
+        </li>
+      );
+    }
+  );
 
   return (
     <Container>
@@ -92,7 +81,8 @@ export default function Footer() {
               strokeWidth="2"
             />
           </svg>
-          <select className="contact-select">{getOptions}</select>
+          {/* <select className="contact-select">{getOptions}</select> */}
+          <Dropdown constants={footerConstants.languages} isForFooter={true} />
         </form>
       </ContactInWebsiteAndLanguagesContainer>
 
@@ -111,14 +101,18 @@ export default function Footer() {
       {/* company knowledge part starts*/}
       <AboutCompanyContainer>
         <ul className="about-company-list">
-          <li className="about-company_item">{AboutCompany.companyName}</li>
+          <li className="about-company_item">
+            {footerConstants.aboutCompany.companyName}
+          </li>
           <li className="about-company_item">
             <ul className="company-city-list">{createCompanyCityList}</ul>
           </li>
-          <li className="about-company_item">{AboutCompany.foundationYear}</li>
+          <li className="about-company_item">
+            {footerConstants.aboutCompany.foundationYear}
+          </li>
         </ul>
       </AboutCompanyContainer>
-            {/* company knowledge part starts*/}
+      {/* company knowledge part starts*/}
     </Container>
   );
 }

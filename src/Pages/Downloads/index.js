@@ -1,18 +1,25 @@
 import React from "react";
 import TopGame from "./TopGame";
 import MiscellaneousAndFeatured from "./MiscellaneousAndFeatured";
-import { gamesConstant } from "../../Constants/downloads";
+import PcAndMobileGames from "./PcAndMobileGames";
+import { downloadsConstant } from "../../Constants/downloads";
 
 function Downloads() {
   return (
     <>
-      <TopGame constants={gamesConstant.topGame} />
+      <TopGame constants={downloadsConstant.topGame} />
       <MiscellaneousAndFeatured
-        constants={gamesConstant.featuredDownloads}
+        constants={downloadsConstant.featuredDownloads}
         isFeatured={true}
       />
+
+      <PcAndMobileGames constants={downloadsConstant.pcMacGames} isPcGames={true} />
+      <PcAndMobileGames
+        constants={downloadsConstant.mobileGamesApps}
+        isPcGames={false}
+      />
       <MiscellaneousAndFeatured
-        constants={gamesConstant.miscellaneous}
+        constants={downloadsConstant.miscellaneous}
         isFeatured={false}
       />
     </>
