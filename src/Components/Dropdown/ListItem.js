@@ -11,8 +11,8 @@ const FooterListItem = ({ constants, click }) => {
             key={constant.title}
             onClick={click}
             id={constant.title}
-            initial={{ background: colors.backgroundColor }}
-            whileHover={{ background: colors.secondary, color: "black" }}
+            initial={{ background: colors.primary }}
+            whileHover={{ background: colors.secondary, color: colors.black }}
             transition={{ delay: 0.1 }}
             className={
               constant.id === constants.length - 1

@@ -4,7 +4,7 @@ import { colors } from "../../Styles/globalStyles";
 
 export const VideosContainer = styled(motion.div)`
   .top-page-container {
-    background-color: ${colors.cardBackground};
+    background-color: ${colors.black};
     margin-bottom: 0px;
   }
 

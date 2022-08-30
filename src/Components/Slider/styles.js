@@ -14,7 +14,7 @@ export const Carousel = styled(motion.div)`
     width: 80%;
     margin: 0 25px 0 4px;
     border-radius: 10px;
-    background-color: ${colors.cardBackground};
+    background-color: ${colors.black};
   }
 
   .slider-header {
@@ -27,7 +27,7 @@ export const Carousel = styled(motion.div)`
   }
 
   .slider-header_title {
-    font-size: ${fontSizes.fontSize4};
+    font-size: ${fontSizes.size6};
     font-weight: bold;
   }
 
@@ -84,8 +84,8 @@ export const InnerCarousel = styled(motion.div)`
     min-width: 100%;
     margin: 0 25px 0 4px;
     border-radius: 10px;
-    border: 1px solid ${colors.border};
-    background-color: ${colors.cardBackground};
+    border: 1px solid ${colors.gray};
+    background-color: ${colors.black};
   }
 
   .slider-inside-page_image {
@@ -107,7 +107,7 @@ export const InnerCarousel = styled(motion.div)`
   }
 
   .slider-inside-page_title {
-    font-size: ${fontSizes.fontSize2};
+    font-size: ${fontSizes.size3};
     margin-top: 5px;
     margin-bottom: 25px;
   }
@@ -133,7 +133,7 @@ export const InnerCarousel = styled(motion.div)`
   }
 
   .slider-top-page_detail {
-    font-size: ${fontSizes.fontSize3};
+    font-size: ${fontSizes.size4};
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -144,7 +144,7 @@ export const InnerCarousel = styled(motion.div)`
   }
 
   .inner-carousel_figcaption {
-    font-size: ${fontSizes.fontSize1};
+    font-size: ${fontSizes.size2};
     font-weight: bold;
   }
 `;

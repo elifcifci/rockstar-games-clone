@@ -1,7 +1,7 @@
 import React from "react";
 import SearchInput from "./SearchInput";
 import { motion } from "framer-motion";
-import { menuItems } from "../../Constants/navbar";
+import { menuItems } from "../../Constants/Navbar";
 import { generalIcons } from "../../Constants/generalIcons";
 import { Container, NavbarMenuConfig } from "./styles";
 import { colors } from "../../Styles/globalStyles";

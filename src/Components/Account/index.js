@@ -32,15 +32,15 @@ export default function Account({ visibility, click }) {
         <AccountContainer>
           <ul className="account-list">
             <motion.li
-              initial={{ background: colors.backgroundColor }}
-              whileHover={{ background: colors.border }}
+              initial={{ background: colors.primary }}
+              whileHover={{ background: colors.gray }}
               className="account-list_item account-list--border"
             >
-              Sign in
+              Sign In
             </motion.li>
             <motion.li
-              initial={{ background: colors.backgroundColor }}
-              whileHover={{ background: colors.border }}
+              initial={{ background: colors.primary }}
+              whileHover={{ background: colors.gray }}
               className="account-list_item"
             >
               Join Social Club{" "}

@@ -22,7 +22,7 @@ export const Container = styled(motion.div)`
   }
 
   .list-item {
-    font-size: ${fontSizes.fontSize5};
+    font-size: ${fontSizes.size7};
     width: 100%;
     height: 60px;
     font-weight: bold;
@@ -51,7 +51,7 @@ display: flex;
 justify-content: center;
 margin-top: 82px;
 width: 80%;
-background-color: ${colors.border};
+background-color: ${colors.gray};
 border-radius: 4px;
 
 svg{
@@ -59,9 +59,9 @@ svg{
   padding: 15px 0 15px 10px;
 }
 .searchArea{
-  background-color: ${colors.border};
-  color: ${colors.text};
-  font-size: ${fontSizes.fontSize3};
+  background-color: ${colors.gray};
+  color: ${colors.white};
+  font-size: ${fontSizes.size4};
   border: none;
   border-radius: 4px;
   width: 100%;
@@ -70,7 +70,7 @@ svg{
     
   ::placeholder {
     color: ${colors.opacityColor};
-    font-size: ${fontSizes.fontSize2};
+    font-size: ${fontSizes.size3};
   }
 `;
 export const NavbarMenuConfig = {

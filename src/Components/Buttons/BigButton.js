@@ -5,7 +5,7 @@ export const BigButton = ({ text }) => {
   return (
     <Button
       initial={{
-        background: colors.backgroundColor,
+        background: colors.primary,
         color: "white",
         border: "1px solid white",
       }}

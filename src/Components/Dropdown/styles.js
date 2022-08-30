@@ -8,10 +8,10 @@ export const DropdownContainer = styled.div`
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 0 8px 8px 8px;
-    border-bottom: 1px solid ${colors.text2};
+    border-bottom: 1px solid ${colors.tertiary};
   }
   .games-dropdown-title {
-    color: ${colors.text};
+    color: ${colors.white};
   }
 
   .dropdown-footer {
@@ -52,14 +52,14 @@ export const DropdownContainer = styled.div`
   .games-list_item {
     margin: 0;
     padding: 8px 16px 8px 16px;
-    background-color: ${colors.cardBackground};
+    background-color: ${colors.black};
     width: 100%;
   }
   .dropdown-list_item {
     padding: 8px 16px 8px 16px;
     width: 100%;
     margin: 0;
-    background-color: ${colors.backgroundColor};
+    background-color: ${colors.primary};
   }
 
   .dropdown-list_last-item {

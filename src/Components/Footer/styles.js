@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: ${colors.cardBackground};
+  background-color: ${colors.black};
 
 `;
 
@@ -54,8 +54,8 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
   }
 
   .contact-select_options {
-    background-color: ${colors.backgroundColor};
-    border: 1px solid ${colors.backgroundColor};
+    background-color: ${colors.primary};
+    border: 1px solid ${colors.primary};
     outline: none;
 
     $:hover {
@@ -95,7 +95,7 @@ export const GeneralKnowledgeContainer = styled.div`
   }
 
   .contact-item {
-    font-size: ${fontSizes.fontSize0};
+    font-size: ${fontSizes.size1};
     margin-bottom: 18px;
   }
 
@@ -105,7 +105,7 @@ export const GeneralKnowledgeContainer = styled.div`
 `;
 
 export const AboutCompanyContainer = styled.div`
-  font-size: ${fontSizes.fontSize1};
+  font-size: ${fontSizes.size2};
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -114,12 +114,12 @@ export const AboutCompanyContainer = styled.div`
     width: 100%;
     padding: 0;
     text-align: center;
-    font-size: ${fontSizes.fontSize0};
+    font-size: ${fontSizes.size1};
     font-weight: 700;
   }
 
   .about-company_item {
-    font-size: ${fontSizes.fontSize0};
+    font-size: ${fontSizes.size1};
     margin-bottom: 18px;
     width: 100%;
   }
@@ -131,7 +131,7 @@ export const AboutCompanyContainer = styled.div`
   }
 
   .company-city_item {
-    font-size: ${fontSizes.fontSize0};
+    font-size: ${fontSizes.size1};
     width: 100%;
   }
 `;

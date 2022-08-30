@@ -32,7 +32,7 @@ export const NewswirePageLinkAnimate = styled(motion.div)`
 `;
 
 export const Button = styled(motion.button)`
-  font-size: ${fontSizes.fontSize2};
+  font-size: ${fontSizes.size3};
   font-weight: bold;
   border-radius: 5px;
   padding: 16px 48px 16px 48px;

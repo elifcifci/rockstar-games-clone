@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, fontSizes } from "../../Styles/globalStyles";
 
 export const TopGameContainer = styled.div`
-  background-color: ${colors.cardBackground};
+  background-color: ${colors.black};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,12 +19,12 @@ export const TopGameContainer = styled.div`
   .top-game_title {
     margin: 0;
     line-height: 3rem;
-    font-size: ${fontSizes.fontSize6};
+    font-size: ${fontSizes.size8};
   }
 
   .top-game_paragraph {
     line-height: 1.4rem;
-    color: ${colors.text2};
+    color: ${colors.tertiary};
   }
 `;
 
@@ -35,7 +35,7 @@ export const FeaturedAndMiscellaneousContainer = styled.div`
   width: 100%;
 
   .content_title {
-    font-size: ${fontSizes.fontSize5};
+    font-size: ${fontSizes.size7};
     margin-bottom: 25px;
     padding: 50px 0 0 0;
     width: 82%;
@@ -43,7 +43,7 @@ export const FeaturedAndMiscellaneousContainer = styled.div`
   }
 
   .content-type {
-    font-size: ${fontSizes.fontSize2};
+    font-size: ${fontSizes.size3};
     font-weight: normal;
     width: 80%;
   }
@@ -104,11 +104,11 @@ export const PcAndMobileGamesContainer = styled.div`
   .top-game_title {
     margin: 0;
     line-height: 3rem;
-    font-size: ${fontSizes.fontSize6};
+    font-size: ${fontSizes.size8};
   }
 
   .top-game_paragraph {
     line-height: 1.4rem;
-    color: ${colors.text2};
+    color: ${colors.tertiary};
   }
 `;

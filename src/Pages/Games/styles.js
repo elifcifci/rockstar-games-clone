@@ -6,7 +6,7 @@ export const GameContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 35px 0 20px 0;
-  background-color: ${colors.backgroundColor};
+  background-color: ${colors.primary};
 
   a {
     width: 100%;

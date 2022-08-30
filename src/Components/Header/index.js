@@ -1,9 +1,9 @@
-import React , { useState } from "react";
+import React, { useState } from "react";
 
 import Account from "../Account";
-import HamburgerMenu from "../HamburgerMenu"
+import HamburgerMenu from "../HamburgerMenu";
 
-import {generalIcons} from "../../Constants/generalIcons"
+import { generalIcons } from "../../Constants/generalIcons";
 import { Container } from "./styles";
 
 export default function Header() {
@@ -19,11 +19,13 @@ export default function Header() {
 
   return (
     <Container>
-      <HamburgerMenu click={closeVisibility} />
-      <a href="/">
-        <img src={generalIcons[0].img[4]}/>
-      </a>
-      <Account visibility={isVisible} click={updateVisibility} />
+      <div className="inner-container">
+        <HamburgerMenu click={closeVisibility} />
+        <a href="/" className="page-icon">
+          <img src={generalIcons[0].img[4]} />
+        </a>
+        <Account visibility={isVisible} click={updateVisibility} />
+      </div>
     </Container>
   );
 }

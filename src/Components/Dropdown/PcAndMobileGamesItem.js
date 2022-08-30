@@ -9,8 +9,8 @@ const PcAndMobileGamesDropdownList = ({ constants, click }) => {
       <motion.li
         key={constant}
         onClick={click}
-        initial={{ background: colors.backgroundColor }}
-        whileHover={{ background: colors.secondary, color: "black" }}
+        initial={{ background: colors.primary }}
+        whileHover={{ background: colors.secondary, color: colors.black }}
         transition={{ delay: 0.1 }}
         className={
           constant === constants.selectRetailer[constants.selectRetailer.length - 1]

@@ -6,15 +6,15 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${colors.backgroundColor};
+  background-color: ${colors.primary};
 
   h3 {
     padding-right: 12px;
-    font-size: ${fontSizes.fontSize1};
+    font-size: ${fontSizes.size2};
   }
 
   time {
-    font-size: ${fontSizes.fontSize1};
+    font-size: ${fontSizes.size2};
     color: ${colors.opacityColor};
   }
 
@@ -28,7 +28,7 @@ export const Container = styled.div`
     width: 100%;
   }
   .first-announcement {
-    font-size: ${fontSizes.fontSize5};
+    font-size: ${fontSizes.size7};
     font-weight: bold;
     width: 80%;
   }
@@ -47,9 +47,9 @@ export const Container = styled.div`
   }
 
   .innerContainer {
-    background-color: ${colors.cardBackground};
+    background-color: ${colors.black};
     margin-bottom: 32px;
-    border: 1px solid ${colors.border};
+    border: 1px solid ${colors.gray};
     border-radius: 7px;
     display: grid;
     grid-template-column: 1fr;
@@ -74,7 +74,7 @@ export const Container = styled.div`
   }
 
   .announcement {
-    font-size: ${fontSizes.fontSize4};
+    font-size: ${fontSizes.size6};
     width: 80%;
   }
 `;

@@ -3,7 +3,7 @@ import { colors, fontSizes } from "../../Styles/globalStyles";
 
 export const MainContainer = styled.div`
   .top-page-container {
-    background-color: ${colors.cardBackground};
+    background-color: ${colors.black};
     margin-bottom: 0px;
   }
 `;
@@ -16,18 +16,18 @@ export const Container = styled.div`
 
   h3 {
     padding-right: 12px;
-    font-size: ${fontSizes.fontSize1};
+    font-size: ${fontSizes.size2};
   }
 
   time {
-    font-size: ${fontSizes.fontSize1};
+    font-size: ${fontSizes.size2};
     color: ${colors.opacityColor};
   }
 
   .innerContainer {
-    background-color: ${colors.cardBackground};
+    background-color: ${colors.black};
     margin-bottom: 32px;
-    border: 1px solid ${colors.border};
+    border: 1px solid ${colors.gray};
     border-radius: 7px;
     display: grid;
     grid-template-column: 1fr;
@@ -52,7 +52,7 @@ export const Container = styled.div`
   }
 
   .announcement {
-    font-size: ${fontSizes.fontSize4};
+    font-size: ${fontSizes.size6};
     width: 80%;
   }
 `;

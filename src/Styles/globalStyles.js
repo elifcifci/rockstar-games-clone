@@ -1,36 +1,36 @@
 import { createGlobalStyle } from "styled-components";
 
 export const colors = {
-  primary: "#0b0b0b",
-  secondary: "#fcaf17",
-  tertiary: "#e8e8e8",
+  primary: "rgb(11, 11, 11)",
+  secondary: "rgb(252, 175, 23)",
+  tertiary: "rgb(232, 232, 232)",
   opacityColor: "rgba(232, 232, 232 ,0.7)",
-  backgroundColor: "#0b0b0b",
   navbarBackground: "rgba(0,0,0,.85)",
-  border: "#282828",
-  cardBackground: "#000",
-  text: "#fff",
-  text2: "#e8e8e8"
+  gray: "rgb(40, 40, 40)",
+  black: "rgb(0,0,0)",
+  white: "rgb(255,255,255)",
 };
 
 export const fontSizes = {
-  fontSize0: "0.70rem",
-  fontSize1: "0.8rem",
-  fontSize2: "1rem",
-  fontSize3: "1.20rem",
-  fontSize4: "1.32rem",
-  fontSize5: "1.563rem",
-  fontSize6: "1.953rem",
-  fontSize7: "2.441rem",
-  fontSize8: "3.052rem",
-  fontSize9: "3.815rem",
-  fontSize10: "4.768rem",
+  size0:"0.64rem",
+  size1: "0.70rem",
+  size2: "0.8rem",
+  size3: "1rem",
+  size4: "1.20rem",
+  size5: "1.25rem",
+  size6: "1.32rem",
+  size7: "1.563rem",
+  size8: "1.953rem",
+  size9: "2.441rem",
+  size10: "3.052rem",
+  size11: "3.815rem",
+  size12: "4.768rem",
 };
 
 const GlobalStyle = createGlobalStyle`
     body{
-        background-color: ${colors.backgroundColor};
-        color: ${colors.text};
+        background-color: ${colors.primary};
+        color: ${colors.white};
         font-family: helvetica;
         box-sizing: border-box;
         margin: 0;
