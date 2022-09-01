@@ -34,9 +34,13 @@ export const Container = styled(motion.div)`
     width: 100%;
     height: 100%;
     height: 50px;
-    color: white;
+    color:  ${colors.white};
     display: flex;
     align-items: center;
+  }
+
+  .active-page{
+    color:  ${colors.secondary};
   }
 
   .list_icon {

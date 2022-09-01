@@ -6,14 +6,16 @@ import { generalIcons } from "../../Constants/generalIcons";
 import { Container, NavbarMenuConfig } from "./styles";
 import { colors } from "../../Styles/globalStyles";
 
-export default function MenuItem() {
+export default function MenuItem({ pageTitle }) {
   const svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
 
   let createMenuItem = menuItems.map((item) => {
     return (
       <motion.li className="list-item list_text" key={item.title}>
         <motion.a
-          className="list-link"
+          className={
+            item.title === pageTitle ? "list-link active-page" : "list-link"
+          }
           href={item.link}
           whileHover={{ color: colors.secondary }}
         >
@@ -30,7 +32,7 @@ export default function MenuItem() {
 
   return (
     <Container title="Site" variants={NavbarMenuConfig}>
-      <SearchInput/>
+      <SearchInput />
       <ul className="menu-list">{createMenuItem}</ul>
     </Container>
   );

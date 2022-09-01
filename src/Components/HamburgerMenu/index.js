@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import MenuItem from "../MenuItem";
@@ -10,7 +10,17 @@ import { useCycle } from "framer-motion";
 
 export default function HamburgerMenu({ click }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [pageTitle, setPageTitle] = useState("");
+
   let pageName = useLocation().pathname;
+  useEffect(() => {
+    menuItems.forEach((item) => {
+      if (item.link === pageName) {
+        setPageTitle(item.title);
+      }
+    });
+  }, []);
+
   return (
     <Container
       onClick={click}
@@ -18,9 +28,9 @@ export default function HamburgerMenu({ click }) {
       animate={isOpen ? "open" : "closed"}
       title="Open Menu"
     >
-      <MenuItem />
+      <MenuItem pageTitle={pageTitle}/>
       <MenuToggleIcon toggle={() => toggleOpen()} />
-      {menuItems.map((item) => item.link === pageName && item.title)}
+      {pageTitle}
     </Container>
   );
 }
