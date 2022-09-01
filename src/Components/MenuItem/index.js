@@ -29,8 +29,8 @@ export default function MenuItem() {
   });
 
   return (
-    <Container variants={NavbarMenuConfig}>
-      <SearchInput />
+    <Container title="Site" variants={NavbarMenuConfig}>
+      <SearchInput/>
       <ul className="menu-list">{createMenuItem}</ul>
     </Container>
   );

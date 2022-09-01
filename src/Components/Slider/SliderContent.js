@@ -16,6 +16,7 @@ export const SliderContent = ({
             ? "slider-inside-page-container"
             : "slider-top-page-container"
         }
+        title={constant.description}
       >
         <div
           className={
@@ -66,7 +67,7 @@ export const SliderContent = ({
             ? { right: 1, left: -5 }
             : { right: 0, left: -screenWidth }
         }
-        animate={{ x:( -limit ) }}
+        animate={{ x: -limit }}
         transition={{ duration: 0.3 }}
         className={isForInsidePage && "slider-inside-page-container"}
       >

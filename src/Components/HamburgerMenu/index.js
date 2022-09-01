@@ -16,6 +16,7 @@ export default function HamburgerMenu({ click }) {
       onClick={click}
       initial={false}
       animate={isOpen ? "open" : "closed"}
+      title="Open Menu"
     >
       <MenuItem />
       <MenuToggleIcon toggle={() => toggleOpen()} />

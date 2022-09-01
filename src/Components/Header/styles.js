@@ -5,7 +5,7 @@ import { colors } from "../../Styles/globalStyles";
 export const Container = styled(motion.nav)`
   width: 100%;
   height: 60px;
-  border-bottom: solid 2px ${colors.gray};
+  border-bottom: solid 1px ${colors.gray};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,19 +15,21 @@ export const Container = styled(motion.nav)`
   z-index: 3;
 
   .inner-container {
-    width: 80%;
+    padding: 12px 32px 12px 32px;
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 74px 1fr;
   }
 
-  .page-icon{
+  .page-icon-link {
     display: flex;
     justify-content: center;
-    align-items: center;
+
   }
-  img {
+  .page-icon{
     border-radius: 15%;
-    width: 35px;
+    width: 40px;
+    height: 100%;
     position: relative;
     z-index: 3;
   }
