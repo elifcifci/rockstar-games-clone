@@ -1,14 +1,16 @@
 import React from "react";
 import { generalIcons } from "../../Constants/generalIcons";
 import {
-  Container,
+  FooterContainer,
   ContactInWebsiteAndLanguagesContainer,
   ContactSocialMediaContainer,
   GeneralKnowledgeContainer,
   AboutCompanyContainer,
 } from "./styles";
+import { motion } from "framer-motion";
 import { footerConstants } from "../../Constants/footer";
 import Dropdown from "../../Components/Dropdown";
+import { colors } from "../../Styles/globalStyles";
 
 export default function Footer() {
   let svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
@@ -16,39 +18,56 @@ export default function Footer() {
   let createContactPagesList = footerConstants.contactInWebsite.map((item) => {
     return (
       <li className="contact-item" key={item.title}>
-        <a href={item.link}>
-          <span>{item.title}</span>
+        <motion.a
+          className="contact-item-link"
+          initial={{ color: colors.white }}
+          whileHover={{ color: colors.secondary }}
+          href={item.link}
+        >
+          {item.title}
           {item.isIconVisible && (
-            <svg className="contact-icon" viewBox={svgNeeds[0]}>
+            <svg className="contact-item-icon" viewBox={svgNeeds[0]}>
               <path d={svgNeeds[1]} />
             </svg>
           )}
-        </a>
+        </motion.a>
       </li>
     );
   });
 
-  let createSocialMediaContact = footerConstants.contactSocialMedia.map(
+  let createSocialMediaLinks = footerConstants.contactSocialMedia.map(
     (contact) => {
       return (
         <li className="contact-item" key={contact.title}>
-          <a href={contact.link}>
-            <svg className="contact-icon" viewBox={contact.viewBox}>
-              <path d={contact.path} />
-            </svg>
+          <a href={contact.link} title={contact.title}>
+            <motion.svg
+              className="contact-item-icon"
+              initial={{ fill: colors.white }}
+              whileHover={{ fill: colors.secondary }}
+            >
+              <path className="contact-item-path" d={contact.path} />
+
+              {contact.title === "instagram" && (
+                <path className="contact-item-path" d={contact.path2} />
+              )}
+            </motion.svg>
           </a>
         </li>
       );
     }
   );
 
-  let createGeneralKnowledgeLinkList = footerConstants.generalKnowledge.map(
+  let createGeneralKnowledgeLinks = footerConstants.generalKnowledge.map(
     (knowledge) => {
       return (
         <li key={knowledge.title} className="contact-item">
-          <a className="contact-item_link" href={knowledge.link}>
+          <motion.a
+            className="contact-item_link"
+            whileHover={{ color: colors.secondary }}
+            href={knowledge.link}
+          >
             {knowledge.title}
-          </a>
+          </motion.a>
         </li>
       );
     }
@@ -65,11 +84,11 @@ export default function Footer() {
   );
 
   return (
-    <Container>
+    <FooterContainer title="footer">
       <ContactInWebsiteAndLanguagesContainer>
         <ul className="contact-list">{createContactPagesList}</ul>
         <form className="select-container">
-          <svg width="24" height="24" fill="none">
+          <svg className="select-world-icon" fill="none">
             <path
               d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10ZM2 12h20"
               stroke="white"
@@ -86,17 +105,19 @@ export default function Footer() {
         </form>
       </ContactInWebsiteAndLanguagesContainer>
 
-      {/* social media links starts*/}
-      <ContactSocialMediaContainer>
-        <ul className="contact-list">{createSocialMediaContact}</ul>
-      </ContactSocialMediaContainer>
-      {/* social media links ends*/}
-
-      {/* knowledge links part starts*/}
-      <GeneralKnowledgeContainer>
-        <ul className="contact-list">{createGeneralKnowledgeLinkList}</ul>
-      </GeneralKnowledgeContainer>
-      {/* knowledge links part ends*/}
+      <section>
+        {/* knowledge links part starts*/}
+        <GeneralKnowledgeContainer>
+          <ul className="contact-list">{createGeneralKnowledgeLinks}</ul>
+        </GeneralKnowledgeContainer>
+        {/* knowledge links part ends*/}
+        
+        {/* social media links starts*/}
+        <ContactSocialMediaContainer>
+          <ul className="contact-list">{createSocialMediaLinks}</ul>
+        </ContactSocialMediaContainer>
+        {/* social media links ends*/}
+      </section>
 
       {/* company knowledge part starts*/}
       <AboutCompanyContainer>
@@ -104,15 +125,15 @@ export default function Footer() {
           <li className="about-company_item">
             {footerConstants.aboutCompany.companyName}
           </li>
-          <li className="about-company_item">
+          <li className="about-company_item city-list-container">
             <ul className="company-city-list">{createCompanyCityList}</ul>
           </li>
-          <li className="about-company_item">
+          <li className="about-company_item about-company_last-item">
             {footerConstants.aboutCompany.foundationYear}
           </li>
         </ul>
       </AboutCompanyContainer>
       {/* company knowledge part starts*/}
-    </Container>
+    </FooterContainer>
   );
 }

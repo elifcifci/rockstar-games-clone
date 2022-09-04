@@ -1,5 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
+export const screen = {
+  mobileS:"(min-width: 314px)",
+  mobileM: "(min-width: 375px)",
+  mobileL: "(min-width: 425px)",
+  tablet: "(min-width: 768px)",
+  laptop: "(min-width: 1024px)",
+  laptopL: "(min-width: 1440px)",
+};
+
 export const colors = {
   primary: "rgb(11, 11, 11)",
   secondary: "rgb(252, 175, 23)",

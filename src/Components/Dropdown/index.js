@@ -10,9 +10,9 @@ const Dropdown = ({ constants, isForFooter }) => {
   const [rotate, setRotate] = useState(0);
 
   const footerHandleClick = (event) => {
-    selectLanguage(event)
+    selectLanguage(event);
     updateIsVisible();
-  }
+  };
 
   const selectLanguage = (event) => {
     constants.forEach((constant) => {
@@ -20,7 +20,6 @@ const Dropdown = ({ constants, isForFooter }) => {
         setSelectedLanguage(constant.language);
       }
     });
-    
   };
 
   const updateIsVisible = () => {
