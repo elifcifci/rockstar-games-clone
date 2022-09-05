@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 
-export const NewswireButtonContainer = styled(motion.a)`
-  width: 100%;
+export const AnimatedButtonContainer = styled(motion.a)`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -12,26 +11,40 @@ export const NewswireButtonContainer = styled(motion.a)`
     z-index: 2;
     margin: 0 0 3px 0;
   }
+
+  @media ${screen.tablet}{
+    .link-text {
+      font-size: ${fontSizes.size4};
+    }
+  }
 `;
 
-export const NewswireButton = styled(motion.button)`
+export const MoreStoryButton = styled(motion.button)`
   background-color: transparent;
   border: none;
   color: white;
   z-index: 2;
   margin: 0 0 3px 0;
+
+  @media ${screen.tablet}{
+      font-size: ${fontSizes.size4};
+  }
 `;
 
-export const NewswirePageLinkAnimate = styled(motion.div)`
+export const ButtonAnimation = styled(motion.div)`
   background-color: ${colors.secondary};
   width: 75px;
   height: 4px;
   border-radius: 4px;
   position: absolute;
   z-index: 1;
+  @media ${screen.tablet}{
+    width: 90px;
+
+  }
 `;
 
-export const Button = styled(motion.button)`
+export const SliderWatchButton = styled(motion.button)`
   font-size: ${fontSizes.size3};
   font-weight: bold;
   border-radius: 5px;

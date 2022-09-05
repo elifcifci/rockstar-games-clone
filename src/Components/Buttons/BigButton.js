@@ -1,9 +1,9 @@
 import React from "react";
 import { colors } from "../../Styles/globalStyles";
-import { Button } from "./styles";
+import { SliderWatchButton } from "./styles";
 export const BigButton = ({ text }) => {
   return (
-    <Button
+    <SliderWatchButton
       initial={{
         background: colors.primary,
         color: "white",
@@ -17,6 +17,6 @@ export const BigButton = ({ text }) => {
       type="button"
     >
       {text}
-    </Button>
+    </SliderWatchButton>
   );
 };

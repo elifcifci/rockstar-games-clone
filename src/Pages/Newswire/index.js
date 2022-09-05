@@ -19,7 +19,7 @@ function Newswire() {
 
   return (
     <>
-      <CreateNewswireCards showThisCards={[...countedCards]} mainConstantLength = {newswireConstantsLength}/>
+      <CreateNewswireCards isPreview={false} showThisCards={[...countedCards]} mainConstantLength = {newswireConstantsLength}/>
       <MoreStoriesButton click={updateCounter} text={"More Stories"} />
     </>
   );

@@ -1,20 +1,20 @@
 import React from "react";
 import {
-  NewswireButtonContainer,
-  NewswireButton,
-  NewswirePageLinkAnimate,
+  AnimatedButtonContainer,
+  MoreStoryButton,
+  ButtonAnimation,
 } from "./styles";
 
 export function MoreStoriesButton({ text, click }) {
   return (
-    <NewswireButtonContainer>
-      <NewswireButton type="button" onClick={click}>
+    <AnimatedButtonContainer>
+      <MoreStoryButton type="button" onClick={click}>
         {text}
-      </NewswireButton>
-      <NewswirePageLinkAnimate
+      </MoreStoryButton>
+      <ButtonAnimation
         initial={{ scale: 1 }}
         whileHover={{ width: 85, height: 25 }}
       />
-    </NewswireButtonContainer>
+    </AnimatedButtonContainer>
   );
 }

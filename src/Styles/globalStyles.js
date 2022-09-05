@@ -4,9 +4,12 @@ export const screen = {
   mobileS:"(min-width: 314px)",
   mobileM: "(min-width: 375px)",
   mobileL: "(min-width: 425px)",
+  mobileXL: "(min-width: 525px)",
   tablet: "(min-width: 768px)",
   laptop: "(min-width: 1024px)",
   laptopL: "(min-width: 1440px)",
+  laptopXL: "(min-width: 1920px)",
+
 };
 
 export const colors = {

@@ -1,18 +1,44 @@
 import styled from "styled-components";
-import { colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 
 export const MainContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+
+  .inner-container {
+    padding: 32px;
+    max-width: 1745px;
+  }
+
   .top-page-container {
     background-color: ${colors.black};
     margin-bottom: 0px;
   }
+
+  @media${screen.tablet} {
+    .inner-container {
+      padding: 72px;
+    }
+  }
+
+  @media${screen.laptop} {
+    .inner-container {
+      padding: 80px;
+    }
+  }
 `;
 
-export const Container = styled.div`
+export const NewswireContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  h2 {
+    width: 100%;
+    font-size: ${fontSizes.size7};
+  }
 
   h3 {
     padding-right: 12px;
@@ -31,8 +57,9 @@ export const Container = styled.div`
     border-radius: 7px;
     display: grid;
     grid-template-column: 1fr;
-    width: 80%;
+    width: 100%;
   }
+
   .newswireImg {
     width: 100%;
     border-top-left-radius: 7px;
@@ -44,6 +71,7 @@ export const Container = styled.div`
     align-items: center;
     width: 80%;
   }
+
   .detail {
     padding: 32px 0 32px 0;
     display: flex;
@@ -55,6 +83,12 @@ export const Container = styled.div`
     font-size: ${fontSizes.size6};
     width: 80%;
   }
+
+  @media${screen.laptopXL}{
+    h2{
+      font-size: ${fontSizes.size8};
+    }
+  }
 `;
 
 export const GameContainer = styled.div`
@@ -65,11 +99,11 @@ export const GameContainer = styled.div`
   width: 100%;
 
   h2 {
-    width: 80%;
+    width: 100%;
   }
 
   .imgContainer {
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
@@ -80,5 +114,11 @@ export const GameContainer = styled.div`
   .gameImg {
     width: 100%;
     border-radius: 7px;
+  }
+
+  @media${screen.laptop} {
+    .imgContainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 `;

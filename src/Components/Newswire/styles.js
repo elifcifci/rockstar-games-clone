@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 
 export const Container = styled.div`
   display: flex;
@@ -18,6 +18,17 @@ export const Container = styled.div`
     color: ${colors.opacityColor};
   }
 
+  .preview-newswire {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .preview-newswire .innerContainer {
+    margin-bottom: 0;
+  }
+
   .first-newswire {
     margin-bottom: 55px;
     width: 100%;
@@ -27,6 +38,7 @@ export const Container = styled.div`
   .first-newswire_img {
     width: 100%;
   }
+
   .first-announcement {
     font-size: ${fontSizes.size7};
     font-weight: bold;
@@ -43,7 +55,7 @@ export const Container = styled.div`
   .first-newswire-time {
     display: flex;
     align-items: center;
-    justify-content: center;
+    width: 80%;
   }
 
   .innerContainer {
@@ -52,29 +64,47 @@ export const Container = styled.div`
     border: 1px solid ${colors.gray};
     border-radius: 7px;
     display: grid;
-    grid-template-column: 1fr;
-    width: 80%;
+    grid-template-columns: 1fr;
   }
+
   .newswireImg {
     width: 100%;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
   }
 
-  .detail-title-time {
-    display: flex;
-    align-items: center;
-    width: 80%;
-  }
   .detail {
     padding: 32px 0 32px 0;
+  }
+
+  .detail-title-time {
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+
+  time {
+    padding-right: 12px;
   }
 
   .announcement {
-    font-size: ${fontSizes.size6};
+    font-size: ${fontSizes.size7};
+    line-height: 1.3;
+    font-weight: 600;
     width: 80%;
+  }
+
+  @media${screen.tablet} {
+    .preview-newswire {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.9rem;
+
+    }
+  }
+
+  @media${screen.laptop} {
+    .preview-newswire {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 `;

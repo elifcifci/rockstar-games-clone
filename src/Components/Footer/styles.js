@@ -19,6 +19,7 @@ export const FooterContainer = styled.div`
   }
   @media${screen.tablet} {
     padding: 72px;
+    margin-top: 0px;
 
     section {
       flex-direction: row;
@@ -32,7 +33,6 @@ export const FooterContainer = styled.div`
     }
   }
 `;
-
 
 export const ContactInWebsiteAndLanguagesContainer = styled.div`
   display: grid;
@@ -104,6 +104,7 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
 
   @media ${screen.mobileS} {
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1.2rem;
 
     .select-container {
       display: flex;
@@ -112,16 +113,33 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
   }
 
   @media ${screen.tablet} {
+    .contact-item {
+      font-size: 18px;
+    }
     .contact-list {
       display: flex;
-      width: 300px;
-      grid-row-gap: 1rem;
+      width: 330px;
     }
   }
 
   @media ${screen.laptop} {
     .contact-item {
       width: 100%;
+      font-size: 20px;
+    }
+
+    .contact-list {
+      width: 350px;
+    }
+  }
+
+  @media ${screen.laptopXL} {
+    .contact-item {
+      font-size: 22px;
+    }
+
+    .contact-list {
+      width: 375px;
     }
   }
 `;

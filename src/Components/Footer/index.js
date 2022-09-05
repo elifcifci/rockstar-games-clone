@@ -100,7 +100,6 @@ export default function Footer() {
               strokeWidth="2"
             />
           </svg>
-          {/* <select className="contact-select">{getOptions}</select> */}
           <Dropdown constants={footerConstants.languages} isForFooter={true} />
         </form>
       </ContactInWebsiteAndLanguagesContainer>

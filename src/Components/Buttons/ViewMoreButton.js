@@ -1,15 +1,14 @@
 import React from "react";
-import { NewswireButtonContainer, NewswirePageLinkAnimate } from "./styles";
+import { AnimatedButtonContainer, ButtonAnimation } from "./styles";
 
-export function ViewMoreButton({text, link}) {
-
+export function ViewMoreButton({ text, link }) {
   return (
-      <NewswireButtonContainer href={link}>
-        <p className="link-text">{text}</p>
-        <NewswirePageLinkAnimate
-          initial={{ scale: 1 }}
-          whileHover={{ width: 85, height: 25 }}
-        />
-      </NewswireButtonContainer>
+    <AnimatedButtonContainer href={link}>
+      <p className="link-text">{text}</p>
+      <ButtonAnimation
+        initial={{ scale: 1 }}
+        whileHover={{ width: 85, height: 25 }}
+      />
+    </AnimatedButtonContainer>
   );
 }

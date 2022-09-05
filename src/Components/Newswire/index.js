@@ -1,7 +1,11 @@
 import React from "react";
 import { Container } from "./styles";
 
-export function CreateNewswireCards({ showThisCards, mainConstantLength }) {
+export function CreateNewswireCards({
+  showThisCards,
+  mainConstantLength,
+  isPreview,
+}) {
   let result = showThisCards.map((item) => {
     if (item.id == mainConstantLength - 1) {
       return (
@@ -32,5 +36,11 @@ export function CreateNewswireCards({ showThisCards, mainConstantLength }) {
     );
   });
 
-  return <Container>{result}</Container>;
+  return isPreview ? (
+    <Container>
+      <div className="preview-newswire">{result}</div>
+    </Container>
+  ) : (
+    <Container>{result}</Container>
+  );
 }
