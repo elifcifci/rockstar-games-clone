@@ -21,6 +21,7 @@ export const colors = {
   gray: "rgb(40, 40, 40)",
   black: "rgb(0,0,0)",
   white: "rgb(255,255,255)",
+  inactive: "rgb(102, 102, 102)"
 };
 
 export const fontSizes = {

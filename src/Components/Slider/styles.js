@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { fontSizes, colors } from "../../Styles/globalStyles";
+import { screen, fontSizes, colors } from "../../Styles/globalStyles";
 
 export const Carousel = styled(motion.div)`
   cursor: pointer;
@@ -9,6 +9,7 @@ export const Carousel = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   margin-bottom: 32px;
+  width: 100%;
 
   .slider-inside-page-container {
     width: 80%;
@@ -39,7 +40,7 @@ export const Carousel = styled(motion.div)`
 `;
 
 export const ButtonContainer = styled(motion.div)`
-  padding: 32px 0 32px 0;
+  padding: 32px 0 0 0;
   display: flex;
   width: 80%;
 
@@ -62,6 +63,19 @@ export const ButtonContainer = styled(motion.div)`
 
   .active-dot {
     background-color: white;
+  }
+
+  @media${screen.tablet} {
+    .button-label {
+      height: 30px;
+      width: 4.6rem;
+    }
+  
+    .slider_button {
+      margin-right: 10px;
+      height: 4px;
+      width: 4.6rem;
+    }
   }
 `;
 

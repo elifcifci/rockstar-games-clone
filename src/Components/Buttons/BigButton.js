@@ -1,6 +1,7 @@
 import React from "react";
 import { colors } from "../../Styles/globalStyles";
 import { SliderWatchButton } from "./styles";
+
 export const BigButton = ({ text }) => {
   return (
     <SliderWatchButton
