@@ -102,7 +102,7 @@ export const Container = styled.div`
     }
   }
 
-  @media${screen.laptop} {
+  @media${screen.laptopS} {
     .preview-newswire {
       grid-template-columns: repeat(3, 1fr);
     }

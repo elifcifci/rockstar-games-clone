@@ -6,7 +6,9 @@ export const screen = {
   mobileL: "(min-width: 425px)",
   mobileXL: "(min-width: 525px)",
   tablet: "(min-width: 768px)",
-  laptop: "(min-width: 1024px)",
+  tabletM: "(min-width: 828px)",
+  laptopS: "(min-width: 1024px)",
+  laptopM: "(min-width: 1197px)",
   laptopL: "(min-width: 1440px)",
   laptopXL: "(min-width: 1920px)",
 

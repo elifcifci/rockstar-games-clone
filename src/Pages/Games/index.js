@@ -1,6 +1,6 @@
 import React from "react";
 import { gamesConstant } from "../../Constants/games";
-import {GameContainer} from "./styles";
+import { GameContainer } from "./styles";
 
 function Games() {
   const createGameCards = gamesConstant.map((game) => {
@@ -11,7 +11,11 @@ function Games() {
     );
   });
 
-  return <GameContainer>{createGameCards}</GameContainer>;
+  return (
+    <GameContainer>
+      <div className="game-items">{createGameCards}</div>
+    </GameContainer>
+  );
 }
 
 export default Games;

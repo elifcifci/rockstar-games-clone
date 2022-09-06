@@ -25,7 +25,7 @@ export const FooterContainer = styled.div`
       flex-direction: row;
     }
   }
-  @media${screen.laptop} {
+  @media${screen.laptopS} {
     section {
       display: grid;
       grid-gap: 0;
@@ -122,7 +122,7 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
     }
   }
 
-  @media ${screen.laptop} {
+  @media ${screen.laptopS} {
     .contact-item {
       width: 100%;
       font-size: 20px;
@@ -164,7 +164,7 @@ export const GeneralKnowledgeContainer = styled.div`
     width: 100%;
   }
 
-  @media ${screen.laptop} {
+  @media ${screen.laptopS} {
     order: 1;
 
     .contact-item {

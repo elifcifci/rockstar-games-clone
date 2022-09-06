@@ -22,7 +22,7 @@ align-items: center;
     }
   }
 
-  @media${screen.laptop} {
+  @media${screen.laptopS} {
     .inner-container {
       padding: 80px;
     }
@@ -116,7 +116,7 @@ export const GameContainer = styled.div`
     border-radius: 7px;
   }
 
-  @media${screen.laptop} {
+  @media${screen.laptopS} {
     .imgContainer {
       grid-template-columns: repeat(4, 1fr);
     }
