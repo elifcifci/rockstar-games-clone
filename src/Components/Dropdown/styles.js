@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../Styles/globalStyles";
+import { screen, colors } from "../../Styles/globalStyles";
 
 export const DropdownContainer = styled.div`
   cursor: pointer;
@@ -71,5 +71,17 @@ export const DropdownContainer = styled.div`
   .dropdown-list_first-item {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+  }
+
+  @media${screen.tablet}{
+    .dropdown-select-text {
+      padding: 0.5rem;
+    }
+
+    svg{
+      border: solid;
+      display: flex;
+      justify-container: flex-end;
+    }
   }
 `;

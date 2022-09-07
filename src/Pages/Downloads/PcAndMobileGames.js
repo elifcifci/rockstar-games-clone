@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import {ViewMoreButton} from "../../Components/Buttons/ViewMoreButton";
 import { PcAndMobileGamesContainer } from "./styles";
 import Dropdown from "../../Components/Dropdown/index.js";
 
@@ -33,6 +34,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
         {isPcGames ? "PC & Mac Games" : "Mobile Games & Apps"}
       </h2>
       <div className="content-container">{createContent}</div>
+      <ViewMoreButton text="View All"/>
     </PcAndMobileGamesContainer>
   );
 }

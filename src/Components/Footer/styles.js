@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 
 export const FooterContainer = styled.div`
-  margin-top: 32px;
   padding: 64px 30px 40px 30px;
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ import { FeaturedAndMiscellaneousContainer } from "./styles";
 function MiscellaneousAndFeatured({ constants, isFeatured }) {
   let createContent = constants.map((constant) => {
     return (
-      <div key={constant.id}>
+      <div className="inner-container" key={constant.id}>
         <img
           className={isFeatured ? "featured_img" : "miscellaneous_img"}
           src={constant.img}
@@ -17,7 +17,9 @@ function MiscellaneousAndFeatured({ constants, isFeatured }) {
 
   return (
     <FeaturedAndMiscellaneousContainer>
-      <h2 className="content_title">{isFeatured ? "Featured Downloads" : "Miscellaneous"}</h2>
+      <h2 className="content_title">
+        {isFeatured ? "Featured Downloads" : "Miscellaneous"}
+      </h2>
       <div
         className={isFeatured ? "featured-content" : "miscellaneous-content"}
       >
