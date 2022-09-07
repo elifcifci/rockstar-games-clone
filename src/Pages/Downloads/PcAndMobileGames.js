@@ -1,7 +1,9 @@
 import React from "react";
-import {ViewMoreButton} from "../../Components/Buttons/ViewMoreButton";
+import { ViewMoreButton } from "../../Components/Buttons/ViewMoreButton";
 import { PcAndMobileGamesContainer } from "./styles";
 import Dropdown from "../../Components/Dropdown/index.js";
+import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
+
 
 function PcAndMobileGames({ constants, isPcGames }) {
   // const [copyConstants, setCopyConstants] = useState([...constants])
@@ -18,8 +20,9 @@ function PcAndMobileGames({ constants, isPcGames }) {
   //   setCopyConstants([updatedConstants])
   // }
 
+  let limitedConstant = getLimitedConstant(3, constants);
 
-  let createContent = constants.map((constant) => {
+  let createContent = limitedConstant.map((constant) => {
     return (
       <div key={constant.id} className="inner-container">
         <img className="content-img" src={constant.img} alt="" />
@@ -34,7 +37,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
         {isPcGames ? "PC & Mac Games" : "Mobile Games & Apps"}
       </h2>
       <div className="content-container">{createContent}</div>
-      <ViewMoreButton text="View All"/>
+      <ViewMoreButton text="View All" />
     </PcAndMobileGamesContainer>
   );
 }

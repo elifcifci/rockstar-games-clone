@@ -1,10 +1,13 @@
 import React from "react";
-import { gamesPreviewConstant } from "../../Constants/gamesPreview";
 import { ViewMoreButton } from "../../Components/Buttons/ViewMoreButton";
 import { GameContainer } from "./styles";
+import {getLimitedConstant} from "../../Helpers/getLimitedConstant";
+import {gamesConstant} from "../../Constants/games"
 
 function GamesPreview() {
-  const getPreviewGames = gamesPreviewConstant.map((constant) => {
+  const limitedConstant = getLimitedConstant(3, [...gamesConstant]);
+
+  const getPreviewGames = limitedConstant.map((constant) => {
     return (
       <img key={constant.id} className="gameImg" src={constant.poster} alt="" />
     );
