@@ -46,18 +46,17 @@ export const ButtonAnimation = styled(motion.div)`
 
 export const SliderWatchButton = styled(motion.button)`
   font-size: ${fontSizes.size3};
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 16px 48px 16px 48px;
-  width: 100%;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  padding: 1rem 3rem 1rem 3rem;
   margin-top: 2rem;
-
-  @media ${screen.tablet} {
-    margin-bottom: 3rem;
-  }
+  line-height: 100%;
+  
   @media ${screen.laptopS} {
     margin-bottom: 0;
-    padding: 20px 60px 20px 60px;
     font-weight: 700;
+    padding: 20px 60px;
+    width: 284px;
+    height: 62px;
   }
 `;

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import SliderButtons from "./SliderButtons";
 import SliderArrows from "./SliderArrows";
 import { SliderContent } from "./SliderContent";
-import { BigButton } from "../Buttons/BigButton";
+import { WatchButton } from "../Buttons/WatchButton";
 import { Carousel } from "./styles";
 
 const Slider = ({
@@ -69,7 +69,7 @@ const Slider = ({
 
       {visibleTopSlidersButtons && (
         <>
-          <BigButton text="WATCH NOW" />
+          <WatchButton text="WATCH NOW" />
           <SliderButtons
             activeIndex={activeIndex}
             constants={constants}

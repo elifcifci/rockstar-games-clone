@@ -2,8 +2,14 @@ import styled from "styled-components";
 import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 
 export const DownloadsContainer = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-gap: 4rem;
+  max-width: 1920px;
+  box-sizing: border: box;
+  margin: 0 auto;
 
   @media${screen.tablet} {
     grid-gap: 8rem;
@@ -18,7 +24,7 @@ export const DownloadsContainer = styled.div`
 `;
 
 export const TopGameContainer = styled.div`
-  padding: 0 32px 0 32px;
+  padding: 32px;
   background-color: ${colors.black};
 
   .top-game_img {
@@ -57,12 +63,42 @@ export const TopGameContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
-    padding: 80px;
+    padding: 4rem;
+    border-radius: 16px;
+
+    .top-game_paragraph {
+      font-size: 20px;
+    }
+  }
+
+  @media${screen.laptopL} {
+    .top-game_paragraph {
+      line-height: 1.6rem;
+    }
+
+    .top-game-detail {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+
+  @media${screen.laptopXL} {
+    padding: 2rem 4rem;
+    grid-gap: 4rem;
+    grid-template-columns: 55% 1fr;
+
+    .top-game-detail {
+      padding: 2rem 0 2rem 0;
+    }
+
+    .top-game_paragraph {
+      font-size: 22px;
+    }
   }
 `;
-
 export const FeaturedAndMiscellaneousContainer = styled.div`
   padding: 0 32px 0 32px;
+  justify-self: center;
 
   .inner-container {
     display: grid;
@@ -154,12 +190,19 @@ export const FeaturedAndMiscellaneousContainer = styled.div`
       margin: 0 0 30px 0;
     }
   }
+
+  @media${screen.laptopL} {
+    .featured-content {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 `;
 
 export const PcAndMobileGamesContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 32px 0 32px;
+  justify-self: center;
 
   .content-container {
     width: 100%;
@@ -207,12 +250,6 @@ export const PcAndMobileGamesContainer = styled.div`
 
     .content_title {
       font-size: ${fontSizes.size7};
-    }
-  }
-
-  @media${screen.laptopM} {
-    .content_title {
-      margin: 0 0 30px 0;
     }
   }
 `;

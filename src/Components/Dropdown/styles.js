@@ -10,6 +10,7 @@ export const DropdownContainer = styled.div`
     padding: 0 8px 8px 8px;
     border-bottom: 1px solid ${colors.tertiary};
   }
+
   .games-dropdown-title {
     color: ${colors.white};
   }
@@ -55,6 +56,7 @@ export const DropdownContainer = styled.div`
     background-color: ${colors.black};
     width: 100%;
   }
+
   .dropdown-list_item {
     padding: 8px 16px 8px 16px;
     width: 100%;
@@ -67,21 +69,20 @@ export const DropdownContainer = styled.div`
     border-bottom-right-radius: 10px;
   }
 
-
   .dropdown-list_first-item {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
 
-  @media${screen.tablet}{
+  @media${screen.mobileL} {
+    .dropdown-select-text {
+      grid-template-columns: 5fr 1fr;
+    }
+  }
+
+  @media${screen.tablet} {
     .dropdown-select-text {
       padding: 0.5rem;
-    }
-
-    svg{
-      border: solid;
-      display: flex;
-      justify-container: flex-end;
     }
   }
 `;
