@@ -1,27 +1,39 @@
 import React, { useState } from "react";
-import { countCardsNumber } from "../../Components/Newswire/cardCounter";
-import { CreateNewswireCards } from "../../Components/Newswire/index";
+import { Container } from "./styles";
+import { NewswireCardRenderer } from "../../Components/NewswireCardRenderer/index";
 import { MoreStoriesButton } from "../../Components/Buttons/MoreStoriesButton";
 import { newswireConstants } from "../../Constants/newswire";
+import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
 
 function Newswire() {
-  let [counter, setCounter] = useState(19);
-  const newswireConstantsLength = newswireConstants.length;
-  let countedCards =countCardsNumber(counter);
+  let [requestedLimit, setRequestedLimit] = useState(18);
+  const constantsLength = newswireConstants.length;
 
   let updateCounter = () => {
-    let updatedCounter = counter + 20;
+    let updatedRequest = requestedLimit + 20;
 
-    updatedCounter <= newswireConstantsLength
-      ? setCounter((counter += 20))
-      : setCounter(newswireConstantsLength);
+    updatedRequest <= constantsLength
+      ? setRequestedLimit(updatedRequest)
+      : setRequestedLimit(constantsLength);
   };
 
+  let limitedNewswireConstant = getLimitedConstant(
+    requestedLimit,
+    newswireConstants
+  );
   return (
-    <>
-      <CreateNewswireCards isPreview={false} showThisCards={[...countedCards]} mainConstantLength = {newswireConstantsLength}/>
+    <Container>
+      <NewswireCardRenderer isTopCard={true} constants={newswireConstants} />
+
+      <div className="mes">
+        
+        <NewswireCardRenderer
+          isTopCard={false}
+          constants={[...limitedNewswireConstant]}
+        />
+      </div>
       <MoreStoriesButton click={updateCounter} text={"More Stories"} />
-    </>
+    </Container>
   );
 }
 

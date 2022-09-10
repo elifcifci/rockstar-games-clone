@@ -6,7 +6,6 @@ export const AnimatedButtonContainer = styled(motion.a)`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  margin-top: 32px;
 
   .link-text {
     z-index: 2;

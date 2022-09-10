@@ -11,7 +11,7 @@ export const screen = {
   laptopM: "(min-width: 1197px)",
   laptopL: "(min-width: 1440px)",
   laptopXL: "(min-width: 1920px)",
-
+  biggestScreen: "(min-width: 2560px)",
 };
 
 export const colors = {

@@ -8,7 +8,7 @@ import {
 export function MoreStoriesButton({ text, click }) {
   return (
     <AnimatedButtonContainer>
-      <MoreStoryButton type="button" onClick={click}>
+      <MoreStoryButton onClick={click}>
         {text}
       </MoreStoryButton>
       <ButtonAnimation

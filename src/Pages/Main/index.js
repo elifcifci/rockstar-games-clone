@@ -9,7 +9,7 @@ function Main() {
   return (
     <MainContainer>
       <Slider constants={sliderConstants} visibleTopSlidersButtons={true} />
-      <div className="inner-container">
+      <div className="previews-container">
         <NewswirePreview />
         <GamesPreview />
       </div>

@@ -1,22 +1,30 @@
 // First users view 19 cards. When users click the "more stories" button add 20 more cards on the page
 export const newswireConstants = [
   {
+    id: "33",
+    title: "GTA Online",
+    announcement: "Revenues Soar for Nightclubs and Nightlife Activities",
+    date: "September 8, 2022",
+    dateTime: "9/8/22, 10:00 AM",
+    link: "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/ak27k1k1o48973/30c00095954c4c88ea72290c6c710fe0147ae71c.jpg",
+    link2: "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/ak27k1k1o48973/66c37b9f858ac08b580381e207af9bdb15b8a823.jpg",
+
+  },
+  {
     id: "32",
     title: "Rockstar Games",
-    announcement:
-      "Rockstar Store Summer Sale: August 24 – September 6",
+    announcement: "Rockstar Store Summer Sale: August 24 – September 6",
     date: "August 24, 2022",
     dateTime: "8/24/22, 1:00 PM",
-    link: "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/1732299a424o25/f149304b99155b3d59373a1dab096a7a6d6a6dd7.jpg"
+    link: "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/1732299a424o25/f149304b99155b3d59373a1dab096a7a6d6a6dd7.jpg",
   },
   {
     id: "31",
     title: "GTA Online",
-    announcement:
-      "The Imponte Ruiner ZZ-8 Muscle Car Available Now",
+    announcement: "The Imponte Ruiner ZZ-8 Muscle Car Available Now",
     date: "August 18, 2022",
     dateTime: "8/18/22, 10:00 AM",
-    link: "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/k429kk427k83a2/f794895010dcd186db0f79d5730a76c700493858.jpg"
+    link: "https://media-rockstargames-com.akamaized.net/tina-uploads/posts/k429kk427k83a2/f794895010dcd186db0f79d5730a76c700493858.jpg",
   },
   {
     id: "30",
