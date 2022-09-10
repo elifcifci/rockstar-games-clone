@@ -4,10 +4,7 @@ import Newswire from "./Pages/Newswire";
 import Games from "./Pages/Games";
 import Videos from "./Pages/Videos";
 import Downloads from "./Pages/Downloads";
-import Support from "./Pages/Support";
 import SocialClub from "./Pages/SocialClub";
-import Launcher from "./Pages/Launcher";
-import Store from "./Pages/Store";
 
 import Footer from "./Components/Footer/index";
 
@@ -26,10 +23,7 @@ function App() {
           <Route path="/games" exact element={<Games />} />
           <Route path="/videos" exact element={<Videos />} />
           <Route path="/downloads" exact element={<Downloads />} />
-          <Route path="/support" exact element={<Support />} />
           <Route path="/socialClub" exact element={<SocialClub />} />
-          <Route path="/launcher" exact element={<Launcher />} />
-          <Route path="/store" exact element={<Store />} />
           <Route path="/:id" exact element={<Newswire />} />
         </Routes>
         <Footer />
