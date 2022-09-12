@@ -8,41 +8,51 @@ export const Carousel = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
   width: 100%;
 
   .slider-inside-page-container {
-    width: 80%;
-    margin: 0 25px 0 4px;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin-left: -10px;
     border-radius: 10px;
     background-color: ${colors.black};
   }
 
   .slider-header {
-    margin-top: 25px;
-    width: 80%;
-    margin-bottom: 25px;
+    box-sizing: border-box;
+    padding: 0rem 2rem 1.5rem 2rem;
     display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-gap: 4px;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1rem;
+    width: 100%;
   }
 
   .slider-header_title {
-    font-size: ${fontSizes.size6};
+    font-size: ${fontSizes.size5};
     font-weight: bold;
   }
 
   .slider_arrow {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
+  }
+
+  .visible-slider-header .slider-header {
+    border: solid;
+  }
+
+  .button-container {
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    box-sizing: border-box;
   }
 `;
 
 export const ButtonContainer = styled(motion.div)`
   padding: 32px 0 0 0;
   display: flex;
-  width: 80%;
 
   .button-label {
     height: 20px;
@@ -70,7 +80,7 @@ export const ButtonContainer = styled(motion.div)`
       height: 30px;
       width: 4.6rem;
     }
-  
+
     .slider_button {
       margin-right: 10px;
       height: 4px;
@@ -80,6 +90,9 @@ export const ButtonContainer = styled(motion.div)`
 `;
 
 export const ArrowButtonContainer = styled.div`
+  display: grid;
+  grid-gap: 1.5rem;
+
   .slider-arrow {
     width: 13px;
     fill: white;
@@ -90,75 +103,92 @@ export const ArrowButtonContainer = styled.div`
   }
 `;
 
-export const InnerCarousel = styled(motion.div)`
-  display: flex;
+export const InnerCarouselContainer = styled.div`
   width: 100%;
 
-  .slider-inside-page-container {
-    min-width: 100%;
-    margin: 0 25px 0 4px;
-    border-radius: 10px;
-    border: 1px solid ${colors.gray};
-    background-color: ${colors.black};
-  }
-
-  .slider-inside-page_image {
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-bottom: 0;
-  }
-
-  .slider-inside-page_detail {
-    padding: 24px 16px 24px 16px;
-  }
-
-  .slider-inside-page-inner-content {
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .slider-inside-page_title {
-    font-size: ${fontSizes.size3};
-    margin-top: 5px;
-    margin-bottom: 25px;
-  }
-
-  .slider-top-page-container {
+  .slider-page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 100%;
     margin: 0;
+    min-width: 100%;
   }
 
-  .slider-top-page-inner-content {
+  .slider-page_image {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
-  .slider-top-page_image {
-    width: 100%;
-    padding-bottom: 32px;
-  }
-
-  .slider-top-page_detail {
+  .slider-page_detail {
     font-size: ${fontSizes.size4};
-    width: 80%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 0.5rem;
   }
 
-  .slider-top-page_title {
-    margin: 10px 0 25px 0;
+  .slider-page_title {
+    margin: 0;
   }
 
   .inner-carousel_figcaption {
     font-size: ${fontSizes.size2};
     font-weight: bold;
   }
+
+  @media${screen.mobileM} {
+    .slider-page_detail {
+      padding: 2rem;
+      height: auto;
+    }
+  }
+
+  ${(props) =>
+    props.visibleForTopPage
+      ? `
+  .slider-page_detail{
+    box-sizing: border-box;
+    height: auto;
+  } `
+      : `
+  .slider-page-container{
+    margin: 0 25px 0 10px;
+    border-radius: 10px;
+    border: 1px solid ${colors.gray};
+    background-color: ${colors.black};
+    width: 100%;
+  }
+  
+  .slider-page_image{
+    width: 100%;
+    border-left-radius: 10px;
+    border-right-radius: 10px;
+    padding-bottom: 0;
+  }
+
+  .slider-page_detail {
+    padding: 24px 16px 24px 16px;
+  }
+
+  .slider-page_title{
+    font-size: ${fontSizes.size3};
+    margin: 5px 0 25px 0;
+  }
+
+  `}
+
+  ${(props) =>
+    props.isLastSlider &&
+    `
+   .slider-page_image{
+    border-radius: 10px;
+   }
+  `}
+`;
+
+export const InnerCarousel = styled(motion.div)`
+  display: flex;
+  width: 100%;
 `;

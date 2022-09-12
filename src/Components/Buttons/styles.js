@@ -38,6 +38,7 @@ export const ButtonAnimation = styled(motion.div)`
   border-radius: 4px;
   position: absolute;
   z-index: 1;
+
   @media ${screen.tablet} {
     width: 90px;
   }
@@ -48,8 +49,7 @@ export const SliderWatchButton = styled(motion.button)`
   font-weight: 700;
   border-radius: 0.25rem;
   padding: 1rem 3rem 1rem 3rem;
-  margin-top: 2rem;
-  line-height: 100%;
+  width: 100%;
   
   @media ${screen.laptopS} {
     margin-bottom: 0;
