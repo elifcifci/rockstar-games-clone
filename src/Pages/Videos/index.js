@@ -4,6 +4,7 @@ import { videos } from "../../Constants/video";
 import { VideosContainer } from "./styles";
 
 function Videos() {
+  
   return (
     <VideosContainer>
       {videos.map((video) => {
@@ -13,7 +14,6 @@ function Videos() {
             constants={video[1].constant}
             sliderTitle={video[0] !== "top slider" && video[0].title}
             visibleForTopPage={video[0].title === "top slider" ? true : false}
-            isLastSlider={true}
           />
         );
       })}
@@ -22,3 +22,6 @@ function Videos() {
 }
 
 export default Videos;
+
+
+// title: "By Game",

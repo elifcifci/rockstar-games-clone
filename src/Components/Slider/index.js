@@ -1,16 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import SliderButtons from "./SliderButtons";
-import SliderArrows from "./SliderArrows";
-import { SliderContent } from "./SliderContent";
-import { WatchButton } from "../Buttons/WatchButton";
-import { Carousel } from "./styles";
+import SliderButtons from "./Buttons";
+import Detail from "./Detail";
+import SliderContent from "./Content";
+import { SliderContainer, Carousel } from "./styles";
 
 const Slider = ({
   constants,
   sliderTitle,
   visibleForTopPage,
-  isLastSlider
 }) => {
+
   const carouselWidth = useRef();
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth] = useState(0);
@@ -43,42 +42,34 @@ const Slider = ({
   };
 
   return (
-    <Carousel
-      // insidePageContainer={visibleForTopPage ? false : true}
-      ref={carouselWidth}
-      className={visibleForTopPage ? "inside-page-container" : "visible-slider-header  inside-page-container" }
-    >
-      {/* This part will be visible when sliders aren't top of page */}
-      {!visibleForTopPage && (
-        <div className="slider-header">
-          <div className="slider-header_title">{sliderTitle}</div>
-          <SliderArrows
+    <SliderContainer>
+      <div className={visibleForTopPage ? "top-carousel-container" : "inside-carousel-container"}>
+        <Carousel ref={carouselWidth}>
+          <SliderContent
+            visibleForTopPage={visibleForTopPage}
+            limit={dragLimit}
+            screenWidth={width}
+            constants={constants}
             clicksCount={arrowClickCount}
             clickLimit={constants.length - 1}
             click={slideWithArrows}
+            title={sliderTitle}
           />
-        </div>
-      )}
-      <SliderContent
-        visibleForTopPage={visibleForTopPage}
-        limit={dragLimit}
-        screenWidth={width}
-        constants={constants}
-        isLastSlider={isLastSlider}
-      />
+        </Carousel>
 
-      {/* This part will be visible when slider is top of page */}
-      {visibleForTopPage && (
-        <div className="button-container">
-          <WatchButton text="WATCH NOW" />
+        {/* This part will be visible when slider is top of page */}
+        {visibleForTopPage && (
+          <div className="detail-and-buttons-container">
+          <Detail constants={constants} index={activeIndex} />
           <SliderButtons
-            activeIndex={activeIndex}
-            constants={constants}
-            click={(event) => setActiveIndex(event.target.id)}
+          activeIndex={activeIndex}
+          constants={constants}
+          click={(event) => setActiveIndex(event.target.id)}
           />
-        </div>
-      )}
-    </Carousel>
+          </div>
+        )}
+      </div>
+    </SliderContainer>
   );
 };
 

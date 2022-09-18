@@ -48,14 +48,33 @@ export const SliderWatchButton = styled(motion.button)`
   font-size: ${fontSizes.size3};
   font-weight: 700;
   border-radius: 0.25rem;
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 16px 48px;
   width: 100%;
-  
+  box-sizing: border-box;
+
+  @media${screen.mobileXL} {
+    max-width: 200px;
+  }
+
+  @media${screen.tablet} {
+    padding: 18px 0;
+    max-width: 230px;
+    height: 56px;
+    font-size: ${fontSizes.size4};
+  }  
+
   @media ${screen.laptopS} {
     margin-bottom: 0;
     font-weight: 700;
-    padding: 20px 60px;
-    width: 284px;
+    padding: 20px 0px;
+    max-width: 250px;
     height: 62px;
+  }
+
+  @media${screen.biggestScreen} {
+      font-size: ${fontSizes.size6};
+      padding: 22px 0px;
+      height: auto;
+
   }
 `;

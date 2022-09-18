@@ -2,7 +2,7 @@ import React from "react";
 import { colors } from "../../Styles/globalStyles";
 import { SliderWatchButton } from "./styles";
 
-export const WatchButton = ({ text }) => {
+export const WatchButton = ({ text,title }) => {
   return (
     <SliderWatchButton
       initial={{
@@ -16,6 +16,7 @@ export const WatchButton = ({ text }) => {
         border: `1px solid ${colors.secondary}`,
       }}
       type="button"
+      title={title}
     >
       {text}
     </SliderWatchButton>

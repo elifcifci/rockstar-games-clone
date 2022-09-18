@@ -17,7 +17,7 @@ function SliderButtons({ activeIndex, click, constants }) {
               id={constant.id}
               className={`${
                 activeIndex == index
-                  ? "slider_button active-dot"
+                  ? "slider_button active-slider_button"
                   : "slider_button"
               }`}
             />

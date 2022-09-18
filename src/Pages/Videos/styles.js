@@ -4,10 +4,10 @@ import { colors } from "../../Styles/globalStyles";
 
 export const VideosContainer = styled(motion.div)`
   margin-bottom: 4rem;
-  display: grid;
-  grid-gap: 4rem;
+  display: flex;
+  flex-direction: column;
 
-  .top-page-container {
+  .top-carousel-container {
     background-color: ${colors.black};
     margin-bottom: 0px;
   }
