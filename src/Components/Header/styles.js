@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { colors } from "../../Styles/globalStyles";
 
-export const Container = styled(motion.nav)`
+export const HeaderContainer = styled(motion.nav)`
   width: 100%;
   height: 60px;
   border-bottom: solid 1px ${colors.gray};
@@ -14,7 +14,7 @@ export const Container = styled(motion.nav)`
   top: 0;
   z-index: 3;
 
-  .inner-container {
+  .header-inner-container {
     padding: 12px 32px 12px 32px;
     width: 90%;
     display: grid;

@@ -1,24 +1,28 @@
 import styled from "styled-components";
-import { colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 import { motion } from "framer-motion";
 
-export const Container = styled(motion.div)`
-  background-color: ${colors.primary};
+export const MenuItemContainer = styled(motion.div)`
+  padding: 0;
+  background-color: ${colors.black};
   position: fixed;
+  grid-row: 2rem;
   top: 0;
   left: 0;
   bottom: 0;
-  height: 100vh;
-  width: 300px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
+  grid-gap: 2rem;
+  height: 100vh;
+  width: 100%;
   z-index: 2;
+  box-sizing: border-box;
 
   .menu-list {
     padding-left: 0;
-    width: 80%;
-    margin-top: 30px;
+    margin: 0;
+    padding: 0 2rem;
+    display: block;
   }
 
   .list-item {
@@ -34,13 +38,13 @@ export const Container = styled(motion.div)`
     width: 100%;
     height: 100%;
     height: 50px;
-    color:  ${colors.white};
+    color: ${colors.white};
     display: flex;
     align-items: center;
   }
 
-  .active-page{
-    color:  ${colors.secondary};
+  .active-page {
+    color: ${colors.secondary};
   }
 
   .list_icon {
@@ -50,20 +54,20 @@ export const Container = styled(motion.div)`
   }
 `;
 
-export const MenuForm = styled(motion.form)`
+export const MenuSearchInput = styled(motion.form)`
 display: flex;
 justify-content: center;
-margin-top: 82px;
-width: 80%;
-background-color: ${colors.gray};
+margin: 82px 2rem 0 2rem;
+background-color: ${colors.darkerGray};
 border-radius: 4px;
+box-sizing: border: box;
 
 svg{
   cursor: pointer;
   padding: 15px 0 15px 10px;
 }
 .searchArea{
-  background-color: ${colors.gray};
+  background-color: ${colors.darkerGray};
   color: ${colors.white};
   font-size: ${fontSizes.size4};
   border: none;
@@ -77,20 +81,3 @@ svg{
     font-size: ${fontSizes.size3};
   }
 `;
-export const NavbarMenuConfig = {
-  open: {
-    x: 0,
-    y: 0,
-    transition: {
-      type: "tween",
-      delay: 0.2,
-    },
-  },
-  closed: {
-    x: -300,
-    y: 0,
-    transition: {
-      type: "tween",
-    },
-  },
-};

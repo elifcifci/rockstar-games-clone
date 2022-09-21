@@ -16,7 +16,6 @@ export const MenuToggleIcon = ({ toggle }) => (
       }}
     />
     <IconParts
-      // thirdPart
       variants={{
         closed: { opacity: 1 },
         open: { y: -8 },

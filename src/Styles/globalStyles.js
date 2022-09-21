@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const screen = {
-  mobileS:"(min-width: 314px)",
+  mobileS: "(min-width: 314px)",
   mobileM: "(min-width: 375px)",
   mobileL: "(min-width: 425px)",
   mobileXL: "(min-width: 525px)",
@@ -21,13 +21,16 @@ export const colors = {
   opacityColor: "rgba(232, 232, 232 ,0.7)",
   navbarBackground: "rgba(0,0,0,.85)",
   gray: "rgb(40, 40, 40)",
+  darkerGray: "rgb(17, 17, 17)",
   black: "rgb(0,0,0)",
   white: "rgb(255,255,255)",
-  inactive: "rgb(102, 102, 102)"
+  inactive: "rgb(102, 102, 102)",
+  opacityColor2: "rgba(0,0,0,.7)",
+
 };
 
 export const fontSizes = {
-  size0:"0.64rem",
+  size0: "0.64rem",
   size1: "0.70rem",
   size2: "0.8rem",
   size3: "1rem",
@@ -49,6 +52,8 @@ const GlobalStyle = createGlobalStyle`
         font-family: helvetica;
         box-sizing: border-box;
         margin: 0;
+        z-index: 1;
+
     }
 
     a{

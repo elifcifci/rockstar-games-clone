@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import SearchInput from "./SearchInput";
-import { motion } from "framer-motion";
 import { menuItems } from "../../Constants/Navbar";
+
+import { motion } from "framer-motion";
+
 import { generalIcons } from "../../Constants/generalIcons";
-import { Container, NavbarMenuConfig } from "./styles";
+import { MenuItemContainer } from "./styles";
 import { colors } from "../../Styles/globalStyles";
 
-export default function MenuItem({ pageTitle }) {
+export default function MenuItem({ pageTitle, isOpen }) {
   const svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
+  const carouselWidth = useRef();
+  const [width, setWidth] = useState(-99999);
+
+  useEffect(() => {
+    setWidth(carouselWidth.current.scrollWidth + 17);
+  }, [isOpen]);
+
+  const NavbarMenuConfig = {
+    open: {
+      x: 0,
+      y: 0,
+      transition: {
+        type: "tween",
+        delay: 0.2,
+      },
+    },
+    closed: {
+      x: -width,
+      y: 0,
+      transition: {
+        type: "tween",
+        delay: 0.2,
+      },
+    },
+  };
 
   let createMenuItem = menuItems.map((item) => {
     return (
@@ -31,9 +58,13 @@ export default function MenuItem({ pageTitle }) {
   });
 
   return (
-    <Container title="Site" variants={NavbarMenuConfig}>
+    <MenuItemContainer
+      ref={carouselWidth}
+      variants={NavbarMenuConfig}
+      title="Site"
+    >
       <SearchInput />
       <ul className="menu-list">{createMenuItem}</ul>
-    </Container>
+    </MenuItemContainer>
   );
 }

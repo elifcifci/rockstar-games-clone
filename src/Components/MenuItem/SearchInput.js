@@ -1,9 +1,9 @@
 import React from "react";
-import { MenuForm } from "./styles";
+import { MenuSearchInput } from "./styles";
 
 export default function SearchInput() {
   return (
-    <MenuForm title="Submit" >
+    <MenuSearchInput title="Submit" >
       <svg width="29" height="24" fill="none">
         <path
           d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm9.998 2-4.35-4.35"
@@ -19,6 +19,6 @@ export default function SearchInput() {
         placeholder="Search Rockstar Games"
         title="Site" 
       />
-    </MenuForm>
+    </MenuSearchInput>
   );
 }
