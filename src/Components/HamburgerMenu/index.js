@@ -6,13 +6,12 @@ import { menuItems } from "../../Constants/Navbar";
 import { MenuToggleIcon } from "../MenuToggle";
 
 import { HamburgerMenuContainer } from "./styles";
-import { useCycle } from "framer-motion";
 
-export default function HamburgerMenu({ click, isOpen, setIsOpen }) {
+export default function HamburgerMenu({ click, toggle, isOpen }) {
   const [pageTitle, setPageTitle] = useState("");
 
   let pageName = useLocation().pathname;
-  
+
   useEffect(() => {
     menuItems.forEach((item) => {
       if (item.link === pageName) {
@@ -28,8 +27,12 @@ export default function HamburgerMenu({ click, isOpen, setIsOpen }) {
       animate={isOpen ? "open" : "closed"}
       title="Open Menu"
     >
-      <MenuItem toggle={() => setIsOpen(prevState => !prevState)} isOpen = {isOpen} pageTitle={pageTitle} />
-      <MenuToggleIcon toggle={() => setIsOpen(prevState => !prevState)} />
+      <MenuItem
+        toggle={toggle}
+        isOpen={isOpen}
+        pageTitle={pageTitle}
+      />
+      <MenuToggleIcon toggle={toggle} />
       {pageTitle}
     </HamburgerMenuContainer>
   );

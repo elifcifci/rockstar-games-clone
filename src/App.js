@@ -4,32 +4,29 @@ import Newswire from "./Pages/Newswire";
 import Games from "./Pages/Games";
 import Videos from "./Pages/Videos";
 import Downloads from "./Pages/Downloads";
-import SocialClub from "./Pages/SocialClub";
-import BackDrop from "../src/Components/BackDrop"
-import { useCycle, useScroll } from "framer-motion";
-
+import { useCycle } from "framer-motion";
 import Footer from "./Components/Footer/index";
+import BackDrop from "./Components/BackDrop";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./Styles/globalStyles";
-import { useState } from "react";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-console.log("isOpen: ", isOpen);
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const toggleBackDrop = () => toggleOpen();
+
   return (
     <div>
       <GlobalStyle />
       <Router>
-        {/* {isOpen && <BackDrop toggle={setIsOpen((pre) => !pre)}/>} */}
-        <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <Header isOpen={isOpen} toggle={toggleBackDrop} />
+        <BackDrop isOpen={isOpen} toggle={toggleBackDrop} />
         <Routes>
           <Route path="/" exact element={<Main />} />
           <Route path="/newswire" exact element={<Newswire />} />
           <Route path="/games" exact element={<Games />} />
           <Route path="/videos" exact element={<Videos />} />
           <Route path="/downloads" exact element={<Downloads />} />
-          <Route path="/socialClub" exact element={<SocialClub />} />
           <Route path="/:id" exact element={<Newswire />} />
         </Routes>
         <Footer />

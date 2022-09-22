@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import SearchInput from "./SearchInput";
 import { menuItems } from "../../Constants/Navbar";
+// import BackDrop from "../BackDrop";
 
 import { motion } from "framer-motion";
 
@@ -11,11 +12,11 @@ import { colors } from "../../Styles/globalStyles";
 export default function MenuItem({ pageTitle, isOpen }) {
   const svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
   const carouselWidth = useRef();
-  const [width, setWidth] = useState(-99999);
+  // const [width, setWidth] = useState(770);
 
-  useEffect(() => {
-    setWidth(carouselWidth.current.scrollWidth + 17);
-  }, [isOpen]);
+  // useEffect(() => {
+  //   setWidth(carouselWidth.current.scrollWidth + 17);
+  // }, [isOpen]);
 
   const NavbarMenuConfig = {
     open: {
@@ -27,7 +28,7 @@ export default function MenuItem({ pageTitle, isOpen }) {
       },
     },
     closed: {
-      x: -width,
+      x: -770,
       y: 0,
       transition: {
         type: "tween",

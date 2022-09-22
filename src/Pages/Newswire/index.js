@@ -26,7 +26,6 @@ function Newswire() {
       <NewswireCardRenderer isTopCard={true} constants={newswireConstants} />
 
       <div className="mes">
-        
         <NewswireCardRenderer
           isTopCard={false}
           constants={[...limitedNewswireConstant]}

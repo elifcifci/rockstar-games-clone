@@ -22,6 +22,3 @@ function Videos() {
 }
 
 export default Videos;
-
-
-// title: "By Game",

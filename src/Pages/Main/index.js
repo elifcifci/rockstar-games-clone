@@ -6,12 +6,10 @@ import { mainConstants } from "../../Constants/main";
 import { MainContainer } from "./styles";
 
 function Main() {
+
   return (
-    <MainContainer>
-      <Slider
-        constants={mainConstants}
-        visibleForTopPage={true}
-      />
+    <MainContainer>      
+      <Slider constants={mainConstants} visibleForTopPage={true} />
       <div className="previews-container">
         <NewswirePreview />
         <GamesPreview />

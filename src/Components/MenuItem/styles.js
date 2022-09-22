@@ -52,6 +52,14 @@ export const MenuItemContainer = styled(motion.div)`
     margin-left: 7px;
     width: 10px;
   }
+
+  @media${screen.tablet} {
+    width: max-content;
+
+    .menu-list {
+      padding: 0 4rem;
+    }
+  }
 `;
 
 export const MenuSearchInput = styled(motion.form)`
@@ -79,5 +87,10 @@ svg{
   ::placeholder {
     color: ${colors.opacityColor};
     font-size: ${fontSizes.size3};
+  }
+}
+
+  @media${screen.tablet}{
+    margin: 82px 4rem 0 4rem;
   }
 `;

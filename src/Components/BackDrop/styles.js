@@ -1,12 +1,11 @@
-import styled, { keyframes } from "styled-components";
-import { screen, colors } from "../../Styles/globalStyles";
+import styled from "styled-components";
+import {motion} from "framer-motion";
 
-const navbarBackgroundAnimation = keyframes`
-to {background-color: ${colors.opacityColor2};}
-`;
-
-export const BackDropContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  animation: ${navbarBackgroundAnimation} linear 1s;
+export const BackDropContainer = styled(motion.div)`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
 `;

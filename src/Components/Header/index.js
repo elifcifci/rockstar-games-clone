@@ -5,7 +5,7 @@ import HamburgerMenu from "../HamburgerMenu";
 
 import { HeaderContainer } from "./styles";
 
-export default function Header({isOpen , setIsOpen}) {
+export default function Header({isOpen , toggle}) {
   let [isVisible, setIsVisible] = useState(false);
   let rockstarGamesIcon = (
     <a href="/" className="page-icon-link" title="Home">
@@ -47,11 +47,10 @@ export default function Header({isOpen , setIsOpen}) {
     isVisible && setIsVisible((oldVersion) => !oldVersion);
   };
 
-  console.log(window.pageYOffset);
   return (
     <HeaderContainer>
       <div className="header-inner-container">
-        <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} click={closeVisibility} />
+        <HamburgerMenu isOpen={isOpen} toggle={toggle} click={closeVisibility} />
         {rockstarGamesIcon}
         <Account visibility={isVisible} click={updateVisibility} />
       </div>
