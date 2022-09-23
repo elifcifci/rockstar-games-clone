@@ -1,5 +1,5 @@
 import React from "react";
-import { ViewMoreButton } from "../../Components/Buttons/ViewMoreButton";
+import { ViewMoreButtons } from "../../Components/Buttons/ViewMoreButton";
 import { PcAndMobileGamesContainer } from "./styles";
 import Dropdown from "../../Components/Dropdown/index.js";
 import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
@@ -37,7 +37,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
         {isPcGames ? "PC & Mac Games" : "Mobile Games & Apps"}
       </h2>
       <div className="content-container">{createContent}</div>
-      <ViewMoreButton text="View All" />
+      <ViewMoreButtons text="View All" />
     </PcAndMobileGamesContainer>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { ViewMoreButton } from "../../Components/Buttons/ViewMoreButton";
+import { ViewMoreButtons } from "../../Components/Buttons/ViewMoreButton";
 import { GameContainer } from "./styles";
 import {getLimitedConstant} from "../../Helpers/getLimitedConstant";
 import {gamesConstant} from "../../Constants/games"
@@ -17,7 +17,7 @@ function GamesPreview() {
     <GameContainer>
       <h2>Featured Games</h2>
       <div className="imgContainer">{getPreviewGames}</div>
-      <ViewMoreButton text={"View More"} link={"/games"} />
+      <ViewMoreButtons text={"View More"} link={"/games"} />
     </GameContainer>
   );
 }

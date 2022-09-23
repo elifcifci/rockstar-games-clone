@@ -7,11 +7,6 @@ export const AnimatedButtonContainer = styled(motion.a)`
   flex-direction: column-reverse;
   align-items: center;
 
-  .link-text {
-    z-index: 2;
-    margin: 0 0 3px 0;
-  }
-
   @media ${screen.tablet} {
     .link-text {
       font-size: ${fontSizes.size4};
@@ -19,30 +14,38 @@ export const AnimatedButtonContainer = styled(motion.a)`
   }
 `;
 
-export const MoreStoryButton = styled(motion.button)`
-  background-color: transparent;
-  border: none;
+export const ButtonText = styled(motion.p)`
   color: white;
-  z-index: 2;
-  margin: 0 0 3px 0;
-
-  @media ${screen.tablet} {
-    font-size: ${fontSizes.size4};
-  }
-`;
-
-export const ButtonAnimation = styled(motion.div)`
-  background-color: ${colors.secondary};
-  width: 75px;
-  height: 4px;
-  border-radius: 4px;
-  position: absolute;
+  position: relative;
+  line-height: 25px;
   z-index: 1;
 
-  @media ${screen.tablet} {
-    width: 90px;
+  &::before {
+    content: "";
+    height: 4px;
+    width: calc(100% + 0.2rem);
+    background-color: ${colors.secondary};
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -0.1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+  }
+
+  &:hover::before {
+    height: 25px;
+    width: calc(100% + 1rem);
+    left: -0.5rem;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: black;
+    cursor: pointer;
   }
 `;
+
 
 export const SliderWatchButton = styled(motion.button)`
   font-size: ${fontSizes.size3};
@@ -61,7 +64,7 @@ export const SliderWatchButton = styled(motion.button)`
     max-width: 230px;
     height: 56px;
     font-size: ${fontSizes.size4};
-  }  
+  }
 
   @media ${screen.laptopS} {
     margin-bottom: 0;
@@ -72,9 +75,8 @@ export const SliderWatchButton = styled(motion.button)`
   }
 
   @media${screen.biggestScreen} {
-      font-size: ${fontSizes.size6};
-      padding: 22px 0px;
-      height: auto;
-
+    font-size: ${fontSizes.size6};
+    padding: 22px 0px;
+    height: auto;
   }
 `;

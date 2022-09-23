@@ -1,14 +1,10 @@
 import React from "react";
-import { AnimatedButtonContainer, ButtonAnimation } from "./styles";
+import { AnimatedButtonContainer, ButtonText } from "./styles";
 
-export function ViewMoreButton({ text, link }) {
+export function ViewMoreButtons({ isMoreStory, text, link, click }) {
   return (
     <AnimatedButtonContainer href={link}>
-      <p className="link-text">{text}</p>
-      <ButtonAnimation
-        initial={{ scale: 1 }}
-        whileHover={{ width: 85, height: 25 }}
-      />
-    </AnimatedButtonContainer>
-  );
+     <ButtonText onClick={isMoreStory && click} className="link-text">{text}</ButtonText>
+   </AnimatedButtonContainer>
+   );
 }
