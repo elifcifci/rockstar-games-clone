@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Account from "../Account";
 import HamburgerMenu from "../HamburgerMenu";
@@ -7,8 +8,9 @@ import { HeaderContainer } from "./styles";
 
 export default function Header({isOpen , toggle}) {
   let [isVisible, setIsVisible] = useState(false);
+  
   let rockstarGamesIcon = (
-    <a href="/" className="page-icon-link" title="Home">
+    <Link to="/" className="page-icon-link" onClick={isOpen && toggle} title="Home">
       <svg className="page-icon" viewBox="0 0 216 198.83">
         <g data-name="Layer 2">
           <g data-name="Layer 1">
@@ -26,7 +28,7 @@ export default function Header({isOpen , toggle}) {
           </g>
         </g>
       </svg>
-    </a>
+    </Link>
   );
   // let [isHeaderVisible, setIsHeaderVisible] = useState(true);
 

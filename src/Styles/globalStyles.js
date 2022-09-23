@@ -26,7 +26,8 @@ export const colors = {
   white: "rgb(255,255,255)",
   inactive: "rgb(102, 102, 102)",
   opacityColor2: "rgba(0,0,0,.7)",
-  transparent: "rgb(0, 0, 0, 0)"
+  transparent: "rgb(0, 0, 0, 0)",
+  navbarBorder: "rgb(22, 22, 22)"
 
 };
 

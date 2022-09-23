@@ -2,20 +2,31 @@ import React from "react";
 import { BackDropContainer } from "./styles";
 import { colors } from "../../Styles/globalStyles";
 
-const BackDrop = ({ toggle, isOpen }) => {
+const BackDrop = ({ isOpen }) => {
   const BackDropConfig = {
     open: {
       background: colors.opacityColor2,
+      display: "initial",
       transition: {
-        type: "tween",
+        type: "spring",
+        damping: 30,
         delay: 0.2,
       },
     },
-    closed: {
+    colorChange: {
       background: colors.transparent,
+
       transition: {
         type: "tween",
+        damping: 30,
         delay: 0.2,
+      },
+    },
+
+    closed: {
+      display: "none",
+      transition: {
+        delay: 1,
       },
     },
   };
@@ -23,8 +34,7 @@ const BackDrop = ({ toggle, isOpen }) => {
   return (
     <BackDropContainer
       variants={BackDropConfig}
-      animate={isOpen ? "open" : "closed"}
-      onClick={toggle}
+      animate={isOpen ? "open" : ["closed", "colorChange"]}
     ></BackDropContainer>
   );
 };

@@ -7,57 +7,111 @@ export const MenuItemContainer = styled(motion.div)`
   background-color: ${colors.black};
   position: fixed;
   grid-row: 2rem;
-  top: 0;
   left: 0;
   bottom: 0;
   display: flex;
   flex-flow: column;
   grid-gap: 2rem;
-  height: 100vh;
+  height: calc(100vh - 62px);
   width: 100%;
   z-index: 2;
   box-sizing: border-box;
+
+  .toggle-back-drop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1;
+  }
 
   .menu-list {
     padding-left: 0;
     margin: 0;
     padding: 0 2rem;
-    display: block;
+    display: grid;
+    grid-row-gap: 1rem;
   }
 
   .list-item {
-    font-size: ${fontSizes.size7};
+    position: relative;
+    z-index: 2;
     width: 100%;
-    height: 60px;
     font-weight: bold;
     display: flex;
     align-items: center;
   }
 
   .list-link {
+    font-size: ${fontSizes.size7};
     width: 100%;
-    height: 100%;
-    height: 50px;
+    height: 40px;
     color: ${colors.white};
-    display: flex;
-    align-items: center;
   }
 
   .active-page {
-    color: ${colors.secondary};
+    color: ${colors.secondary} !important;
   }
 
   .list_icon {
     fill: white;
-    margin-left: 7px;
-    width: 10px;
+    margin-left: 10px;
+    width: 12px;
   }
 
   @media${screen.tablet} {
     width: max-content;
 
     .menu-list {
-      padding: 0 4rem;
+      padding: 1.5rem 4.5rem 4.5rem 4.5rem;
+    }
+
+    .list-link {
+      font-size: 28px;
+      height: 45px;
+      width: 360px;
+    }
+  }
+
+  @media${screen.laptopS} {
+    .menu-list {
+      padding: 1.5rem 5rem 5rem 5rem;
+    }
+
+    .list-link {
+      font-size: 31px;
+      height: 50px;
+      width: 400px;
+    }
+  }
+
+  @media${screen.laptopL} {
+    .list-link {
+      height: 55px;
+    }
+  }
+
+  @media${screen.laptopXL} {
+    .menu-list {
+      padding: 1.5rem 5.5rem 5.5rem 5.5rem;
+    }
+
+    .list-link {
+      font-size: 43px;
+      height: 75px;
+      width: 440px;
+    }
+
+    .list_icon {
+      margin-left: 20px;
+      width: 20px;
+    }
+  }
+
+  @media${screen.biggestScreen} {
+    .list-link {
+      font-size: 54px;
+      height: 90px;
     }
   }
 `;
@@ -65,15 +119,16 @@ export const MenuItemContainer = styled(motion.div)`
 export const MenuSearchInput = styled(motion.form)`
 display: flex;
 justify-content: center;
-margin: 82px 2rem 0 2rem;
+margin: 26px 2rem 5px 2rem;
 background-color: ${colors.darkerGray};
 border-radius: 4px;
 box-sizing: border: box;
 
 svg{
   cursor: pointer;
-  padding: 15px 0 15px 10px;
+  padding: 16px 1px 16px 22px;
 }
+
 .searchArea{
   background-color: ${colors.darkerGray};
   color: ${colors.white};
@@ -81,7 +136,8 @@ svg{
   border: none;
   border-radius: 4px;
   width: 100%;
-  padding: 0 5px 0 15px;  
+  box-sizing: border-box;
+  padding: 16px;  
   outline: none;
     
   ::placeholder {
@@ -91,6 +147,59 @@ svg{
 }
 
   @media${screen.tablet}{
-    margin: 82px 4rem 0 4rem;
+    min-width: 20rem;
+    margin: 35px 4.5rem -5px 4.5rem;
+
+    .searchArea{
+      padding: 18px;  
+
+      ::placeholder {
+        font-size: ${fontSizes.size4};
+      }
+    }   
+    
+    svg{
+      padding: 15px 0px 15px 6px;
+      margin-left: 18px;
+    }
+  }
+
+  @media${screen.laptopS}{    
+    margin: 40px 5rem -10px 5rem;
+    .searchArea{
+      padding: 20px;  
+
+      ::placeholder {
+        font-size: ${fontSizes.size5};
+      }
+    }   
+    
+    svg{
+      padding: 15px 6px;
+      margin-left: 20px;
+    }
+  }
+
+  @media${screen.laptopL}{    
+    .searchArea{
+      ::placeholder {
+        font-size: ${fontSizes.size6};
+      }
+    }  
+
+    svg{
+      padding: 18px 0px 18px 6px;
+    }
+  }
+
+  @media${screen.laptopXL} {
+    margin: 45px  5.5rem 8px  5.5rem;
+  }
+
+  @media${screen.biggestScreen} {
+    margin-bottom: 0;
+    svg{
+      padding: 22px 0px 22px 6px;
+    }
   }
 `;

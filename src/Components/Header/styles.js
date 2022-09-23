@@ -5,7 +5,7 @@ import { colors } from "../../Styles/globalStyles";
 export const HeaderContainer = styled(motion.nav)`
   width: 100%;
   height: 60px;
-  border-bottom: solid 1px ${colors.gray};
+  border-bottom: solid 2px ${colors.navbarBorder};
   display: flex;
   justify-content: center;
   align-items: center;

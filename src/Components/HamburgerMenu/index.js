@@ -9,8 +9,7 @@ import { HamburgerMenuContainer } from "./styles";
 
 export default function HamburgerMenu({ click, toggle, isOpen }) {
   const [pageTitle, setPageTitle] = useState("");
-
-  let pageName = useLocation().pathname;
+  const pageName = useLocation().pathname;
 
   useEffect(() => {
     menuItems.forEach((item) => {
@@ -18,7 +17,7 @@ export default function HamburgerMenu({ click, toggle, isOpen }) {
         setPageTitle(item.title);
       }
     });
-  }, []);
+  }, [pageName]);
 
   return (
     <HamburgerMenuContainer
@@ -27,13 +26,9 @@ export default function HamburgerMenu({ click, toggle, isOpen }) {
       animate={isOpen ? "open" : "closed"}
       title="Open Menu"
     >
-      <MenuItem
-        toggle={toggle}
-        isOpen={isOpen}
-        pageTitle={pageTitle}
-      />
+      <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
       <MenuToggleIcon toggle={toggle} />
-      {pageTitle}
+      <span className="page-title">{pageTitle}</span>
     </HamburgerMenuContainer>
   );
 }
