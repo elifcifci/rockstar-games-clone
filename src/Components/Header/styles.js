@@ -1,36 +1,57 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { colors } from "../../Styles/globalStyles";
+import { screen } from "../../Styles/globalStyles";
 
 export const HeaderContainer = styled(motion.nav)`
-  width: 100%;
   height: 60px;
-  border-bottom: solid 2px ${colors.navbarBorder};
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${colors.primary};
-  position: relative;
   top: 0;
-  z-index: 3;
+  background-color: ${colors.black};
+  z-index: 4;
 
   .header-inner-container {
-    padding: 12px 32px 12px 32px;
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 74px 1fr;
+    height: 60px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    padding: 6px 32px 6px 32px;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    background-color: ${colors.black};
+    border-bottom: solid 2px ${colors.navbarBorder};
   }
 
   .page-icon-link {
     display: flex;
     justify-content: center;
-
   }
-  .page-icon{
+
+  .page-icon {
     border-radius: 15%;
     width: 40px;
     height: 100%;
     position: relative;
     z-index: 3;
+  }
+
+  @media${screen.tablet} {
+    .header-inner-container {
+      padding: 6px  4.5rem 6px  4.5rem;
+  }
+
+  @media${screen.laptopS} {
+    .header-inner-container {
+      padding: 6px  5rem 6px  5rem;
+  }
+
+  @media${screen.laptopXL} {
+    .header-inner-container {
+      padding: 6px  5.5rem 6px  5.5rem;
   }
 `;

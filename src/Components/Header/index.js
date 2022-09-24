@@ -1,13 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import Account from "../Account";
 import HamburgerMenu from "../HamburgerMenu";
+import MenuItem from "../MenuItem";
+import { menuItems } from "../../Constants/Navbar";
 
 import { HeaderContainer } from "./styles";
 
 export default function Header({ isOpen, toggle }) {
-  let [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [pageTitle, setPageTitle] = useState("");
+  const pageName = useLocation().pathname;
+
+  useEffect(() => {
+    let visibilityCondition;
+    window.addEventListener("scroll", () => {
+      const position = window.scrollY;
+      if (position <= 70) {
+        visibilityCondition = true;
+      } else {
+        visibilityCondition = false;
+      }
+
+      visibilityCondition
+        ? setIsHeaderVisible(true)
+        : setIsHeaderVisible(false);
+    });
+  }, []);
+
+  useEffect(() => {
+    menuItems[1].forEach((item) => {
+      if (item.link === pageName || item.link === "") {
+        setPageTitle(item.title);
+      }
+    });
+  }, [pageName]);
 
   let rockstarGamesIcon = (
     <Link
@@ -36,17 +66,6 @@ export default function Header({ isOpen, toggle }) {
     </Link>
   );
 
-  // let [isHeaderVisible, setIsHeaderVisible] = useState(true);
-
-  // useEffect(() => {
-  //   windows.addEventListener(() => {
-  //     const position = window.pageYOffset;
-  //     if(position >= 300){
-  //       setIsHeaderVisible
-  //     }
-  //   });
-  // }, []);
-
   let updateVisibility = () => {
     setIsVisible((oldVersion) => !oldVersion);
   };
@@ -55,9 +74,32 @@ export default function Header({ isOpen, toggle }) {
     isVisible && setIsVisible((oldVersion) => !oldVersion);
   };
 
+  const NavbarVisibilityConfig = {
+    initial: {
+      position: "fixed",
+
+      y: 0,
+      transition: {
+        type: "tween",
+      },
+    },
+    animated: {
+      position: "fixed",
+
+      y: -65,
+      transition: {
+        type: "tween",
+      },
+    },
+  };
+
   return (
     <HeaderContainer>
-      <div className="header-inner-container">
+      <motion.div
+        className="header-inner-container"
+        animate={isHeaderVisible ? "initial" : "animated"}
+        variants={NavbarVisibilityConfig}
+      >
         <HamburgerMenu
           isOpen={isOpen}
           toggle={toggle}
@@ -65,7 +107,8 @@ export default function Header({ isOpen, toggle }) {
         />
         {rockstarGamesIcon}
         <Account visibility={isVisible} click={updateVisibility} />
-      </div>
+      </motion.div>
+      <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
     </HeaderContainer>
   );
 }

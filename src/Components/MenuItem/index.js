@@ -11,11 +11,6 @@ import { colors } from "../../Styles/globalStyles";
 export default function MenuItem({ pageTitle, isOpen, toggle }) {
   const svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
   const carouselWidth = useRef();
-  // const [width, setWidth] = useState(770);
-
-  // useEffect(() => {
-  //   setWidth(carouselWidth.current.scrollWidth + 17);
-  // }, [isOpen]);
 
   const navbarMenuConfig = {
     open: {
@@ -72,6 +67,7 @@ export default function MenuItem({ pageTitle, isOpen, toggle }) {
     <MenuItemContainer
       ref={carouselWidth}
       variants={navbarMenuConfig}
+      animate={isOpen ? "open" : "closed"}
       title="Site"
     >
       {isOpen && <div className="toggle-back-drop" onClick={toggle} />}

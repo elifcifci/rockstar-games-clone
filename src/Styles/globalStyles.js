@@ -27,8 +27,7 @@ export const colors = {
   inactive: "rgb(102, 102, 102)",
   opacityColor2: "rgba(0,0,0,.7)",
   transparent: "rgb(0, 0, 0, 0)",
-  navbarBorder: "rgb(22, 22, 22)"
-
+  navbarBorder: "rgb(22, 22, 22)",
 };
 
 export const fontSizes = {
@@ -55,7 +54,6 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         z-index: 1;
-
     }
 
     a{

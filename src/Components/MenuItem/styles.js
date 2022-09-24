@@ -12,9 +12,10 @@ export const MenuItemContainer = styled(motion.div)`
   display: flex;
   flex-flow: column;
   grid-gap: 2rem;
-  height: calc(100vh - 62px);
+  height: 100vh;
   width: 100%;
   z-index: 2;
+  padding-top: 70px;
   box-sizing: border-box;
 
   .toggle-back-drop {

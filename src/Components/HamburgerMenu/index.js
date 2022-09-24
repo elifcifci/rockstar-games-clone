@@ -26,7 +26,7 @@ export default function HamburgerMenu({ click, toggle, isOpen }) {
       animate={isOpen ? "open" : "closed"}
       title="Open Menu"
     >
-      <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
+      {/* <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} /> */}
       <MenuToggleIcon toggle={toggle} />
       <span className="page-title">{pageTitle}</span>
     </HamburgerMenuContainer>
