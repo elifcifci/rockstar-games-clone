@@ -35,6 +35,7 @@ export const TopGameContainer = styled.div`
     display: grid;
     grid-gap: 0.5rem;
     margin-bottom: 2rem;
+    width: 100%;
   }
 
   .top-game_title {
@@ -53,6 +54,11 @@ export const TopGameContainer = styled.div`
     margin: 0;
   }
 
+  .downLoad-button {
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+
   @media${screen.tablet} {
     .top-game_paragraph {
       font-size: 18px;
@@ -62,13 +68,8 @@ export const TopGameContainer = styled.div`
   @media${screen.laptopS} {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
-    padding: 4rem;
+    grid-gap: 4em;
     border-radius: 16px;
-
-    .top-game_paragraph {
-      font-size: 20px;
-    }
   }
 
   @media${screen.laptopL} {
@@ -80,10 +81,15 @@ export const TopGameContainer = styled.div`
       display: flex;
       flex-flow: column;
     }
+
+    .downLoad-button {
+      margin-top: 2rem;
+      max-width: 50%;
+    }
   }
 
   @media${screen.laptopXL} {
-    padding: 2rem 4rem;
+    padding: 2.8rem 5.5rem;
     grid-gap: 4rem;
     grid-template-columns: 55% 1fr;
 

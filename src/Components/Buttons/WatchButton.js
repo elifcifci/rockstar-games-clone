@@ -2,9 +2,10 @@ import React from "react";
 import { colors } from "../../Styles/globalStyles";
 import { SliderWatchButton } from "./styles";
 
-export const WatchButton = ({ text,title }) => {
+export const WatchButton = ({ text, title, isForDownLoad }) => {
   return (
     <SliderWatchButton
+      className={isForDownLoad && "downLoad-button"}
       initial={{
         background: colors.primary,
         color: "white",

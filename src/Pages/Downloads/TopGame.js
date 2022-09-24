@@ -9,13 +9,13 @@ function TopGame({ constants }) {
 
       <div className="top-game-detail">
         <h2 className="top-game_title">{constants.title}</h2>
-        
+
         <div className="top-game-paragraphs">
           <p className="top-game_paragraph">{constants.describe[0]}</p>
           <p className="top-game_paragraph">{constants.describe[1]}</p>
         </div>
 
-        <WatchButton text="DOWNLOAD NOW" />
+        <WatchButton isForDownLoad={true} text="DOWNLOAD NOW" />
       </div>
     </TopGameContainer>
   );
