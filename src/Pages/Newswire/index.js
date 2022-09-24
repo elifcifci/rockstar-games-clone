@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "./styles";
 import { NewswireCardRenderer } from "../../Components/NewswireCardRenderer/index";
-import { ViewMoreButtons } from "../../Components/Buttons/ViewMoreButton";
+import { MoreButtons } from "../../Components/Buttons/MoreButtons";
 import { newswireConstants } from "../../Constants/newswire";
 import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
 
@@ -31,7 +31,12 @@ function Newswire() {
           constants={[...limitedNewswireConstant]}
         />
       </div>
-      <ViewMoreButtons isMoreStory={true} click={updateCounter} text={"More Stories"} />
+      <MoreButtons
+        isMoreStory={true}
+        click={updateCounter}
+        text="More Stories"
+        link="/newswire"
+      />
     </Container>
   );
 }

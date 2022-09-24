@@ -27,7 +27,6 @@ function App() {
           <Route path="/games" exact element={<Games />} />
           <Route path="/videos" exact element={<Videos />} />
           <Route path="/downloads" exact element={<Downloads />} />
-          <Route path="/:id" exact element={<Newswire />} />
         </Routes>
         <Footer />
       </Router>

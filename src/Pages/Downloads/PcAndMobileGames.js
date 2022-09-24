@@ -1,9 +1,8 @@
 import React from "react";
-import { ViewMoreButtons } from "../../Components/Buttons/ViewMoreButton";
+import { MoreButtons } from "../../Components/Buttons/MoreButtons";
 import { PcAndMobileGamesContainer } from "./styles";
 import Dropdown from "../../Components/Dropdown/index.js";
 import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
-
 
 function PcAndMobileGames({ constants, isPcGames }) {
   // const [copyConstants, setCopyConstants] = useState([...constants])
@@ -37,7 +36,11 @@ function PcAndMobileGames({ constants, isPcGames }) {
         {isPcGames ? "PC & Mac Games" : "Mobile Games & Apps"}
       </h2>
       <div className="content-container">{createContent}</div>
-      <ViewMoreButtons text="View All" />
+      <MoreButtons
+        title="Click event didn't add"
+        isMoreStory={true}
+        text="View All"
+      />
     </PcAndMobileGamesContainer>
   );
 }

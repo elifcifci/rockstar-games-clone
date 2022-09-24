@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 
-export const AnimatedButtonContainer = styled(motion.a)`
+export const AnimatedButtonContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -44,8 +44,13 @@ export const ButtonText = styled(motion.p)`
     color: black;
     cursor: pointer;
   }
-`;
 
+  .button-link {
+    &:hover {
+      color: black;
+    }
+  }
+`;
 
 export const SliderWatchButton = styled(motion.button)`
   font-size: ${fontSizes.size3};

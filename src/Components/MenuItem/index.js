@@ -1,4 +1,4 @@
-import React, { useRef} from "react";
+import React, { useRef } from "react";
 import SearchInput from "./SearchInput";
 import { menuItems } from "../../Constants/Navbar";
 import { Link } from "react-router-dom";
@@ -36,31 +36,35 @@ export default function MenuItem({ pageTitle, isOpen, toggle }) {
     },
   };
 
-  console.log("pageTitle: ", pageTitle);
   const menuItemConfig = {
     initial: { color: colors.white },
     animate: { color: colors.secondary },
   };
 
-  let createMenuItem = menuItems.map((item) => {
+  let createMenuItem = menuItems[0].map((item) => {
     return (
-        <Link to={item.link} className="list-item" key={item.title} onClick={toggle}>
-          <motion.span
-            className={
-              item.title === pageTitle ? "list-link active-page" : "list-link"
-            }
-            initial="initial"
-            whileHover="animate"
-            variants={menuItemConfig}
-          >
-            {item.title}
-            {item.isIconVisible && (
-              <svg className="list_icon" viewBox={svgNeeds[0]}>
-                <path d={svgNeeds[1]} />
-              </svg>
-            )}
-          </motion.span>
-        </Link>
+      <Link
+        to={item.link}
+        className="list-item"
+        key={item.title}
+        onClick={toggle}
+      >
+        <motion.span
+          className={
+            item.title === pageTitle ? "list-link active-page" : "list-link"
+          }
+          initial="initial"
+          whileHover="animate"
+          variants={menuItemConfig}
+        >
+          {item.title}
+          {item.isIconVisible && (
+            <svg className="list_icon" viewBox={svgNeeds[0]}>
+              <path d={svgNeeds[1]} />
+            </svg>
+          )}
+        </motion.span>
+      </Link>
     );
   });
 

@@ -12,8 +12,8 @@ export default function HamburgerMenu({ click, toggle, isOpen }) {
   const pageName = useLocation().pathname;
 
   useEffect(() => {
-    menuItems.forEach((item) => {
-      if (item.link === pageName) {
+    menuItems[1].forEach((item) => {
+      if (item.link === pageName || item.link === "") {
         setPageTitle(item.title);
       }
     });

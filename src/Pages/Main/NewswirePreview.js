@@ -1,7 +1,7 @@
 import React from "react";
 import { NewswireCards } from "./styles";
 import { NewswireCardRenderer } from "../../Components/NewswireCardRenderer/index";
-import { ViewMoreButtons } from "../../Components/Buttons/ViewMoreButton";
+import { MoreButtons } from "../../Components/Buttons/MoreButtons";
 import { newswireConstants } from "../../Constants/newswire";
 import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
 
@@ -12,7 +12,7 @@ function NewswirePreview() {
     <NewswireCards>
       <h2>Newswire</h2>
       <NewswireCardRenderer isPreview={true} constants={[...limitedNewswireConstant]} />
-      <ViewMoreButtons text={"View More"} link={"/newswire"} />
+      <MoreButtons text="View More" link="/newswire" />
     </NewswireCards>
   );
 }
