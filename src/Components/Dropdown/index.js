@@ -1,18 +1,12 @@
 import React, { useState } from "react";
-import { DropdownContainer } from "./styles";
-import { motion } from "framer-motion";
-import FooterListItem from "./ListItem";
+import { DropdownContainer, FooterDropdownContainer } from "./styles";
+import { motion, useCycle } from "framer-motion";
+import FooterDropdown from "./FooterDropdown";
 import PcAndMobileGamesDropdownList from "./PcAndMobileGamesItem";
 
 const Dropdown = ({ constants, isForFooter }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, toggleVisible] = useCycle(false, true);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
-  const [rotate, setRotate] = useState(0);
-
-  const footerHandleClick = (event) => {
-    selectLanguage(event);
-    updateIsVisible();
-  };
 
   const selectLanguage = (event) => {
     constants.forEach((constant) => {
@@ -22,21 +16,49 @@ const Dropdown = ({ constants, isForFooter }) => {
     });
   };
 
-  const updateIsVisible = () => {
-    setIsVisible((previous) => !previous);
-    setRotate((previous) => (previous == 0 ? 180 : 0));
+  const dropdownIconAnimationConfig = {
+    open: {
+      rotate: 180,
+      transition: { type: "teen" },
+    },
+    close: {
+      rotate: 0,
+      transition: { type: "teen" },
+    },
   };
+
+  const dropdownIcon = (
+    <motion.svg
+      animate={isVisible ? "open" : "close"}
+      variants={dropdownIconAnimationConfig}
+      width="24"
+      height="24"
+      fill="none"
+    >
+      <path
+        d="m6 9 6 6 6-6"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </motion.svg>
+  );
 
   return (
     <DropdownContainer>
-      <div
-        onClick={updateIsVisible}
-        className={
-          isForFooter
-            ? "dropdown-select-text dropdown-footer"
-            : "dropdown-select-text"
-        }
+      <FooterDropdownContainer
+        onClick={() => toggleVisible()}
+        className={`dropdown-select-text ${isForFooter && "dropdown-footer"}`}
       >
+        {isForFooter && isVisible && (
+          <FooterDropdown
+            constants={constants}
+            click={selectLanguage}
+            isForFooter={isForFooter}
+          />
+        )}
+
         {isForFooter ? (
           <h4 className={isVisible ? "dropdown-title" : "games-dropdown-title"}>
             {selectedLanguage}
@@ -44,35 +66,13 @@ const Dropdown = ({ constants, isForFooter }) => {
         ) : (
           <h4 className="games-dropdown-title">Select Retailer</h4>
         )}
-
-        <motion.svg
-          animate={{ rotate: rotate }}
-          width="24"
-          height="24"
-          fill="none"
-        >
-          <path
-            d="m6 9 6 6 6-6"
-            stroke="#fff"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </motion.svg>
-      </div>
-
-      {isForFooter && isVisible && (
-        <FooterListItem
-          constants={constants}
-          click={footerHandleClick}
-          isForFooter={isForFooter}
-        />
-      )}
+        {dropdownIcon}
+      </FooterDropdownContainer>
 
       {!isForFooter && isVisible && (
         <PcAndMobileGamesDropdownList
           constants={constants}
-          click={updateIsVisible}
+          click={() => toggleVisible()}
         />
       )}
     </DropdownContainer>
