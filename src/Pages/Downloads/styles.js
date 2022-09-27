@@ -10,14 +10,14 @@ export const DownloadsContainer = styled.div`
   max-width: 1920px;
   box-sizing: border: box;
   margin: 0 auto;
-
+  padding-bottom: 2rem;
+  
   @media${screen.tablet} {
     grid-gap: 8rem;
-    margin-bottom: 72px;
+    padding-bottom: 72px;
   }
 
   @media${screen.laptopS} {
-    padding: 4rem;
     margin-bottom: 0;
     padding: 80px;
   }
@@ -215,12 +215,7 @@ export const PcAndMobileGamesContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
-  }
-
-  .inner-container {
-    display: grid;
-    grid-template-row: repeat(2, 1fr);
-    grid-gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .content-img {
@@ -237,6 +232,22 @@ export const PcAndMobileGamesContainer = styled.div`
   .top-game_paragraph {
     line-height: 1.4rem;
     color: ${colors.tertiary};
+  }
+
+  .title-container {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0 8px 8px 8px;
+    border-bottom: 1px solid ${colors.tertiary};
+    margin-top: 1rem;
+  }
+
+  .games-dropdown-title {
+    margin: 0;
+    padding: 0px;
   }
 
   @media${screen.tablet} {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "./styles";
 import { NewswireCardRenderer } from "../../Components/NewswireCardRenderer/index";
-import { MoreButtons } from "../../Components/Buttons/MoreButtons";
+import { ViewAndMoreButtons } from "../../Components/Buttons/ViewAndMoreButtons";
 import { newswireConstants } from "../../Constants/newswire";
 import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
 
@@ -24,14 +24,13 @@ function Newswire() {
   return (
     <Container>
       <NewswireCardRenderer isTopCard={true} constants={newswireConstants} />
-
       <div className="mes">
         <NewswireCardRenderer
           isTopCard={false}
           constants={[...limitedNewswireConstant]}
         />
       </div>
-      <MoreButtons
+      <ViewAndMoreButtons
         isMoreStory={true}
         click={updateCounter}
         text="More Stories"

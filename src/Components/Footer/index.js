@@ -9,7 +9,7 @@ import {
 } from "./styles";
 import { motion } from "framer-motion";
 import { footerConstants } from "../../Constants/footer";
-import Dropdown from "../../Components/Dropdown";
+import FooterDropdown from "../../Components/Dropdown/FooterDropdown";
 import { colors } from "../../Styles/globalStyles";
 
 export default function Footer() {
@@ -88,19 +88,7 @@ export default function Footer() {
       <ContactInWebsiteAndLanguagesContainer>
         <ul className="contact-list">{createContactPagesList}</ul>
         <form className="select-container">
-          <svg className="select-world-icon" fill="none">
-            <path
-              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10ZM2 12h20"
-              stroke="white"
-              strokeWidth="2"
-            />
-            <path
-              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10v0Z"
-              stroke="white"
-              strokeWidth="2"
-            />
-          </svg>
-          <Dropdown constants={footerConstants.languages} isForFooter={true} />
+          <FooterDropdown constants={footerConstants.languages} />
         </form>
       </ContactInWebsiteAndLanguagesContainer>
 
@@ -110,7 +98,7 @@ export default function Footer() {
           <ul className="contact-list">{createGeneralKnowledgeLinks}</ul>
         </GeneralKnowledgeContainer>
         {/* knowledge links part ends*/}
-        
+
         {/* social media links starts*/}
         <ContactSocialMediaContainer>
           <ul className="contact-list">{createSocialMediaLinks}</ul>

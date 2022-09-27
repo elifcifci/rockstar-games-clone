@@ -6,7 +6,6 @@ export const AnimatedButtonContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-
   @media ${screen.tablet} {
     .link-text {
       font-size: ${fontSizes.size4};
@@ -19,6 +18,7 @@ export const ButtonText = styled(motion.p)`
   position: relative;
   line-height: 25px;
   z-index: 1;
+  margin: 0;
 
   &::before {
     content: "";

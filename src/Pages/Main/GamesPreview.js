@@ -1,8 +1,8 @@
 import React from "react";
-import { MoreButtons } from "../../Components/Buttons/MoreButtons";
+import { ViewAndMoreButtons } from "../../Components/Buttons/ViewAndMoreButtons";
 import { GameContainer } from "./styles";
-import {getLimitedConstant} from "../../Helpers/getLimitedConstant";
-import {gamesConstant} from "../../Constants/games"
+import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
+import { gamesConstant } from "../../Constants/games";
 
 function GamesPreview() {
   const limitedConstant = getLimitedConstant(3, [...gamesConstant]);
@@ -17,7 +17,7 @@ function GamesPreview() {
     <GameContainer>
       <h2>Featured Games</h2>
       <div className="imgContainer">{getPreviewGames}</div>
-      <MoreButtons text="View More" link="/games" />
+      <ViewAndMoreButtons text="View More" link="/games" />
     </GameContainer>
   );
 }

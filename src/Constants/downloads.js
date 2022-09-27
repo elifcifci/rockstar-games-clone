@@ -35,25 +35,25 @@ export const downloadsConstant = {
 
   pcMacGames: [
     {
-      id: "0",
+      id: "0-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/bully.jpg",
       selectRetailer: ["Warehouse (PC)"],
       isOpen: false,
     },
     {
-      id: "1",
+      id: "1-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/reddeadredemption2.jpg",
       selectRetailer: ["Rockstar (PS)"],
       isOpen: false,
     },
     {
-      id: "2",
+      id: "2-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/V.jpg",
       selectRetailer: ["Warehouse (PC)", "Steam (PC)", "Amazon (PC)"],
       isOpen: false,
     },
     {
-      id: "3",
+      id: "3-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/maxpayne3.jpg",
       selectRetailer: [
         "Warehouse (PC)",
@@ -64,7 +64,7 @@ export const downloadsConstant = {
       isOpen: false,
     },
     {
-      id: "4",
+      id: "4-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/lanoire.jpg",
       selectRetailer: [
         "Warehouse (PC)",
@@ -75,13 +75,13 @@ export const downloadsConstant = {
       isOpen: false,
     },
     {
-      id: "5",
+      id: "5-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/episodesfromlibertycity.jpg",
       selectRetailer: ["Warehouse (PC)", "Steam (PC)", "Amazon US (PC)"],
       isOpen: false,
     },
     {
-      id: "6",
+      id: "6-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/IV.jpg",
       selectRetailer: [
         "Warehouse (PC)",
@@ -92,7 +92,7 @@ export const downloadsConstant = {
       isOpen: false,
     },
     {
-      id: "7",
+      id: "7-pc-mac-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/sanandreas.jpg",
       selectRetailer: ["Warehouse (PC)", "Steam (PC)", "Amazon (PC)"],
       isOpen: false,
@@ -101,43 +101,43 @@ export const downloadsConstant = {
 
   mobileGamesApps: [
     {
-      id: "0",
+      id: "0-mobile-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/rdr2-companion.png",
       selectRetailer: ["iOS"],
       isOpen: false,
     },
     {
-      id: "1",
+      id: "1-mobile-game",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/bully.png",
       selectRetailer: ["iOS", "Android"],
       isOpen: false,
     },
     {
-      id: "2",
+      id: "2-mobile",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/gtalcs.png",
       selectRetailer: ["iOS", "Android", "Kindle"],
       isOpen: false,
     },
     {
-      id: "3",
+      id: "3-mobile",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/sanandreas.png",
       selectRetailer: ["iOS", "Android", "Windows Phone", "Kindle"],
       isOpen: false,
     },
     {
-      id: "4",
+      id: "4-mobile",
       img: "https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/apps/gtaiii.png",
       selectRetailer: ["iOS", "Android", "Kindle"],
       isOpen: false,
     },
     {
-      id: "5",
+      id: "5-mobile",
       img: "https://www.rockstargames.com/img/global/downloads/apps/ifruit.png",
       selectRetailer: ["iOS", "Android", "Windows Phone", "Kindle", "PS Vita"],
       isOpen: false,
     },
     {
-      id: "6",
+      id: "6-mobile",
       img: "https://www.rockstargames.com/img/global/downloads/apps/gtavmanual.png",
       selectRetailer: [
         "iOS",
@@ -150,7 +150,7 @@ export const downloadsConstant = {
       isOpen: false,
     },
     {
-      id: "7",
+      id: "7-mobile",
       img: "https://www.rockstargames.com/img/global/downloads/apps/gtavicecity.png",
       selectRetailer: ["iOS", "Android", "Kindle"],
       isOpen: false,

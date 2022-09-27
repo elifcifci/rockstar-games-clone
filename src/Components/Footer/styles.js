@@ -39,6 +39,7 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
   padding: 0;
   width: 100%;
   grid-row-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
 
   .contact-list {
     font-weight: bold;
@@ -68,18 +69,6 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
 
   .select-container {
     display: flex;
-  }
-
-  .select-world-icon {
-    width: 30px;
-    height: 24px;
-    fill: none;
-  }
-
-  .dropdown-footer {
-    display: flex;
-    align-items: center;
-    grid-gap: 0.7rem;
   }
 
   .contact-select {
