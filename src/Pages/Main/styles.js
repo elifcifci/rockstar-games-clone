@@ -1,5 +1,6 @@
+//Styles
 import styled from "styled-components";
-import { screen, colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
 export const MainContainer = styled.div`
   .previews-container {
@@ -28,8 +29,8 @@ export const MainContainer = styled.div`
 `;
 
 export const NewswireCards = styled.div`
-max-width: 1745px;
-margin: 0 auto;
+  max-width: 1745px;
+  margin: 0 auto;
 
   h2 {
     width: 100%;
@@ -44,8 +45,8 @@ margin: 0 auto;
 `;
 
 export const GameContainer = styled.div`
-max-width: 1745px;
-margin: 0 auto;
+  max-width: 1745px;
+  margin: 0 auto;
 
   h2 {
     width: 100%;

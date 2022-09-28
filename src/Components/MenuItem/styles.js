@@ -1,6 +1,8 @@
-import styled from "styled-components";
-import { screen, colors, fontSizes } from "../../Styles/globalStyles";
 import { motion } from "framer-motion";
+
+//Styles
+import styled from "styled-components";
+import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
 export const MenuItemContainer = styled(motion.div)`
   padding: 0;
@@ -54,12 +56,6 @@ export const MenuItemContainer = styled(motion.div)`
     color: ${colors.secondary} !important;
   }
 
-  .list_icon {
-    fill: white;
-    margin-left: 10px;
-    width: 12px;
-  }
-
   @media${screen.tablet} {
     width: max-content;
 
@@ -102,11 +98,6 @@ export const MenuItemContainer = styled(motion.div)`
       height: 75px;
       width: 440px;
     }
-
-    .list_icon {
-      margin-left: 20px;
-      width: 20px;
-    }
   }
 
   @media${screen.biggestScreen} {
@@ -121,7 +112,7 @@ export const MenuSearchInput = styled(motion.form)`
 display: flex;
 justify-content: center;
 margin: 26px 2rem 5px 2rem;
-background-color: ${colors.darkerGray};
+background-color: ${colors.searchArea};
 border-radius: 4px;
 box-sizing: border: box;
 
@@ -131,7 +122,7 @@ svg{
 }
 
 .searchArea{
-  background-color: ${colors.darkerGray};
+  background-color: ${colors.searchArea};
   color: ${colors.white};
   font-size: ${fontSizes.size4};
   border: none;
@@ -142,7 +133,7 @@ svg{
   outline: none;
     
   ::placeholder {
-    color: ${colors.opacityColor};
+    color: ${colors.transparentTertiary};
     font-size: ${fontSizes.size3};
   }
 }

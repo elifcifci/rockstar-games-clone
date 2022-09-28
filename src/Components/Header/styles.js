@@ -1,7 +1,8 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
-import { colors } from "../../Styles/globalStyles";
-import { screen } from "../../Styles/globalStyles";
+
+//Styles
+import styled from "styled-components";
+import { colors, screen } from "../../styles/globalStyles";
 
 export const HeaderContainer = styled(motion.nav)`
   height: 60px;
@@ -25,19 +26,6 @@ export const HeaderContainer = styled(motion.nav)`
 
     background-color: ${colors.black};
     border-bottom: solid 2px ${colors.navbarBorder};
-  }
-
-  .page-icon-link {
-    display: flex;
-    justify-content: center;
-  }
-
-  .page-icon {
-    border-radius: 15%;
-    width: 40px;
-    height: 100%;
-    position: relative;
-    z-index: 3;
   }
 
   @media${screen.tablet} {

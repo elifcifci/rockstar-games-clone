@@ -1,5 +1,6 @@
+//Styles
 import styled from "styled-components";
-import { screen, colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
 export const Container = styled.div`
   background-color: ${colors.primary};
@@ -13,12 +14,12 @@ export const Container = styled.div`
 
   time {
     font-size: ${fontSizes.size2};
-    color: ${colors.opacityColor};
+    color: ${colors.transparentTertiary};
   }
 
   .inner-container {
     background-color: ${colors.black};
-    border: 1px solid ${colors.gray};
+    border: 1px solid ${colors.cardBorder};
     border-radius: 7px;
   }
 
@@ -46,7 +47,7 @@ export const Container = styled.div`
 
   time {
     font-size: ${fontSizes.size2};
-    color: ${colors.opacityColor};
+    color: ${colors.transparentTertiary};
   }
 
   .announcement {

@@ -1,15 +1,16 @@
-import Header from "./Components/Header";
-import Main from "./Pages/Main";
-import Newswire from "./Pages/Newswire";
-import Games from "./Pages/Games";
-import Videos from "./Pages/Videos";
-import Downloads from "./Pages/Downloads";
-import { useCycle } from "framer-motion";
-import Footer from "./Components/Footer/index";
-import BackDrop from "./Components/BackDrop";
+//Pages
+import Header from "./components/Header";
+import Main from "./pages/Main";
+import Newswire from "./pages/Newswire";
+import Games from "./pages/Games";
+import Videos from "./pages/Videos";
+import Downloads from "./pages/Downloads";
+import BackDrop from "./components/BackDrop";
+import Footer from "./components/Footer/index";
 
+import { useCycle } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import GlobalStyle from "./Styles/globalStyles";
+import GlobalStyle from "./styles/globalStyles";
 
 function App() {
   const [isOpen, toggleOpen] = useCycle(false, true);

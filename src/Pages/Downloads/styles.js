@@ -1,5 +1,6 @@
+//Styles
 import styled from "styled-components";
-import { screen, colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
 export const DownloadsContainer = styled.div`
   display: flex;

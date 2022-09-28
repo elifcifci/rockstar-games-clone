@@ -1,6 +1,6 @@
+//Styles
 import styled from "styled-components";
-import { screen, colors } from "../../Styles/globalStyles";
-import { motion } from "framer-motion";
+import { screen, colors } from "../../styles/globalStyles";
 
 export const DropdownContainer = styled.div`
   cursor: pointer;
@@ -27,14 +27,6 @@ export const FooterDropdownContainer = styled(DropdownContainer)`
   h4 {
     margin: 0;
     font-weight: normal;
-  }
-
-  .world-icon {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke-width: 2;
-    scale: 0.9;
   }
 
   @media${screen.mobileL} {
@@ -135,39 +127,4 @@ export const GamesDropdownContainer = styled(DropdownContainer)`
 export const GamesDropdownListItem = styled(DropdownListItems)`
   margin: 0;
   padding: 8px 16px 8px 16px;
-`;
-
-export const dropdownAnimationConfig = {
-  open: {
-    rotate: 180,
-    transition: { type: "teen" },
-  },
-
-  close: {
-    rotate: 0,
-    transition: { type: "teen" },
-  },
-
-  active: {
-    stroke: colors.white,
-    color: colors.white,
-  },
-
-  inactive: {
-    stroke: colors.opacityColor,
-    color: colors.opacityColor,
-  },
-};
-
-export const ArrowIcon = styled(motion.svg)`
-  width: 32px;
-  height: 24px;
-  fill: none;
-
-  .dropdown-arrow-path {
-    stroke: #fff;
-    stroke-width: 2;
-    stroke-line-cap: round;
-    stroke-line-join: round;
-  }
 `;

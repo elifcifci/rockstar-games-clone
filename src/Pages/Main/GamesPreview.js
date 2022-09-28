@@ -1,8 +1,10 @@
 import React from "react";
-import { ViewAndMoreButtons } from "../../Components/Buttons/ViewAndMoreButtons";
 import { GameContainer } from "./styles";
-import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
-import { gamesConstant } from "../../Constants/games";
+import { getLimitedConstant } from "../../helpers/getLimitedConstant";
+
+//Components
+import ViewAndMoreButtons from "../../components/Buttons/ViewAndMoreButtons";
+import { gamesConstant } from "../../constants/games";
 
 function GamesPreview() {
   const limitedConstant = getLimitedConstant(3, [...gamesConstant]);

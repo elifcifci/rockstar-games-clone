@@ -1,15 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
+import { SliderContainer, Carousel } from "./styles";
+
+//Components
 import SliderButtons from "./Buttons";
 import Detail from "./Detail";
 import SliderContent from "./Content";
-import { SliderContainer, Carousel } from "./styles";
 
-const Slider = ({
-  constants,
-  sliderTitle,
-  visibleForTopPage,
-}) => {
-
+const Slider = ({ constants, sliderTitle, isVisibleForTopPage }) => {
   const carouselWidth = useRef();
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth] = useState(0);
@@ -33,7 +30,7 @@ const Slider = ({
     setDragLimit(slideAmount);
   }, [arrowClickCount]);
 
-  let slideWithArrows = (event) => {
+  const slideWithArrows = (event) => {
     event.target.id == 0 && arrowClickCount !== 0
       ? setArrowClickCount((previous) => previous - 1)
       : event.target.id == 1 &&
@@ -43,29 +40,35 @@ const Slider = ({
 
   return (
     <SliderContainer>
-      <div className={visibleForTopPage ? "top-carousel-container" : "inside-carousel-container"}>
+      <div
+        className={
+          isVisibleForTopPage
+            ? "top-carousel-container"
+            : "inside-carousel-container"
+        }
+      >
         <Carousel ref={carouselWidth}>
           <SliderContent
-            visibleForTopPage={visibleForTopPage}
+            isVisibleForTopPage={isVisibleForTopPage}
             limit={dragLimit}
             screenWidth={width}
             constants={constants}
             clicksCount={arrowClickCount}
             clickLimit={constants.length - 1}
-            click={slideWithArrows}
+            slideWithArrows={slideWithArrows}
             title={sliderTitle}
           />
         </Carousel>
 
         {/* This part will be visible when slider is top of page */}
-        {visibleForTopPage && (
+        {isVisibleForTopPage && (
           <div className="detail-and-buttons-container">
-          <Detail constants={constants} index={activeIndex} />
-          <SliderButtons
-          activeIndex={activeIndex}
-          constants={constants}
-          click={(event) => setActiveIndex(event.target.id)}
-          />
+            <Detail constants={constants[activeIndex]} index={activeIndex} />
+            <SliderButtons
+              activeIndex={activeIndex}
+              constants={constants}
+              click={(event) => setActiveIndex(event.target.id)}
+            />
           </div>
         )}
       </div>

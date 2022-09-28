@@ -1,5 +1,6 @@
+//Styles
 import styled from "styled-components";
-import { colors, fontSizes } from "../../Styles/globalStyles";
+import { colors, fontSizes } from "../../styles/globalStyles";
 
 export const Container = styled.div`
   position: relative;
@@ -7,34 +8,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-`;
-
-export const AccountIcon = styled.svg`
-  width: 36px;
-  height: 36px;
-  enable-background: new 0 0 48 48;
-  cursor: pointer;
-
-  .svgCircle {
-    opacity: 0.1;
-    fill-rule: evenodd;
-    clip-rule: evenodd;
-    fill: #fff;
-  }
-
-  .svgUse1 {
-    overflow: visible;
-    fill: #fff;
-  }
-
-  .svgUse2 {
-    overflow: visible;
-  }
-
-  .svgPath {
-    clip-path: url(#b);
-    fill: #fff;
-  }
 `;
 
 export const AccountContainer = styled.div`
@@ -55,8 +28,8 @@ export const AccountContainer = styled.div`
     background: ${colors.primary};
     width: 100%;
   }
-  .account-list--border {
-    border-bottom: 1px solid ${colors.opacityColor};
+  .account-list-border {
+    border-bottom: 1px solid ${colors.transparentTertiary};
     border-bottom: 1px solid hsla(0, 0%, 85%, 0.1);
   }
   .account-list_item {

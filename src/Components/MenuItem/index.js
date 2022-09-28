@@ -1,15 +1,18 @@
 import React, { useRef } from "react";
-import SearchInput from "./SearchInput";
-import { menuItems } from "../../Constants/Navbar";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
-import { generalIcons } from "../../Constants/generalIcons";
+//Components
+import SearchInput from "./SearchInput";
+import SquareWithArrow from "../UI/SquareWithArrow";
+
+//Styles
 import { MenuItemContainer } from "./styles";
-import { colors } from "../../Styles/globalStyles";
+import { colors } from "../../styles/globalStyles";
 
-export default function MenuItem({ pageTitle, isOpen, toggle }) {
-  const svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
+import { motion } from "framer-motion";
+import { menuItems } from "../../constants/Navbar";
+
+function MenuItem({ pageTitle, isOpen, toggle }) {
   const carouselWidth = useRef();
 
   const navbarMenuConfig = {
@@ -53,11 +56,7 @@ export default function MenuItem({ pageTitle, isOpen, toggle }) {
           variants={menuItemConfig}
         >
           {item.title}
-          {item.isIconVisible && (
-            <svg className="list_icon" viewBox={svgNeeds[0]}>
-              <path d={svgNeeds[1]} />
-            </svg>
-          )}
+          {item.isIconVisible && <SquareWithArrow isForMenuItem={true} />}
         </motion.span>
       </Link>
     );
@@ -76,3 +75,5 @@ export default function MenuItem({ pageTitle, isOpen, toggle }) {
     </MenuItemContainer>
   );
 }
+
+export default MenuItem;

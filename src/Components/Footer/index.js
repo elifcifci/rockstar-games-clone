@@ -1,5 +1,13 @@
 import React from "react";
-import { generalIcons } from "../../Constants/generalIcons";
+import { motion } from "framer-motion";
+
+import { footerConstants } from "../../constants/footer";
+
+//Components
+import FooterDropdown from "../../components/Dropdown/FooterDropdown";
+import SquareWithArrow from "../UI/SquareWithArrow";
+
+//Styles
 import {
   FooterContainer,
   ContactInWebsiteAndLanguagesContainer,
@@ -7,14 +15,9 @@ import {
   GeneralKnowledgeContainer,
   AboutCompanyContainer,
 } from "./styles";
-import { motion } from "framer-motion";
-import { footerConstants } from "../../Constants/footer";
-import FooterDropdown from "../../Components/Dropdown/FooterDropdown";
-import { colors } from "../../Styles/globalStyles";
+import { colors } from "../../styles/globalStyles";
 
-export default function Footer() {
-  let svgNeeds = [generalIcons[1].viewBox, generalIcons[1].path];
-
+function Footer() {
   let createContactPagesList = footerConstants.contactInWebsite.map((item) => {
     return (
       <li className="contact-item" key={item.title}>
@@ -25,11 +28,7 @@ export default function Footer() {
           href={item.link}
         >
           {item.title}
-          {item.isIconVisible && (
-            <svg className="contact-item-icon" viewBox={svgNeeds[0]}>
-              <path d={svgNeeds[1]} />
-            </svg>
-          )}
+          {item.isIconVisible && <SquareWithArrow />}
         </motion.a>
       </li>
     );
@@ -124,3 +123,5 @@ export default function Footer() {
     </FooterContainer>
   );
 }
+
+export default Footer;

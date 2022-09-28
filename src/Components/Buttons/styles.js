@@ -1,11 +1,14 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
-import { screen, colors, fontSizes } from "../../Styles/globalStyles";
+
+//Styles
+import styled from "styled-components";
+import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
 export const AnimatedButtonContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+
   @media ${screen.tablet} {
     .link-text {
       font-size: ${fontSizes.size4};
@@ -46,6 +49,9 @@ export const ButtonText = styled(motion.p)`
   }
 
   .button-link {
+    &:visited {
+      color: white;
+    }
     &:hover {
       color: black;
     }

@@ -1,7 +1,7 @@
 import React from "react";
-import { gamesConstant } from "../../Constants/games";
-import { GameContainer } from "./styles";
 import { Link } from "react-router-dom";
+import { gamesConstant } from "../../constants/games";
+import { GameContainer } from "./styles";
 
 function Games() {
   const createGameCards = gamesConstant.map((game) => {

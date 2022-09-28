@@ -1,5 +1,6 @@
+//Styles
 import styled from "styled-components";
-import { screen, colors } from "../../Styles/globalStyles";
+import { screen, colors } from "../../styles/globalStyles";
 
 export const GameContainer = styled.div`
   display: flex;
@@ -65,7 +66,7 @@ export const GameContainer = styled.div`
 
   @media (min-width: 1897px) {
     padding: 88px;
-    
+
     .game-items {
       grid-template-columns: repeat(5, 1fr);
     }

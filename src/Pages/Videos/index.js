@@ -1,10 +1,9 @@
 import React from "react";
-import Slider from "../../Components/Slider";
-import { videos } from "../../Constants/video";
 import { VideosContainer } from "./styles";
+import Slider from "../../components/Slider";
+import { videos } from "../../constants/video";
 
 function Videos() {
-  
   return (
     <VideosContainer>
       {videos.map((video) => {
@@ -13,7 +12,7 @@ function Videos() {
             key={video[0].title}
             constants={video[1].constant}
             sliderTitle={video[0] !== "top slider" && video[0].title}
-            visibleForTopPage={video[0].title === "top slider" ? true : false}
+            isVisibleForTopPage={video[0].title === "top slider" ? true : false}
           />
         );
       })}

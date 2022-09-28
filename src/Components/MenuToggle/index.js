@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, IconParts } from "./style";
 
-export const MenuToggleIcon = ({ toggle }) => (
+const MenuToggleIcon = ({ toggle }) => (
   <Button onClick={toggle}>
     <IconParts
       variants={{
@@ -23,3 +23,5 @@ export const MenuToggleIcon = ({ toggle }) => (
     />
   </Button>
 );
+
+export default MenuToggleIcon;

@@ -1,6 +1,8 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
-import {screen} from "../../Styles/globalStyles";
+
+//Styles
+import styled from "styled-components";
+import { screen } from "../../styles/globalStyles";
 
 export const HamburgerMenuContainer = styled(motion.div)`
   position: relative;
@@ -9,25 +11,25 @@ export const HamburgerMenuContainer = styled(motion.div)`
   display: flex;
   grid-gap: 1rem;
   align-items: center;
-  
-  .page-title{
+
+  .page-title {
     font-size: 16px;
   }
 
   @media${screen.tablet} {
-    .page-title{
+    .page-title {
       font-size: 18px;
     }
   }
 
   @media${screen.laptopS} {
-    .page-title{
+    .page-title {
       font-size: 20px;
     }
   }
 
   @media${screen.laptopXL} {
-    .page-title{
+    .page-title {
       font-size: 22px;
     }
   }

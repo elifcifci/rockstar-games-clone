@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Cards({ constants, firstCard }) {
+function Cards({ constants, firstCard }) {
   let cards = constants.map((constant) => (
     <div
       className={
@@ -30,3 +30,5 @@ export function Cards({ constants, firstCard }) {
 
   return <>{cards}</>;
 }
+
+export default Cards;

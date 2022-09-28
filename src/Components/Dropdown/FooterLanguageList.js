@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { DropdownListItems } from "./styles";
 
 const FooterLanguageList = ({ constants, toggle, isVisible }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
-
-  const handleClick = (event) => {
-    selectLanguage(event);
-    toggle(false);
-  };
-
-  const selectLanguage = (event) => {
-    constants.forEach((constant) => {
-      if (event.target.id === constant.title) {
-        setSelectedLanguage(constant.language);
-      }
-    });
-  };
-
   return (
     <DropdownListItems>
       {isVisible &&

@@ -1,8 +1,8 @@
 import React from "react";
-import { Cards } from "./Cards";
+import Cards from "./Cards";
 import { NewswireContainer, NewswirePreviewContainer } from "./styles";
 
-export function NewswireCardRenderer({ constants, isPreview, isTopCard }) {
+function NewswireCardRenderer({ constants, isPreview, isTopCard }) {
   let copyConstant = [...constants];
   const cardTypes = isTopCard;
 
@@ -23,3 +23,5 @@ export function NewswireCardRenderer({ constants, isPreview, isTopCard }) {
     </NewswireContainer>
   );
 }
+
+export default NewswireCardRenderer;

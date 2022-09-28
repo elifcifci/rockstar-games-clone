@@ -1,17 +1,15 @@
 import React from "react";
-import { WatchButton } from "../Buttons/WatchButton";
-import {DetailContainer} from "./styles"
+import WatchButton from "../Buttons/WatchButton";
+import { DetailContainer } from "./styles";
 
-const Detail = ({ constants, index }) => {
+const Detail = ({ constants }) => {
   return (
     <DetailContainer>
       <div className="slider-figcaption">
-        <div className="inner_figcaption">
-          {constants[index].description}
-        </div>
-        <h2 className="slider-page_title">{constants[index].title}</h2>
+        <div className="inner_figcaption">{constants.description}</div>
+        <h2 className="slider-page_title">{constants.title}</h2>
       </div>
-      <WatchButton title={constants[index].title} text="WATCH NOW" />
+      <WatchButton title={constants.title} text="WATCH NOW" />
     </DetailContainer>
   );
 };

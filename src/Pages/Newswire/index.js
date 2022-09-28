@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Container } from "./styles";
-import { NewswireCardRenderer } from "../../Components/NewswireCardRenderer/index";
-import { ViewAndMoreButtons } from "../../Components/Buttons/ViewAndMoreButtons";
-import { newswireConstants } from "../../Constants/newswire";
-import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
+import { getLimitedConstant } from "../../helpers/getLimitedConstant";
+
+//Components
+import NewswireCardRenderer from "../../components/NewswireCardRenderer/index";
+import ViewAndMoreButtons from "../../components/Buttons/ViewAndMoreButtons";
+import { newswireConstants } from "../../constants/newswire";
 
 function Newswire() {
   let [requestedLimit, setRequestedLimit] = useState(18);
@@ -24,7 +26,7 @@ function Newswire() {
   return (
     <Container>
       <NewswireCardRenderer isTopCard={true} constants={newswireConstants} />
-      <div className="mes">
+      <div>
         <NewswireCardRenderer
           isTopCard={false}
           constants={[...limitedNewswireConstant]}

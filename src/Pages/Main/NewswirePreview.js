@@ -1,9 +1,11 @@
 import React from "react";
 import { NewswireCards } from "./styles";
-import { NewswireCardRenderer } from "../../Components/NewswireCardRenderer/index";
-import { ViewAndMoreButtons } from "../../Components/Buttons/ViewAndMoreButtons";
-import { newswireConstants } from "../../Constants/newswire";
-import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
+import { getLimitedConstant } from "../../helpers/getLimitedConstant";
+
+//Components
+import NewswireCardRenderer from "../../components/NewswireCardRenderer/index";
+import ViewAndMoreButtons from "../../components/Buttons/ViewAndMoreButtons";
+import { newswireConstants } from "../../constants/newswire";
 
 function NewswirePreview() {
   let limitedNewswireConstant = getLimitedConstant(5, newswireConstants);

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-
-import { ViewAndMoreButtons } from "../../Components/Buttons/ViewAndMoreButtons";
+import { getLimitedConstant } from "../../helpers/getLimitedConstant";
 import { PcAndMobileGamesContainer } from "./styles";
-import GamesDropdown from "../../Components/Dropdown/GamesDropdown";
-import { getLimitedConstant } from "../../Helpers/getLimitedConstant";
-import {
-  dropdownAnimationConfig,
-  ArrowIcon,
-} from "../../Components/Dropdown/styles";
+
+//Components
+import GamesDropdown from "../../components/Dropdown/GamesDropdown";
+import ArrowIconContainer from "../../components/UI/ArrowIcon";
+import ViewAndMoreButtons from "../../components/Buttons/ViewAndMoreButtons";
 
 function PcAndMobileGames({ constants, isPcGames }) {
   let limitedConstant = getLimitedConstant(3, constants);
@@ -53,14 +51,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
             <h4 id={constant.id} className="games-dropdown-title">
               Select Retailer
             </h4>
-            <ArrowIcon
-              animate={constant.isOpen ? "open" : "close"}
-              variants={dropdownAnimationConfig}
-              className="dropdown-arrow-svg"
-              id={constant.id}
-            >
-              <path d="m6 9 6 6 6-6" className="dropdown-arrow-path" />
-            </ArrowIcon>
+            <ArrowIconContainer constant={constant} />
           </div>
           {constant.isOpen && (
             <GamesDropdown

@@ -1,18 +1,19 @@
 import React from "react";
 import { HeaderContainer } from "./styles";
 
-function SliderHeader({ click, clicksCount, clickLimit, title }) {
+function SliderHeader({ slideWithArrows, clicksCount, clickLimit, title }) {
   return (
     <HeaderContainer>
       <h2 className="slider-header_title">{title}</h2>
       <div className="arrow-container">
         <svg
           viewBox="0 0 320 512"
-          className={
-            clicksCount === 0 ? "slider-arrow slider-disabled-arrow" : "slider-arrow"
+          className={`slider-arrow   ${
+            clicksCount === 0 && "slider-disabled-arrow"
           }
+          `}
           id={0}
-          onClick={click}
+          onClick={slideWithArrows}
         >
           <path
             id={0}
@@ -22,13 +23,12 @@ function SliderHeader({ click, clicksCount, clickLimit, title }) {
 
         <svg
           viewBox="0 0 320 512"
-          className={
-            clicksCount === clickLimit
-              ? "slider-arrow slider-disabled-arrow"
-              : "slider-arrow"
-          }
+          className={`slider-arrow   ${
+            clicksCount === clickLimit && "slider-disabled-arrow"
+          }  
+          `}
           id={1}
-          onClick={click}
+          onClick={slideWithArrows}
         >
           <path
             id={1}

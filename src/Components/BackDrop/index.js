@@ -1,11 +1,13 @@
 import React from "react";
+
+//Styles
 import { BackDropContainer } from "./styles";
-import { colors } from "../../Styles/globalStyles";
+import { colors } from "../../styles/globalStyles";
 
 const BackDrop = ({ isOpen }) => {
   const BackDropConfig = {
     open: {
-      background: colors.opacityColor2,
+      background: colors.transparentBlack,
       display: "initial",
       transition: {
         type: "spring",
@@ -14,7 +16,8 @@ const BackDrop = ({ isOpen }) => {
       },
     },
     colorChange: {
-      background: colors.transparent,
+      opacity: 0,
+      background: colors.transparentColor,
 
       transition: {
         type: "tween",

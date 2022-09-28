@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+
+//Styles
 import styled from "styled-components";
-import { colors } from "../../Styles/globalStyles";
+import { colors } from "../../styles/globalStyles";
 
 export const VideosContainer = styled(motion.div)`
   margin-bottom: 4rem;

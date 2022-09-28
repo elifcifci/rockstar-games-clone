@@ -6,12 +6,11 @@ const GamesDropdown = ({ constants }) => {
     return (
       <GamesDropdownListItem
         key={constant}
-        className={
+        className={` games-list_item ${
           constant ===
-          constants.selectRetailer[constants.selectRetailer.length - 1]
-            ? "games-list_item dropdown-list_last-item"
-            : "games-list_item"
-        }
+            constants.selectRetailer[constants.selectRetailer.length - 1] &&
+          "dropdown-list_last-item"
+        }`}
       >
         {constant}
       </GamesDropdownListItem>

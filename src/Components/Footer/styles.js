@@ -1,5 +1,6 @@
+//Styles
 import styled from "styled-components";
-import { screen, colors, fontSizes } from "../../Styles/globalStyles";
+import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
 export const FooterContainer = styled.div`
   padding: 64px 30px 40px 30px;
@@ -59,12 +60,6 @@ export const ContactInWebsiteAndLanguagesContainer = styled.div`
     display: inline-block;
     color: white;
     width: 100%;
-  }
-
-  .contact-item-icon {
-    fill: white;
-    margin-left: 7px;
-    width: 10px;
   }
 
   .select-container {
@@ -148,7 +143,7 @@ export const GeneralKnowledgeContainer = styled.div`
   }
 
   .contact-item_link {
-    color: ${colors.opacityColor};
+    color: ${colors.transparentTertiary};
     width: 100%;
   }
 

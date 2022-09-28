@@ -1,5 +1,9 @@
 import React from "react";
+
+//Components
+import Carousel from "./Carousel";
 import SliderHeader from "./SliderHeader";
+
 import { InnerCarouselContainer, Content } from "./styles";
 import { motion } from "framer-motion";
 
@@ -8,70 +12,43 @@ const SliderContent = ({
   title,
   screenWidth,
   constants,
-  visibleForTopPage,
+  isVisibleForTopPage,
   clicksCount,
   clickLimit,
-  click,
+  slideWithArrows,
 }) => {
-  let createCarousel = constants.map((constant) => {
-    return (
-      <div
-        className={
-          title === "By Game"
-            ? "slider-page-container last-slider-inner-container"
-            : "slider-page-container"
-        }
-        key={constant.id}
-        title={constant.title}
-      >
-        <img
-          className={
-            title === "By Game"
-              ? "last-slider_image"
-              : "slider-page_image"
-          }
-          src={constant.link}
-        />
-        {!visibleForTopPage && constant.description && (
-          <div className="slider-page_detail">
-            <div className="inner-carousel_figcaption">
-              {constant.description}
-            </div>
-            <h2 className="slider-inside-page_title">{constant.title}</h2>
-          </div>
-        )}
-      </div>
-    );
-  });
-
   return (
     <Content>
       {/* This part will be visible when sliders aren't top of page */}
-      {!visibleForTopPage && (
+      {!isVisibleForTopPage && (
         <SliderHeader
           title={title}
           clicksCount={clicksCount}
           clickLimit={clickLimit}
-          click={click}
+          slideWithArrows={slideWithArrows}
         />
       )}
-      <InnerCarouselContainer visibleForTopPage={visibleForTopPage}>
+
+      <InnerCarouselContainer isVisibleForTopPage={isVisibleForTopPage}>
         <motion.div
           drag="x"
           dragConstraints={
-            visibleForTopPage
+            isVisibleForTopPage
               ? { right: 0, left: -screenWidth }
               : { right: 1, left: -5 }
           }
           animate={{ x: -limit }}
           transition={{ duration: 0.3 }}
-          className={
-            visibleForTopPage
-              ? "motion-container"
-              : "motion-container slider-inside-page-container"
+          className={`motion-container  ${
+            !isVisibleForTopPage && "slider-inside-page-container"
           }
+          `}
         >
-          {createCarousel}
+          <Carousel
+            isVisibleForTopPage={isVisibleForTopPage}
+            constants={constants}
+            title={title}
+          />
         </motion.div>
       </InnerCarouselContainer>
     </Content>

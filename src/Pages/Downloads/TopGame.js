@@ -1,6 +1,6 @@
 import React from "react";
 import { TopGameContainer } from "./styles";
-import { WatchButton } from "../../Components/Buttons/WatchButton";
+import WatchButton from "../../components/Buttons/WatchButton";
 
 function TopGame({ constants }) {
   return (

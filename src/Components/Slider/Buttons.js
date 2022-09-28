@@ -15,10 +15,8 @@ function SliderButtons({ activeIndex, click, constants }) {
           >
             <span
               id={constant.id}
-              className={`${
-                activeIndex == index
-                  ? "slider_button active-slider_button"
-                  : "slider_button"
+              className={`slider_button ${
+                activeIndex == index && "active-slider_button"
               }`}
             />
           </label>

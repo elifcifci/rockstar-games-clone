@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+
+//Styles
 import styled from "styled-components";
-import { screen, fontSizes, colors } from "../../Styles/globalStyles";
+import { screen, fontSizes, colors } from "../../styles/globalStyles";
 
 export const SliderContainer = styled.div`
   .inside-carousel-container {
@@ -169,7 +171,7 @@ export const ButtonContainer = styled(motion.div)`
 
   .slider_button {
     display: inline-block;
-    background-color: ${colors.inactive};
+    background-color: ${colors.inactiveButton};
     margin-right: 8px;
     height: 2px;
     width: 1.5rem;
@@ -248,7 +250,7 @@ export const HeaderContainer = styled.div`
   }
 
   .slider-disabled-arrow {
-    fill: ${colors.inactive};
+    fill: ${colors.inactiveButton};
   }
 
   @media${screen.tablet} {
@@ -302,13 +304,12 @@ export const InnerCarouselContainer = styled.div`
   }
 
   ${(props) =>
-    props.visibleForTopPage === false &&
+    props.isVisibleForTopPage === false &&
     `
-    
   .slider-page-container{
     margin: 0;
     border-radius: 10px;
-    border: 1px solid ${colors.gray};
+    border: 1px solid ${colors.cardBorder};
     background-color: ${colors.black};
   }
   

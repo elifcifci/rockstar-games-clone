@@ -1,15 +1,16 @@
 import React from "react";
-import Slider from "../../Components/Slider";
-import NewswirePreview from "./NewswirePreview";
-import GamesPreview from "./GamesPreview";
-import { mainConstants } from "../../Constants/main";
 import { MainContainer } from "./styles";
 
-function Main() {
+//Components
+import Slider from "../../components/Slider";
+import NewswirePreview from "./NewswirePreview";
+import GamesPreview from "./GamesPreview";
+import { mainConstants } from "../../constants/main";
 
+function Main() {
   return (
-    <MainContainer>      
-      <Slider constants={mainConstants} visibleForTopPage={true} />
+    <MainContainer>
+      <Slider constants={mainConstants} isVisibleForTopPage={true} />
       <div className="previews-container">
         <NewswirePreview />
         <GamesPreview />
