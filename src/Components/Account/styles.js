@@ -29,7 +29,7 @@ export const StyledAccountContainer = styled.div`
   }
   .account-list_item {
     opacity: 0.8;
-    font-size: ${fontSizes.size3};
+    font-size: ${fontSizes.size16px};
     padding: 1rem 2rem;
   }
 `;

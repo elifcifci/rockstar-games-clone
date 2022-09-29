@@ -34,7 +34,7 @@ export const StyledNewswireCards = styled.div`
 
   h2 {
     width: 100%;
-    font-size: ${fontSizes.size7};
+    font-size: ${fontSizes.size25px};
   }
 
   @media${screen.laptopS} {

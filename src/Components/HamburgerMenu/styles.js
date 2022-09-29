@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 //Styles
 import styled from "styled-components";
-import { screen } from "../../styles/globalStyles";
+import { screen, fontSizes } from "../../styles/globalStyles";
 
 export const StyledHamburgerMenuContainer = styled(motion.div)`
   position: relative;
@@ -13,24 +13,24 @@ export const StyledHamburgerMenuContainer = styled(motion.div)`
   align-items: center;
 
   .page-title {
-    font-size: 16px;
+    ${fontSizes.size16px};
   }
 
   @media${screen.tablet} {
     .page-title {
-      font-size: 18px;
+      ${fontSizes.size18px};
     }
   }
 
   @media${screen.laptopS} {
     .page-title {
-      font-size: 20px;
+      ${fontSizes.size20px};
     }
   }
 
   @media${screen.laptopXL} {
     .page-title {
-      font-size: 22px;
+      ${fontSizes.size22px};
     }
   }
 `;

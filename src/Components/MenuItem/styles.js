@@ -46,7 +46,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
   }
 
   .list-link {
-    font-size: ${fontSizes.size7};
+    font-size: ${fontSizes.size25px};
     width: 100%;
     height: 40px;
     color: ${colors.white};
@@ -124,7 +124,7 @@ svg{
 .searchArea{
   background-color: ${colors.searchArea};
   color: ${colors.white};
-  font-size: ${fontSizes.size4};
+  font-size: ${fontSizes.size19px};
   border: none;
   border-radius: 4px;
   width: 100%;
@@ -134,7 +134,7 @@ svg{
     
   ::placeholder {
     color: ${colors.transparentTertiary};
-    font-size: ${fontSizes.size3};
+    font-size: ${fontSizes.size16px};
   }
 }
 
@@ -146,7 +146,7 @@ svg{
       padding: 18px;  
 
       ::placeholder {
-        font-size: ${fontSizes.size4};
+        font-size: ${fontSizes.size19px};
       }
     }   
     
@@ -162,7 +162,7 @@ svg{
       padding: 20px;  
 
       ::placeholder {
-        font-size: ${fontSizes.size5};
+        font-size: ${fontSizes.size20px};
       }
     }   
     
@@ -175,7 +175,7 @@ svg{
   @media${screen.laptopL}{    
     .searchArea{
       ::placeholder {
-        font-size: ${fontSizes.size6};
+        font-size: ${fontSizes.size21px};
       }
     }  
 

@@ -85,7 +85,7 @@ export const StyledDetailContainer = styled.div`
   grid-gap: 2rem;
 
   .inner_figcaption {
-    font-size: ${fontSizes.size2};
+    font-size: ${fontSizes.size12px};
     font-weight: bold;
   }
 
@@ -95,7 +95,7 @@ export const StyledDetailContainer = styled.div`
   }
 
   h2 {
-    font-size: ${fontSizes.size8};
+    font-size: ${fontSizes.size31px};
   }
 
   .slider-page_title {
@@ -121,11 +121,11 @@ export const StyledDetailContainer = styled.div`
     padding: 40px 40px 60px 40px;
 
     h2 {
-      font-size: ${fontSizes.size9};
+      font-size: ${fontSizes.size39px};
     }
 
     .inner_figcaption {
-      font-size: ${fontSizes.size3};
+      font-size: ${fontSizes.size16px};
     }
   }
 
@@ -136,17 +136,17 @@ export const StyledDetailContainer = styled.div`
 
   @media${screen.laptopXL} {
     h2 {
-      font-size: ${fontSizes.size11};
+      font-size: 61.04px;
     }
   }
 
   @media${screen.biggestScreen} {
     h2 {
-      font-size: ${fontSizes.size12};
+      font-size: 76.28px;
     }
 
     .inner_figcaption {
-      font-size: ${fontSizes.size6};
+      font-size: ${fontSizes.size21px};
     }
   }
 `;
@@ -169,7 +169,7 @@ export const StyledHeaderContainer = styled.div`
   width: 100%;
 
   .slider-header_title {
-    font-size: ${fontSizes.size5};
+    font-size: ${fontSizes.size20px};
     font-weight: bold;
     margin: 0;
   }
@@ -195,7 +195,7 @@ export const StyledHeaderContainer = styled.div`
     padding: 0rem 4.5rem 1.7rem 4.5rem;
 
     .slider-header_title {
-      font-size: ${fontSizes.size6};
+      font-size: ${fontSizes.size21px};
     }
   }
 
@@ -203,7 +203,7 @@ export const StyledHeaderContainer = styled.div`
     padding: 0rem 5rem 1.9rem 5rem;
 
     .slider-header_title {
-      font-size: ${fontSizes.size7};
+      font-size: ${fontSizes.size25px};
     }
   }
 
@@ -262,12 +262,12 @@ export const StyledInnerCarouselContainer = styled.div`
   }
 
   .inner-carousel_figcaption{
-    font-size: ${fontSizes.size2};
+    font-size: ${fontSizes.size12px};
     font-weight: bold;
   }
   
   .slider-inside-page_title{
-    font-size: ${fontSizes.size3};
+    font-size: ${fontSizes.size16px};
     margin: 5px 0 0 0;
   }
 
@@ -301,17 +301,17 @@ export const StyledInnerCarouselContainer = styled.div`
      }
 
      .slider-inside-page_title{
-       font-size: 18px;
+       ${fontSizes.size18px};
      }
    }
 
    @media${screen.laptopS}{
      .inner-carousel_figcaption{
-       font-size: ${fontSizes.size3};
+       font-size: ${fontSizes.size16px};
       }
 
       .slider-inside-page_title{
-        font-size: ${fontSizes.size5};
+        font-size: ${fontSizes.size20px};
       }
 
       .slider-inside-page-container {

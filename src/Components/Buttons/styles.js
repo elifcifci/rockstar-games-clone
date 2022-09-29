@@ -53,13 +53,13 @@ export const StyledAnimatedButtonContainer = styled.div`
 
   @media ${screen.tablet} {
     .link-text {
-      font-size: ${fontSizes.size4};
+      font-size: ${fontSizes.size19px};
     }
   }
 `;
 
 export const SliderWatchButton = styled(motion.button)`
-  font-size: ${fontSizes.size3};
+  font-size: ${fontSizes.size16px};
   font-weight: 700;
   border-radius: 0.25rem;
   padding: 16px 48px;
@@ -74,7 +74,7 @@ export const SliderWatchButton = styled(motion.button)`
     padding: 18px 0;
     max-width: 230px;
     height: 56px;
-    font-size: ${fontSizes.size4};
+    font-size: ${fontSizes.size19px};
   }
 
   @media ${screen.laptopS} {
@@ -86,7 +86,7 @@ export const SliderWatchButton = styled(motion.button)`
   }
 
   @media${screen.biggestScreen} {
-    font-size: ${fontSizes.size6};
+    font-size: ${fontSizes.size21px};
     padding: 22px 0px;
     height: auto;
   }

@@ -45,7 +45,7 @@ export const StyledFooterContainer = styled.div`
     order: 2;
   }
   .website-contact-item {
-    font-size: ${fontSizes.size0};
+    font-size: 10px;
     margin-bottom: 1rem;
   }
   .website-contact-item-link {
@@ -82,12 +82,11 @@ export const StyledFooterContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     padding: 0;
-    font-size: ${fontSizes.size1};
     font-weight: 700;
     row-gap: 0.6rem;
   }
   .company_item {
-    font-size: ${fontSizes.size1};
+    font-size: ${fontSizes.size11px};
     margin: 0;
     display: flex;
     width: 220px;
@@ -101,7 +100,7 @@ export const StyledFooterContainer = styled.div`
     padding: 10px 0 10px 0;
   }
   .company-city-item {
-    font-size: ${fontSizes.size1};
+    font-size: ${fontSizes.size11px};
     width: auto;
   }
 
@@ -145,7 +144,7 @@ export const StyledFooterContainer = styled.div`
     }
 
     .knowledge-contact-item {
-      font-size: 18px;
+      ${fontSizes.size18px};
     }
     .knowledge-contact-list {
       display: flex;
@@ -166,17 +165,17 @@ export const StyledFooterContainer = styled.div`
       width: max-content;
     }
     .company_item {
-      font-size: ${fontSizes.size2};
+      font-size: ${fontSizes.size12px};
       margin-bottom: 0px;
     }
     .company-city-item {
-      font-size: ${fontSizes.size2};
+      font-size: ${fontSizes.size12px};
     }
   }
 
   @media ${screen.laptopS} {
     .website-contact-item {
-      font-size: ${fontSizes.size2};
+      font-size: ${fontSizes.size12px};
     }
     .website-contact-list {
       order: 1;
@@ -193,17 +192,17 @@ export const StyledFooterContainer = styled.div`
     }
 
     .knowledge-contact-item-link {
-      font-size: ${fontSizes.size5};
+      font-size: ${fontSizes.size20px};
     }
 
     .company_item {
-      font-size: ${fontSizes.size3};
+      font-size: ${fontSizes.size16px};
     }
     .company_first-item {
       width: 140px;
     }
     .company-city-item {
-      font-size: ${fontSizes.size3};
+      font-size: ${fontSizes.size16px};
     }
   }
 
@@ -217,7 +216,7 @@ export const StyledFooterContainer = styled.div`
     }
 
     .knowledge-contact-item-link {
-      font-size: 22px;
+      ${fontSizes.size22px};
     }
 
     .website-contact-item-link {

@@ -9,11 +9,11 @@ export const Container = styled.div`
 
   h3 {
     padding-right: 12px;
-    font-size: ${fontSizes.size2};
+    font-size: ${fontSizes.size12px};
   }
 
   time {
-    font-size: ${fontSizes.size2};
+    font-size: ${fontSizes.size12px};
     color: ${colors.transparentTertiary};
   }
 
@@ -46,14 +46,14 @@ export const Container = styled.div`
   }
 
   time {
-    font-size: ${fontSizes.size2};
+    font-size: ${fontSizes.size12px};
     color: ${colors.transparentTertiary};
   }
 
   .announcement {
     width: 100%;
 
-    font-size: ${fontSizes.size5};
+    font-size: ${fontSizes.size20px};
     line-height: 1.3;
     font-weight: 600;
   }
@@ -65,7 +65,7 @@ export const StyledNewswirePreviewContainer = styled(Container)`
   margin-bottom: 2rem;
 
   .announcement {
-    font-size: ${fontSizes.size6};
+    font-size: ${fontSizes.size21px};
   }
 
   @media${screen.tablet} {
@@ -79,7 +79,7 @@ export const StyledNewswirePreviewContainer = styled(Container)`
 
   @media${screen.laptopXL} {
     h2 {
-      font-size: ${fontSizes.size8};
+      font-size: ${fontSizes.size31px};
     }
   }
 `;
@@ -134,7 +134,7 @@ export const StyledNewswireContainer = styled(Container)`
       cursor: pointer;
 
       .announcement{
-        font-size: ${fontSizes.size7}
+        font-size: ${fontSizes.size25px}
       }
 
       .detail{
@@ -161,7 +161,7 @@ export const StyledNewswireContainer = styled(Container)`
         }
 
         .announcement{
-          font-size: ${fontSizes.size8}
+          font-size: ${fontSizes.size31px}
         }
 
       }
@@ -169,7 +169,7 @@ export const StyledNewswireContainer = styled(Container)`
       @media${screen.laptopS} {
 
         h3, time{
-          font-size: 16px;
+          ${fontSizes.size16px};
         }
 
         .detail{
@@ -178,7 +178,7 @@ export const StyledNewswireContainer = styled(Container)`
         }
 
         .announcement{
-          font-size: 39px;
+          font-size: ${fontSizes.size39px};
         }
       }
 
@@ -205,11 +205,11 @@ export const StyledNewswireContainer = styled(Container)`
         }
         
         h3, time{
-          font-size: 18px;
+          ${fontSizes.size18px};
         }
 
         .announcement{
-          font-size: ${fontSizes.size10}
+          font-size: 48.8px;
         }
 
         .detail{

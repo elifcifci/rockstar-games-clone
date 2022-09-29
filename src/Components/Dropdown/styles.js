@@ -1,6 +1,6 @@
 //Styles
 import styled from "styled-components";
-import { screen, colors } from "../../styles/globalStyles";
+import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
 export const DropdownCommonStyles = styled.div`
   cursor: pointer;
@@ -26,7 +26,6 @@ export const StyledFooterDropdownContainer = styled(DropdownCommonStyles)`
   h4 {
     margin: 0;
     font-weight: normal;
-    border: solid;
   }
 
   .dropdown-footer-languages {
@@ -80,7 +79,7 @@ export const StyledFooterDropdownContainer = styled(DropdownCommonStyles)`
       padding: 0.5rem;
     }
     h4 {
-      font-size: 18px;
+      ${fontSizes.size18px};
     }
   }
 
@@ -89,23 +88,23 @@ export const StyledFooterDropdownContainer = styled(DropdownCommonStyles)`
       right: 0px;
     }
     .dropdown-list_item {
-      font-size: 20px;
+      ${fontSizes.size20px};
       padding: 15px 5px 15px 15px;
     }
 
     h4 {
-      font-size: 20px;
+      ${fontSizes.size20px};
     }
   }
 
   @media${screen.laptopXL} {
     .dropdown-list_item {
-      font-size: 22px;
+      ${fontSizes.size22px};
       padding: 20px 15px 20px 20px;
     }
 
     h4 {
-      font-size: 22px;
+      ${fontSizes.size22px};
     }
   }
 `;

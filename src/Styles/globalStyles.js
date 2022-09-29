@@ -30,19 +30,17 @@ export const colors = {
 };
 
 export const fontSizes = {
-  size0: "0.64rem",
-  size1: "0.70rem",
-  size2: "0.8rem",
-  size3: "1rem",
-  size4: "1.20rem",
-  size5: "1.25rem",
-  size6: "1.32rem",
-  size7: "1.563rem",
-  size8: "1.953rem",
-  size9: "2.441rem",
-  size10: "3.052rem",
-  size11: "3.815rem",
-  size12: "4.768rem",
+  size11px: "11.2px",
+  size12px: "12.8px",
+  size16px: "16px",
+  size18px: "18px",
+  size19px: "19.2px",
+  size20px: "20px",
+  size21px: "21.12px",
+  size22px: "22px",
+  size25px: "25px",
+  size31px: "31.24px",
+  size39px: "39px",
 };
 
 const GlobalStyle = createGlobalStyle`

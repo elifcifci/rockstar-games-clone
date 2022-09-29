@@ -42,7 +42,7 @@ export const StyledTopGameContainer = styled.div`
   .top-game_title {
     margin: 0;
     line-height: 3rem;
-    font-size: ${fontSizes.size8};
+    font-size: ${fontSizes.size31px};
   }
 
   .top-game-paragraphs {
@@ -62,7 +62,7 @@ export const StyledTopGameContainer = styled.div`
 
   @media${screen.tablet} {
     .top-game_paragraph {
-      font-size: 18px;
+      ${fontSizes.size18px};
     }
   }
 
@@ -99,7 +99,7 @@ export const StyledTopGameContainer = styled.div`
     }
 
     .top-game_paragraph {
-      font-size: 22px;
+      ${fontSizes.size22px};
     }
   }
 `;
@@ -113,7 +113,7 @@ export const StyledFeaturedAndMiscellaneousContainer = styled.div`
   }
 
   .content_title {
-    font-size: ${fontSizes.size7};
+    font-size: ${fontSizes.size25px};
     margin: 0 0 24px 0;
     padding: 0;
     width: 100%;
@@ -125,7 +125,7 @@ export const StyledFeaturedAndMiscellaneousContainer = styled.div`
   }
 
   .content-type {
-    font-size: ${fontSizes.size3};
+    font-size: ${fontSizes.size16px};
     font-weight: normal;
     margin: 0;
   }
@@ -150,11 +150,11 @@ export const StyledFeaturedAndMiscellaneousContainer = styled.div`
     padding: 0 72px 0 72px;
 
     .content_title {
-      font-size: ${fontSizes.size7};
+      font-size: ${fontSizes.size25px};
     }
 
     .content-type {
-      font-size: 18px;
+      ${fontSizes.size18px};
     }
 
     .featured-content {
@@ -227,7 +227,7 @@ export const StyledPcAndMobileGamesContainer = styled.div`
   .top-game_title {
     margin: 0;
     line-height: 3rem;
-    font-size: ${fontSizes.size8};
+    font-size: ${fontSizes.size31px};
   }
 
   .top-game_paragraph {
@@ -267,7 +267,7 @@ export const StyledPcAndMobileGamesContainer = styled.div`
     }
 
     .content_title {
-      font-size: ${fontSizes.size7};
+      font-size: ${fontSizes.size25px};
     }
   }
 `;
