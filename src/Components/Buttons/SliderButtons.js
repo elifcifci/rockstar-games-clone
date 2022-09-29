@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledButtonContainer } from "./styles";
 
-function SliderButtons({ activeIndex, click, constants }) {
+function SliderButtons({ activeIndex, updateActiveIndex, constants }) {
   return (
     <StyledButtonContainer>
       {constants.map((constant, index) => {
@@ -11,7 +11,7 @@ function SliderButtons({ activeIndex, click, constants }) {
             id={constant.id}
             htmlFor={constant.id}
             className="button-label"
-            onClick={click}
+            onClick={updateActiveIndex}
           >
             <span
               id={constant.id}

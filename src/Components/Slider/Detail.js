@@ -1,5 +1,5 @@
 import React from "react";
-import WatchButton from "../Buttons/WatchButton";
+import WatchButton from "../Buttons/WatchButtons";
 import { StyledDetailContainer } from "./styles";
 
 const Detail = ({ constants }) => {

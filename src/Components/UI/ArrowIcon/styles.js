@@ -26,7 +26,7 @@ export const StyledArrowIconContainer = styled(motion.svg)`
     stroke-line-join: round;
   }
 
-  @media${screen.mobileS} {
+  @media ${screen.mobileS} {
     width: 26px;
   }
 `;

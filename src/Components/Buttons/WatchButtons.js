@@ -4,7 +4,7 @@ import React from "react";
 import { colors } from "../../styles/globalStyles";
 import { SliderWatchButton } from "./styles";
 
-const WatchButton = ({ text, title, isForDownLoad }) => {
+const WatchButtons = ({ text, title, isForDownLoad }) => {
   return (
     <SliderWatchButton
       className={isForDownLoad && "downLoad-button"}
@@ -26,4 +26,4 @@ const WatchButton = ({ text, title, isForDownLoad }) => {
   );
 };
 
-export default WatchButton;
+export default WatchButtons;

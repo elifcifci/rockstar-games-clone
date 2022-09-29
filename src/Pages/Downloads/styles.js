@@ -13,12 +13,12 @@ export const StyledDownloadsContainer = styled.div`
   margin: 0 auto;
   padding-bottom: 2rem;
   
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     grid-gap: 8rem;
     padding-bottom: 72px;
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     margin-bottom: 0;
     padding: 80px;
   }
@@ -60,20 +60,20 @@ export const StyledTopGameContainer = styled.div`
     max-width: 100%;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     .top-game_paragraph {
       ${fontSizes.size18px};
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4em;
     border-radius: 16px;
   }
 
-  @media${screen.laptopL} {
+  @media ${screen.laptopL} {
     .top-game_paragraph {
       line-height: 1.6rem;
     }
@@ -89,7 +89,7 @@ export const StyledTopGameContainer = styled.div`
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     padding: 2.8rem 5.5rem;
     grid-gap: 4rem;
     grid-template-columns: 55% 1fr;
@@ -146,7 +146,7 @@ export const StyledFeaturedAndMiscellaneousContainer = styled.div`
     border-radius: 10px;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     padding: 0 72px 0 72px;
 
     .content_title {
@@ -168,14 +168,14 @@ export const StyledFeaturedAndMiscellaneousContainer = styled.div`
     }
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     .miscellaneous-content {
       grid-gap: 1.5rem;
       grid-row-gap: 4rem;
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     padding: 0;
 
     .featured-content {
@@ -187,7 +187,7 @@ export const StyledFeaturedAndMiscellaneousContainer = styled.div`
     }
   }
 
-  @media${screen.laptopM} {
+  @media ${screen.laptopM} {
     .featured-content {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 1.5rem;
@@ -198,7 +198,7 @@ export const StyledFeaturedAndMiscellaneousContainer = styled.div`
     }
   }
 
-  @media${screen.laptopL} {
+  @media ${screen.laptopL} {
     .featured-content {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -215,7 +215,8 @@ export const StyledPcAndMobileGamesContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    row-gap: 32px;
+    column-gap: 24px;
     margin-bottom: 2rem;
   }
 
@@ -257,11 +258,12 @@ export const StyledPcAndMobileGamesContainer = styled.div`
     text-align: left;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     padding: 0 72px 0 72px;
 
     .content-container {
       grid-row-gap: 4rem;
+      column-gap: 24px;
     }
 
     .title-container {
@@ -273,12 +275,11 @@ export const StyledPcAndMobileGamesContainer = styled.div`
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     padding: 0;
 
     .content-container {
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1.5rem;
     }
 
     .content_title {
@@ -294,7 +295,7 @@ export const StyledPcAndMobileGamesContainer = styled.div`
     }
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     .title-container {
       padding: 0 11px 11px 11px;
     }

@@ -11,19 +11,27 @@ export const StyledSliderContainer = styled.div`
     padding: 2rem 0;
   }
 
-  @media${screen.tablet} {
+  .slider-carousel {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media ${screen.tablet} {
     .inside-carousel-container {
       padding: 4.5rem 0;
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .inside-carousel-container {
       padding: 5rem 0;
     }
   }
 
-  @media${screen.laptopM} {
+  @media ${screen.laptopM} {
     .top-carousel-container {
       display: grid;
       grid-template-columns: 70% 1fr;
@@ -36,13 +44,13 @@ export const StyledSliderContainer = styled.div`
     }
   }
 
-  @media${screen.laptopL} {
+  @media ${screen.laptopL} {
     .detail-and-buttons-container {
       padding: 80px 40px;
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     .detail-and-buttons-container {
       padding: 88px;
     }
@@ -53,7 +61,7 @@ export const StyledSliderContainer = styled.div`
     }
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     .top-carousel-container {
       grid-template-columns: 60% 1fr;
     }
@@ -66,15 +74,6 @@ export const StyledSliderContainer = styled.div`
       padding: 5.5rem 0;
     }
   }
-`;
-
-export const StyledCarousel = styled.div`
-  cursor: pointer;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
 `;
 
 export const StyledDetailContainer = styled.div`
@@ -102,18 +101,18 @@ export const StyledDetailContainer = styled.div`
     margin: 0;
   }
 
-  @media${screen.mobileXL} {
+  @media ${screen.mobileXL} {
     display: flex;
     align-items: flex-start;
     grid-gap: 2rem;
     justify-content: space-between;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     padding: 72px 36px;
   }
 
-  @media${screen.laptopM} {
+  @media ${screen.laptopM} {
     flex-direction: column;
   }
 
@@ -129,18 +128,18 @@ export const StyledDetailContainer = styled.div`
     }
   }
 
-  @media${screen.laptopM} {
+  @media ${screen.laptopM} {
     padding: 0;
     justify-content: initial;
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     h2 {
       font-size: 61.04px;
     }
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     h2 {
       font-size: 76.28px;
     }
@@ -149,10 +148,6 @@ export const StyledDetailContainer = styled.div`
       font-size: ${fontSizes.size21px};
     }
   }
-`;
-
-export const Container = styled.div`
-  border: solid 9px red;
 `;
 
 //SliderContent styles start
@@ -191,7 +186,7 @@ export const StyledHeaderContainer = styled.div`
     fill: ${colors.inactiveButton};
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     padding: 0rem 4.5rem 1.7rem 4.5rem;
 
     .slider-header_title {
@@ -199,7 +194,7 @@ export const StyledHeaderContainer = styled.div`
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     padding: 0rem 5rem 1.9rem 5rem;
 
     .slider-header_title {
@@ -207,7 +202,7 @@ export const StyledHeaderContainer = styled.div`
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     padding: 0 0 1.9rem 0;
   }
 `;
@@ -216,7 +211,6 @@ export const StyledInnerCarouselContainer = styled.div`
   .motion-container {
     display: flex;
     width: 100%;
-    grid-gap: 2rem;
   }
 
   .slider-inside-page-container {
@@ -235,7 +229,7 @@ export const StyledInnerCarouselContainer = styled.div`
     min-width: 100%;
   }
 
-  @media${screen.mobileM} {
+  @media ${screen.mobileM} {
     .slider-page_detail {
       height: auto;
     }
@@ -244,68 +238,72 @@ export const StyledInnerCarouselContainer = styled.div`
   ${(props) =>
     props.isVisibleForTopPage === false &&
     `
-  .slider-page-container{
-    margin: 0;
-    border-radius: 10px;
-    border: 1px solid ${colors.cardBorder};
-    background-color: ${colors.black};
-  }
-  
-  .slider-page_image{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-bottom: 0;
-  }
+    .motion-container {
+      grid-gap: 2rem;
+    }
 
-  .slider-page_detail {
-    padding: 24px;
-  }
-
-  .inner-carousel_figcaption{
-    font-size: ${fontSizes.size12px};
-    font-weight: bold;
-  }
-  
-  .slider-inside-page_title{
-    font-size: ${fontSizes.size16px};
-    margin: 5px 0 0 0;
-  }
-
-  .last-slider_image{
-    border-radius: 10px;
-    width: 100%;
-   }
-
-   .last-slider-inner-container{
-    border: 1px solid ${colors.black};
-   }
-
-   @media${screen.tablet}{
-    margin: 0 72px;
-    display: grid;
-    grid-gap: 1.5rem;
-
-    .slider-inside-page-container {
-      padding: 0;
-      width: 45%;
-      box-sizing: border-box;
-      margin-left: 0px;
+    .slider-page-container{
+      margin: 0;
+      border-radius: 10px;
+      border: 1px solid ${colors.cardBorder};
+      background-color: ${colors.black};
+    }
+    
+    .slider-page_image{
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding-bottom: 0;
     }
 
     .slider-page_detail {
-      padding: 27px; 
+      padding: 24px;
     }
 
     .inner-carousel_figcaption{
-      font-size: 15px;
-     }
+      font-size: ${fontSizes.size12px};
+      font-weight: bold;
+    }
+    
+    .slider-inside-page_title{
+      font-size: ${fontSizes.size16px};
+      margin: 5px 0 0 0;
+    }
 
-     .slider-inside-page_title{
-       ${fontSizes.size18px};
-     }
-   }
+    .last-slider_image{
+      border-radius: 10px;
+      width: 100%;
+    }
 
-   @media${screen.laptopS}{
+    .last-slider-inner-container{
+      border: 1px solid ${colors.black};
+    }
+
+    @media ${screen.tablet}{
+      margin: 0 72px;
+      display: grid;
+      grid-gap: 1.5rem;
+
+      .slider-inside-page-container {
+        padding: 0;
+        width: 45%;
+        box-sizing: border-box;
+        margin-left: 0px;
+      }
+
+      .slider-page_detail {
+        padding: 27px; 
+      }
+
+      .inner-carousel_figcaption{
+        font-size: 15px;
+      }
+
+      .slider-inside-page_title{
+        ${fontSizes.size18px};
+      }
+    }
+
+   @media ${screen.laptopS}{
      .inner-carousel_figcaption{
        font-size: ${fontSizes.size16px};
       }
@@ -323,7 +321,7 @@ export const StyledInnerCarouselContainer = styled.div`
       }
     }
 
-    @media${screen.laptopL}{
+    @media ${screen.laptopL}{
       grid-gap: 1.5rem;
       margin: 0 80px;
       
@@ -332,7 +330,7 @@ export const StyledInnerCarouselContainer = styled.div`
       }
     } 
 
-    @media${screen.laptopXL}{
+    @media ${screen.laptopXL}{
       margin: 0;
 
       .slider-inside-page-container {

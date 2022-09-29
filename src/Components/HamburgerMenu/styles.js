@@ -16,19 +16,19 @@ export const StyledHamburgerMenuContainer = styled(motion.div)`
     ${fontSizes.size16px};
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     .page-title {
       ${fontSizes.size18px};
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .page-title {
       ${fontSizes.size20px};
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     .page-title {
       ${fontSizes.size22px};
     }

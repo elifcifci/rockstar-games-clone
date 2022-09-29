@@ -13,7 +13,7 @@ export const StyledSquareIconContainer = styled.svg`
       margin-left: 10px;
       width: 12px;
 
-      @media${screen.laptopXL} {
+      @media ${screen.laptopXL} {
         margin-left: 20px;
         width: 20px;
       }

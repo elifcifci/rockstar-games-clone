@@ -14,14 +14,14 @@ export const StyledMainContainer = styled.div`
     margin-bottom: 0px;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     .previews-container {
       padding: 4rem;
       grid-gap: 8rem;
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .previews-container {
       padding: 80px;
     }
@@ -37,7 +37,7 @@ export const StyledNewswireCards = styled.div`
     font-size: ${fontSizes.size25px};
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .previews-container {
       padding: 80px;
     }
@@ -66,7 +66,7 @@ export const StyledGameContainer = styled.div`
     border-radius: 7px;
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .imgContainer {
       grid-template-columns: repeat(4, 1fr);
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledHeaderContainer } from "./styles";
 
-function SliderHeader({ slideWithArrows, clicksCount, clickLimit, title }) {
+function Header({ slideWithArrows, clicksCount, clickLimit, title }) {
   return (
     <StyledHeaderContainer>
       <h2 className="slider-header_title">{title}</h2>
@@ -40,4 +40,4 @@ function SliderHeader({ slideWithArrows, clicksCount, clickLimit, title }) {
   );
 }
 
-export default SliderHeader;
+export default Header;

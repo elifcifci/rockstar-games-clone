@@ -59,12 +59,10 @@ export const StyledFooterContainer = styled.div`
 
   .social-media-list {
     order: 1;
-    display: flex;
     padding: 0;
     margin: 0;
     width: 100%;
     display: flex;
-    padding: 0;
     justify-content: space-between;
   }
   .social-media-icon {
@@ -83,7 +81,7 @@ export const StyledFooterContainer = styled.div`
     justify-content: flex-start;
     padding: 0;
     font-weight: 700;
-    row-gap: 0.6rem;
+    row-gap: 0.5rem;
   }
   .company_item {
     font-size: ${fontSizes.size11px};
@@ -104,24 +102,14 @@ export const StyledFooterContainer = styled.div`
     width: auto;
   }
 
-  @media${screen.mobileM} {
-    .contact-and-language-section {
-      grid-template-columns: 1fr 1fr;
-      grid-row-gap: 1.2rem;
-    }
-
+  @media ${screen.mobileM} {
     .social-media-list {
-      width: 280px;
+      justify-content: flex-start;
+      column-gap: 2rem;
     }
   }
 
-  @media${screen.mobileL} {
-    .company-section {
-      row-gap: 0.5rem;
-    }
-  }
-
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     padding: 72px;
     margin-top: 0px;
 
@@ -133,7 +121,6 @@ export const StyledFooterContainer = styled.div`
       justify-content: flex-end;
       column-gap: 2rem;
       order: 2;
-      width: 100%;
     }
     .social-media-icon {
       width: 24px;
@@ -143,9 +130,6 @@ export const StyledFooterContainer = styled.div`
       scale: 1;
     }
 
-    .knowledge-contact-item {
-      ${fontSizes.size18px};
-    }
     .knowledge-contact-list {
       display: flex;
       width: 330px;
@@ -153,16 +137,7 @@ export const StyledFooterContainer = styled.div`
     }
 
     .company-section {
-      width: 100%;
       flex-direction: row;
-    }
-    .company_first-item {
-      width: 125px;
-      text-align: left;
-    }
-    .company_last-item {
-      text-align: right;
-      width: max-content;
     }
     .company_item {
       font-size: ${fontSizes.size12px};
@@ -182,14 +157,6 @@ export const StyledFooterContainer = styled.div`
       display: flex;
       column-gap: 1rem;
     }
-    .website-contact-item_link {
-      width: 100%;
-    }
-    .website-social-media-section {
-      display: grid;
-      grid-gap: 0;
-      grid-template-columns: repeat(2, 1fr);
-    }
 
     .knowledge-contact-item-link {
       font-size: ${fontSizes.size20px};
@@ -198,20 +165,13 @@ export const StyledFooterContainer = styled.div`
     .company_item {
       font-size: ${fontSizes.size16px};
     }
-    .company_first-item {
-      width: 140px;
-    }
     .company-city-item {
       font-size: ${fontSizes.size16px};
     }
   }
 
   @media ${screen.laptopXL} {
-    .website-contact-list {
-      width: max-content;
-    }
     .website-contact-item {
-      width: max-content;
       margin-right: 8px;
     }
 

@@ -1,17 +1,17 @@
 import { createGlobalStyle } from "styled-components";
 
 export const screen = {
-  mobileS: "(min-width: 314px)",
-  mobileM: "(min-width: 375px)",
-  mobileL: "(min-width: 425px)",
-  mobileXL: "(min-width: 525px)",
-  tablet: "(min-width: 768px)",
-  tabletM: "(min-width: 828px)",
-  laptopS: "(min-width: 1024px)",
-  laptopM: "(min-width: 1197px)",
-  laptopL: "(min-width: 1440px)",
-  laptopXL: "(min-width: 1920px)",
-  biggestScreen: "(min-width: 2560px)",
+  mobileS: `(min-width: 314px)`,
+  mobileM: `(min-width: 375px)`,
+  mobileL: `(min-width: 425px)`,
+  mobileXL: `(min-width: 525px)`,
+  tablet: `(min-width: 768px)`,
+  tabletM: `(min-width: 828px)`,
+  laptopS: `(min-width: 1024px)`,
+  laptopM: `(min-width: 1197px)`,
+  laptopL: `(min-width: 1440px)`,
+  laptopXL: `(min-width: 1920px)`,
+  biggestScreen: `(min-width: 2560px)`,
 };
 
 export const colors = {
@@ -51,6 +51,11 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         z-index: 1;
+
+        @media(min-width: 300px){
+          width: 100%;
+          overflow-x: visible ;
+        }
     }
 
     a{

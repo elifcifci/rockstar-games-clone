@@ -1,21 +1,26 @@
 //Pages
-import Header from "./components/Header";
 import Main from "./pages/Main";
 import Newswire from "./pages/Newswire";
 import Games from "./pages/Games";
 import Videos from "./pages/Videos";
 import Downloads from "./pages/Downloads";
-import BackDrop from "./components/BackDrop";
+
+//Components
+import Header from "./components/Header";
+import BackDrop from "./components/Backdrop";
 import Footer from "./components/Footer/index";
 
 import { useCycle } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./styles/globalStyles";
+import { useEffect } from "react";
 
 function App() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const toggleBackDrop = () => toggleOpen();
-
+  useEffect(() => {
+    console.log("isOpen: ", isOpen);
+  }, [isOpen]);
   return (
     <div>
       <GlobalStyle />

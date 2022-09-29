@@ -8,16 +8,14 @@ export const StyledMenuItemContainer = styled(motion.div)`
   padding: 0;
   background-color: ${colors.black};
   position: fixed;
-  grid-row: 2rem;
   left: 0;
   bottom: 0;
   display: flex;
   flex-flow: column;
-  grid-gap: 2rem;
   height: 100vh;
   width: 100%;
+  padding-top: 60px;
   z-index: 4;
-  padding-top: 70px;
   box-sizing: border-box;
 
   .toggle-back-drop {
@@ -56,7 +54,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
     color: ${colors.secondary} !important;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     width: max-content;
 
     .menu-list {
@@ -70,7 +68,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .menu-list {
       padding: 1.5rem 5rem 5rem 5rem;
     }
@@ -82,13 +80,13 @@ export const StyledMenuItemContainer = styled(motion.div)`
     }
   }
 
-  @media${screen.laptopL} {
+  @media ${screen.laptopL} {
     .list-link {
       height: 55px;
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     .menu-list {
       padding: 1.5rem 5.5rem 5.5rem 5.5rem;
     }
@@ -100,7 +98,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
     }
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     .list-link {
       font-size: 54px;
       height: 90px;
@@ -111,7 +109,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
 export const StyledMenuSearchInput = styled(motion.form)`
 display: flex;
 justify-content: center;
-margin: 26px 2rem 5px 2rem;
+margin: 26px 2rem 40px 2rem;
 background-color: ${colors.searchArea};
 border-radius: 4px;
 box-sizing: border: box;
@@ -140,9 +138,9 @@ svg{
   }
 }
 
-  @media${screen.tablet}{
+  @media ${screen.tablet}{
     min-width: 20rem;
-    margin: 35px 4.5rem -5px 4.5rem;
+    margin: 35px 4.5rem 25px 4.5rem;
 
     .searchArea{
       padding: 18px;  
@@ -158,8 +156,8 @@ svg{
     }
   }
 
-  @media${screen.laptopS}{    
-    margin: 40px 5rem -10px 5rem;
+  @media ${screen.laptopS}{    
+    margin: 40px 5rem 25px 5rem;
     .searchArea{
       padding: 20px;  
 
@@ -174,7 +172,7 @@ svg{
     }
   }
 
-  @media${screen.laptopL}{    
+  @media ${screen.laptopL}{    
     .searchArea{
       ::placeholder {
         font-size: ${fontSizes.size21px};
@@ -186,14 +184,44 @@ svg{
     }
   }
 
-  @media${screen.laptopXL} {
-    margin: 45px  5.5rem 8px  5.5rem;
+  @media ${screen.laptopXL} {
+    margin: 45px  5.5rem 25px  5.5rem;
   }
 
-  @media${screen.biggestScreen} {
-    margin-bottom: 0;
+  @media ${screen.biggestScreen} {
     svg{
       padding: 22px 0px 22px 6px;
     }
   }
 `;
+
+export const navbarMenuConfig = {
+  open: {
+    display: "initial",
+    x: [-770, -1, 0],
+    y: 0,
+    transition: {
+      type: "tween",
+      delay: 0.2,
+      damping: 30,
+    },
+  },
+  closed: {
+    display: "none",
+    x: -770,
+    y: 0,
+    transition: {
+      type: "tween",
+      delay: 0.2,
+    },
+  },
+
+  displaying: {
+    display: "none",
+
+    transition: {
+      type: "tween",
+      delay: 0.5,
+    },
+  },
+};

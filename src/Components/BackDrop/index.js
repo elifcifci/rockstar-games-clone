@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledBackdropContainer, BackDropConfig } from "./styles";
 
-const BackDrop = ({ isOpen }) => {
+const Backdrop = ({ isOpen }) => {
   return (
     <StyledBackdropContainer
       variants={BackDropConfig}
@@ -10,4 +10,4 @@ const BackDrop = ({ isOpen }) => {
   );
 };
 
-export default BackDrop;
+export default Backdrop;

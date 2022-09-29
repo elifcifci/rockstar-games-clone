@@ -48,7 +48,6 @@ export const StyledFooterDropdownContainer = styled(DropdownCommonStyles)`
     padding: 12px 0 12px 16px;
     width: 100%;
     margin: 0;
-    background-color: ${colors.primary};
     background: ${colors.black};
 
     &:hover {
@@ -68,13 +67,13 @@ export const StyledFooterDropdownContainer = styled(DropdownCommonStyles)`
     border-top-right-radius: 5px;
   }
 
-  @media${screen.mobileL} {
+  @media ${screen.mobileL} {
     .dropdown-select-text {
       grid-template-columns: 5fr 1fr;
     }
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     .dropdown-select-text {
       padding: 0.5rem;
     }
@@ -83,9 +82,9 @@ export const StyledFooterDropdownContainer = styled(DropdownCommonStyles)`
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .dropdown-footer-languages {
-      right: 0px;
+      right: 0;
     }
     .dropdown-list_item {
       ${fontSizes.size20px};
@@ -97,7 +96,7 @@ export const StyledFooterDropdownContainer = styled(DropdownCommonStyles)`
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     .dropdown-list_item {
       ${fontSizes.size22px};
       padding: 20px 15px 20px 20px;
@@ -138,27 +137,27 @@ export const StyledGamesDropdownContainer = styled(DropdownCommonStyles)`
     }
   }
 
-  @media${screen.mobileM} {
+  @media ${screen.mobileM} {
     .games-list_item {
       font-size: 16px;
     }
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     .games-list_item {
       font-size: ${fontSizes.size18px};
       padding: 9px 18px;
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .games-list_item {
       font-size: ${fontSizes.size20px};
       padding: 10px 20px;
     }
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     .games-list_item {
       font-size: ${fontSizes.size22px};
       padding: 11px 22px;

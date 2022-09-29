@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyledNewswireContainer } from "./styles";
 import { getLimitedConstant } from "../../helpers/getLimitedConstant";
 
@@ -10,6 +10,10 @@ import { newswireConstants } from "../../constants/newswire";
 function Newswire() {
   let [requestedLimit, setRequestedLimit] = useState(18);
   const constantsLength = newswireConstants.length;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   let updateCounter = () => {
     let updatedRequest = requestedLimit + 20;
@@ -23,6 +27,7 @@ function Newswire() {
     requestedLimit,
     newswireConstants
   );
+
   return (
     <StyledNewswireContainer>
       <NewswireCardRenderer isTopCard={true} constants={newswireConstants} />
@@ -32,12 +37,14 @@ function Newswire() {
           constants={[...limitedNewswireConstant]}
         />
       </div>
-      <ViewAndMoreButtons
-        isMoreStory={true}
-        click={updateCounter}
-        text="More Stories"
-        link="/newswire"
-      />
+      {requestedLimit !== constantsLength - 1 && (
+        <ViewAndMoreButtons
+          isMoreStory={true}
+          updateCounter={updateCounter}
+          text="More Stories"
+          link="/newswire"
+        />
+      )}
     </StyledNewswireContainer>
   );
 }
