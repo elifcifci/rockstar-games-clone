@@ -78,10 +78,10 @@ function Header({ isOpen, toggle }) {
         <HamburgerMenu
           isOpen={isOpen}
           toggle={toggle}
-          click={closeVisibility}
+          closeVisibility={closeVisibility}
         />
         <RockstarGamesIcon isOpen={isOpen} toggle={toggle} />
-        <Account isVisible={isVisible} click={updateVisibility} />
+        <Account isVisible={isVisible} updateVisibility={updateVisibility} />
       </motion.div>
       <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
     </StyledHeaderContainer>

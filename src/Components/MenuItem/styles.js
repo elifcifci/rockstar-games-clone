@@ -56,7 +56,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
     color: ${colors.secondary} !important;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     width: max-content;
 
     .menu-list {
@@ -70,7 +70,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
     }
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .menu-list {
       padding: 1.5rem 5rem 5rem 5rem;
     }
@@ -82,13 +82,13 @@ export const StyledMenuItemContainer = styled(motion.div)`
     }
   }
 
-  @media${screen.laptopL} {
+  @media ${screen.laptopL} {
     .list-link {
       height: 55px;
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     .menu-list {
       padding: 1.5rem 5.5rem 5.5rem 5.5rem;
     }
@@ -100,7 +100,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
     }
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     .list-link {
       font-size: 54px;
       height: 90px;
@@ -140,7 +140,7 @@ svg{
   }
 }
 
-  @media${screen.tablet}{
+  @media ${screen.tablet}{
     min-width: 20rem;
     margin: 35px 4.5rem -5px 4.5rem;
 
@@ -158,7 +158,7 @@ svg{
     }
   }
 
-  @media${screen.laptopS}{    
+  @media ${screen.laptopS}{    
     margin: 40px 5rem -10px 5rem;
     .searchArea{
       padding: 20px;  
@@ -174,7 +174,7 @@ svg{
     }
   }
 
-  @media${screen.laptopL}{    
+  @media ${screen.laptopL}{    
     .searchArea{
       ::placeholder {
         font-size: ${fontSizes.size21px};
@@ -186,11 +186,11 @@ svg{
     }
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     margin: 45px  5.5rem 8px  5.5rem;
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     margin-bottom: 0;
     svg{
       padding: 22px 0px 22px 6px;

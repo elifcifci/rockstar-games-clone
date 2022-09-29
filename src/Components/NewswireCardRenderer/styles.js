@@ -68,16 +68,16 @@ export const StyledNewswirePreviewContainer = styled(Container)`
     font-size: ${fontSizes.size21px};
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.9rem;
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     h2 {
       font-size: ${fontSizes.size31px};
     }
@@ -91,7 +91,7 @@ export const StyledNewswireContainer = styled(Container)`
     display: none;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     grid-gap: 1.9rem;
   }
 
@@ -107,7 +107,7 @@ export const StyledNewswireContainer = styled(Container)`
       margin: 0 auto;
       box-sizing: border-box;
 
-      @media${screen.tablet} {
+      @media ${screen.tablet} {
         padding: 72px;
         grid-gap: 1.9rem;
         grid-template-columns: repeat(2, 1fr);
@@ -116,7 +116,7 @@ export const StyledNewswireContainer = styled(Container)`
           padding: 36px 27px;
         }
       }
-      @media${screen.laptopS} {
+      @media ${screen.laptopS} {
         padding: 80px;
 
         grid-template-columns: repeat(3, 1fr);
@@ -125,7 +125,7 @@ export const StyledNewswireContainer = styled(Container)`
         }
       }
 
-      @media${screen.biggestScreen} {
+      @media ${screen.biggestScreen} {
         padding: 88px;       
       }
     `
@@ -142,7 +142,7 @@ export const StyledNewswireContainer = styled(Container)`
         box-sizing: border-box;
       }
 
-      @media${screen.tablet} {
+      @media ${screen.tablet} {
         .first-newswire_img {
           display: none;
         }
@@ -166,7 +166,7 @@ export const StyledNewswireContainer = styled(Container)`
 
       }
 
-      @media${screen.laptopS} {
+      @media ${screen.laptopS} {
 
         h3, time{
           ${fontSizes.size16px};
@@ -182,7 +182,7 @@ export const StyledNewswireContainer = styled(Container)`
         }
       }
 
-      @media${screen.laptopM} {
+      @media ${screen.laptopM} {
         margin-bottom: 20px;
 
         .first-newswire{
@@ -196,7 +196,7 @@ export const StyledNewswireContainer = styled(Container)`
         }
       }
 
-      @media${screen.laptopXL} {
+      @media ${screen.laptopXL} {
 
         margin-bottom: 88px;
         
@@ -218,7 +218,7 @@ export const StyledNewswireContainer = styled(Container)`
       
       }
 
-      @media${screen.biggestScreen} {
+      @media ${screen.biggestScreen} {
         margin-bottom: 40px;
 
         .first-newswire{

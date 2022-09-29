@@ -67,7 +67,7 @@ const Slider = ({ constants, sliderTitle, isVisibleForTopPage }) => {
             <SliderButtons
               activeIndex={activeIndex}
               constants={constants}
-              click={(event) => setActiveIndex(event.target.id)}
+              updateActiveIndex={(event) => setActiveIndex(event.target.id)}
             />
           </div>
         )}

@@ -1,10 +1,12 @@
 //Pages
-import Header from "./components/Header";
 import Main from "./pages/Main";
 import Newswire from "./pages/Newswire";
 import Games from "./pages/Games";
 import Videos from "./pages/Videos";
 import Downloads from "./pages/Downloads";
+
+//Components
+import Header from "./components/Header";
 import BackDrop from "./components/BackDrop";
 import Footer from "./components/Footer/index";
 

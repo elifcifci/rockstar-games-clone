@@ -28,17 +28,17 @@ export const StyledHeaderContainer = styled(motion.nav)`
     border-bottom: solid 2px ${colors.navbarBorder};
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     .header-inner-container {
       padding: 6px  4.5rem 6px  4.5rem;
   }
 
-  @media${screen.laptopS} {
+  @media ${screen.laptopS} {
     .header-inner-container {
       padding: 6px  5rem 6px  5rem;
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     .header-inner-container {
       padding: 6px  5.5rem 6px  5.5rem;
   }

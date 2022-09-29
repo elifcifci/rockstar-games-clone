@@ -43,11 +43,9 @@ export const StyledAnimatedButtonContainer = styled.div`
   }
 
   .button-link {
-    &:visited {
-      color: white;
-    }
+    color: ${colors.white};
     &:hover {
-      color: black;
+      color: ${colors.black};
     }
   }
 
@@ -66,11 +64,11 @@ export const SliderWatchButton = styled(motion.button)`
   width: 100%;
   box-sizing: border-box;
 
-  @media${screen.mobileXL} {
+  @media ${screen.mobileXL} {
     max-width: 200px;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     padding: 18px 0;
     max-width: 230px;
     height: 56px;
@@ -85,7 +83,7 @@ export const SliderWatchButton = styled(motion.button)`
     height: 62px;
   }
 
-  @media${screen.biggestScreen} {
+  @media ${screen.biggestScreen} {
     font-size: ${fontSizes.size21px};
     padding: 22px 0px;
     height: auto;
@@ -119,7 +117,7 @@ export const StyledButtonContainer = styled(motion.div)`
     background-color: white;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     margin-bottom: 4rem;
 
     .button-label {
@@ -134,12 +132,12 @@ export const StyledButtonContainer = styled(motion.div)`
     }
   }
 
-  @media${screen.laptopM} {
+  @media ${screen.laptopM} {
     margin: 0;
     padding: 0;
   }
 
-  @media${screen.laptopXL} {
+  @media ${screen.laptopXL} {
     align-items: flex-end;
 
     .button-label {

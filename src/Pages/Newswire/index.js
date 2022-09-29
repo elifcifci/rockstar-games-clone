@@ -23,6 +23,7 @@ function Newswire() {
     requestedLimit,
     newswireConstants
   );
+
   return (
     <StyledNewswireContainer>
       <NewswireCardRenderer isTopCard={true} constants={newswireConstants} />
@@ -34,7 +35,7 @@ function Newswire() {
       </div>
       <ViewAndMoreButtons
         isMoreStory={true}
-        click={updateCounter}
+        updateCounter={updateCounter}
         text="More Stories"
         link="/newswire"
       />

@@ -7,10 +7,10 @@ import AccountIcon from "../UI/AccountIcon";
 import { StyledAccountContainer } from "./styles";
 import { colors } from "../../styles/globalStyles";
 
-function Account({ isVisible, click }) {
+function Account({ isVisible, updateVisibility }) {
   return (
     <StyledAccountContainer>
-      <AccountIcon click={click} />
+      <AccountIcon updateVisibility={updateVisibility} />
 
       {/* There is a dropdown under the AccountIcon. Its visibility depends onClick event. */}
       {isVisible && (

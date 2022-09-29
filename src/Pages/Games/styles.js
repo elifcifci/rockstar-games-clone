@@ -25,7 +25,7 @@ export const StyledGameContainer = styled.div`
     border-radius: 10px;
   }
 
-  @media${screen.tablet} {
+  @media ${screen.tablet} {
     padding: 4rem;
 
     .game-items {
@@ -37,7 +37,7 @@ export const StyledGameContainer = styled.div`
     }
   }
 
-  @media${screen.tabletM} {
+  @media ${screen.tabletM} {
     .game-items {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -50,7 +50,7 @@ export const StyledGameContainer = styled.div`
     }
   }
 
-  @media${screen.laptopM} {
+  @media ${screen.laptopM} {
     padding: 80px;
 
     .game-items {

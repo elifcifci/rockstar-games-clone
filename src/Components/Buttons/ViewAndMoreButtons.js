@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 import { StyledAnimatedButtonContainer } from "./styles";
 
-function ViewAndMoreButtons({ isMoreStory, text, link, click, title }) {
+function ViewAndMoreButtons({ isMoreStory, text, link, updateCounter, title }) {
   return (
     <StyledAnimatedButtonContainer>
-      <p title={title && title} onClick={click} className="link-text">
+      <p title={title && title} onClick={updateCounter} className="link-text">
         {isMoreStory ? (
           <>{text}</>
         ) : (

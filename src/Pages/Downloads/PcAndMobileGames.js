@@ -90,8 +90,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
       </h2>
       <div className="content-container">{renderGameCards()}</div>
       <ViewAndMoreButtons
-        title="Click event didn't add"
-        click={updateCounter}
+        updateCounter={updateCounter}
         isMoreStory={true}
         text="View All"
       />

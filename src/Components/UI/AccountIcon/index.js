@@ -1,9 +1,9 @@
 import { StyledAccountIconContainer } from "./styles";
 
-const AccountIcon = ({ click }) => {
+const AccountIcon = ({ updateVisibility }) => {
   return (
     <StyledAccountIconContainer
-      onClick={click}
+      onClick={updateVisibility}
       className="svg1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
