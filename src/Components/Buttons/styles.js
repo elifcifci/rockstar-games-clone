@@ -4,48 +4,42 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
-export const AnimatedButtonContainer = styled.div`
+export const StyledAnimatedButtonContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
 
-  @media ${screen.tablet} {
-    .link-text {
-      font-size: ${fontSizes.size4};
+  .link-text {
+    color: white;
+    position: relative;
+    line-height: 25px;
+    z-index: 1;
+    margin: 0;
+
+    &::before {
+      content: "";
+      height: 4px;
+      width: calc(100% + 0.2rem);
+      background-color: ${colors.secondary};
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -0.1rem;
+      border-radius: 0.25rem;
+      transition: all 0.2s ease;
     }
-  }
-`;
 
-export const ButtonText = styled(motion.p)`
-  color: white;
-  position: relative;
-  line-height: 25px;
-  z-index: 1;
-  margin: 0;
+    &:hover::before {
+      height: 25px;
+      width: calc(100% + 1rem);
+      left: -0.5rem;
+      z-index: -1;
+    }
 
-  &::before {
-    content: "";
-    height: 4px;
-    width: calc(100% + 0.2rem);
-    background-color: ${colors.secondary};
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: -0.1rem;
-    border-radius: 0.25rem;
-    transition: all 0.2s ease;
-  }
-
-  &:hover::before {
-    height: 25px;
-    width: calc(100% + 1rem);
-    left: -0.5rem;
-    z-index: -1;
-  }
-
-  &:hover {
-    color: black;
-    cursor: pointer;
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
   }
 
   .button-link {
@@ -54,6 +48,12 @@ export const ButtonText = styled(motion.p)`
     }
     &:hover {
       color: black;
+    }
+  }
+
+  @media ${screen.tablet} {
+    .link-text {
+      font-size: ${fontSizes.size4};
     }
   }
 `;

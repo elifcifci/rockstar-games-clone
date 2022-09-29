@@ -30,6 +30,7 @@ export const colors = {
 };
 
 export const fontSizes = {
+  size0: "0.64rem",
   size1: "0.70rem",
   size2: "0.8rem",
   size3: "1rem",

@@ -42,11 +42,11 @@ function Header({ isOpen, toggle }) {
   }, [pathname]);
 
   let updateVisibility = () => {
-    setIsVisible((oldVersion) => !oldVersion);
+    setIsVisible((previousState) => !previousState);
   };
 
   let closeVisibility = () => {
-    isVisible && setIsVisible((oldVersion) => !oldVersion);
+    isVisible && setIsVisible((previousState) => !previousState);
   };
 
   const NavbarVisibilityConfig = {

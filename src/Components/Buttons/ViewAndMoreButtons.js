@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { AnimatedButtonContainer, ButtonText } from "./styles";
+import { StyledAnimatedButtonContainer } from "./styles";
 
 function ViewAndMoreButtons({ isMoreStory, text, link, click, title }) {
   return (
-    <AnimatedButtonContainer>
-      <ButtonText title={title && title} onClick={click} className="link-text">
+    <StyledAnimatedButtonContainer>
+      <p title={title && title} onClick={click} className="link-text">
         {isMoreStory ? (
           <>{text}</>
         ) : (
@@ -14,8 +14,8 @@ function ViewAndMoreButtons({ isMoreStory, text, link, click, title }) {
             {text}
           </Link>
         )}
-      </ButtonText>
-    </AnimatedButtonContainer>
+      </p>
+    </StyledAnimatedButtonContainer>
   );
 }
 

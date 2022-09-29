@@ -7,11 +7,9 @@ import WorldIcon from "../UI/WorldIcon";
 
 //Styles
 import {
-  FooterDropdownContainer,
-  FooterLanguageContainer,
-  DropdownListItems,
+  StyledFooterDropdownContainer,
+  dropdownAnimationConfig,
 } from "./styles";
-import { colors } from "../../styles/globalStyles";
 
 const FooterDropdown = ({ constants }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +30,7 @@ const FooterDropdown = ({ constants }) => {
 
   const LanguageListRenderer = constants.map((constant) => {
     return (
-      <DropdownListItems
+      <p
         key={constant.title}
         id={constant.title}
         onClick={handleClick}
@@ -48,25 +46,15 @@ const FooterDropdown = ({ constants }) => {
             ? constant.language
             : constant.language + " " + constant.explanation}
         </span>
-      </DropdownListItems>
+      </p>
     );
   });
 
-  const dropdownAnimationConfig = {
-    active: {
-      color: colors.white,
-    },
-
-    inactive: {
-      color: colors.transparentTertiary,
-    },
-  };
-
   return (
-    <FooterDropdownContainer>
+    <StyledFooterDropdownContainer>
       <div
         className="footer-dropdown-header"
-        onClick={() => setIsVisible((prevState) => !prevState)}
+        onClick={() => setIsVisible((previousState) => !previousState)}
       >
         <WorldIcon isVisible={isVisible} />
 
@@ -81,11 +69,9 @@ const FooterDropdown = ({ constants }) => {
       </div>
 
       {isVisible && (
-        <FooterLanguageContainer>
-          {LanguageListRenderer}
-        </FooterLanguageContainer>
+        <div className="dropdown-footer-languages">{LanguageListRenderer}</div>
       )}
-    </FooterDropdownContainer>
+    </StyledFooterDropdownContainer>
   );
 };
 

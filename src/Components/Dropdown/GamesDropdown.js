@@ -1,10 +1,10 @@
 import React from "react";
-import { GamesDropdownContainer, GamesDropdownListItem } from "./styles";
+import { StyledGamesDropdownContainer } from "./styles";
 
 const GamesDropdown = ({ constants }) => {
   let listItem = constants.selectRetailer.map((constant) => {
     return (
-      <GamesDropdownListItem
+      <p
         key={constant}
         className={` games-list_item ${
           constant ===
@@ -13,14 +13,14 @@ const GamesDropdown = ({ constants }) => {
         }`}
       >
         {constant}
-      </GamesDropdownListItem>
+      </p>
     );
   });
 
   return (
-    <GamesDropdownContainer>
+    <StyledGamesDropdownContainer>
       <ul className="games-dropdown-list">{listItem}</ul>
-    </GamesDropdownContainer>
+    </StyledGamesDropdownContainer>
   );
 };
 

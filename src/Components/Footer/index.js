@@ -8,119 +8,108 @@ import FooterDropdown from "../../components/Dropdown/FooterDropdown";
 import SquareWithArrow from "../UI/SquareWithArrow";
 
 //Styles
-import {
-  FooterContainer,
-  ContactInWebsiteAndLanguagesContainer,
-  ContactSocialMediaContainer,
-  GeneralKnowledgeContainer,
-  AboutCompanyContainer,
-} from "./styles";
+import { StyledFooterContainer } from "./styles";
 import { colors } from "../../styles/globalStyles";
 
 function Footer() {
-  let createContactPagesList = footerConstants.contactInWebsite.map((item) => {
+  const createLanguageContainerAndKnowledgeList = (constants, classNameTag) => {
     return (
-      <li className="contact-item" key={item.title}>
-        <motion.a
-          className="contact-item-link"
-          initial={{ color: colors.white }}
-          whileHover={{ color: colors.secondary }}
-          href={item.link}
-        >
-          {item.title}
-          {item.isIconVisible && <SquareWithArrow />}
-        </motion.a>
-      </li>
+      <ul className={`${classNameTag}-contact-list`}>
+        {constants.map((item) => {
+          return (
+            <li className={`${classNameTag}-contact-item`} key={item.title}>
+              <motion.a
+                className={`${classNameTag}-contact-item-link`}
+                whileHover={{ color: colors.secondary }}
+                href={item.link}
+              >
+                {item.title}
+                {item.isIconVisible && <SquareWithArrow />}
+              </motion.a>
+            </li>
+          );
+        })}
+      </ul>
     );
-  });
+  };
 
-  let createSocialMediaLinks = footerConstants.contactSocialMedia.map(
-    (contact) => {
-      return (
-        <li className="contact-item" key={contact.title}>
-          <a href={contact.link} title={contact.title}>
-            <motion.svg
-              className="contact-item-icon"
-              initial={{ fill: colors.white }}
-              whileHover={{ fill: colors.secondary }}
+  let createSocialMediaAndCityList = (
+    constants,
+    isSocialMedia,
+    classNameTag
+  ) => {
+    return (
+      <ul
+        className={`${classNameTag}-list ${!isSocialMedia && "company_item"}`}
+      >
+        {constants.map((item) => {
+          return (
+            <li
+              className={`${classNameTag}-item`}
+              key={isSocialMedia ? item.title : item}
             >
-              <path className="contact-item-path" d={contact.path} />
+              {isSocialMedia ? (
+                <a href={item.link} title={item.title}>
+                  <motion.svg
+                    className={`${classNameTag}-icon`}
+                    initial={{ fill: colors.white }}
+                    whileHover={{ fill: colors.secondary }}
+                  >
+                    <path className={`${classNameTag}_path`} d={item.path} />
 
-              {contact.title === "instagram" && (
-                <path className="contact-item-path" d={contact.path2} />
+                    {item.title === "instagram" && (
+                      <path className={`${classNameTag}_path`} d={item.path2} />
+                    )}
+                  </motion.svg>
+                </a>
+              ) : (
+                item
               )}
-            </motion.svg>
-          </a>
-        </li>
-      );
-    }
-  );
-
-  let createGeneralKnowledgeLinks = footerConstants.generalKnowledge.map(
-    (knowledge) => {
-      return (
-        <li key={knowledge.title} className="contact-item">
-          <motion.a
-            className="contact-item_link"
-            whileHover={{ color: colors.secondary }}
-            href={knowledge.link}
-          >
-            {knowledge.title}
-          </motion.a>
-        </li>
-      );
-    }
-  );
-
-  let createCompanyCityList = footerConstants.aboutCompany.cities.map(
-    (city) => {
-      return (
-        <li key={city} className="company-city_item">
-          {city}
-        </li>
-      );
-    }
-  );
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
 
   return (
-    <FooterContainer title="footer">
-      <ContactInWebsiteAndLanguagesContainer>
-        <ul className="contact-list">{createContactPagesList}</ul>
-        <form className="select-container">
-          <FooterDropdown constants={footerConstants.languages} />
-        </form>
-      </ContactInWebsiteAndLanguagesContainer>
-
-      <section>
-        {/* knowledge links part starts*/}
-        <GeneralKnowledgeContainer>
-          <ul className="contact-list">{createGeneralKnowledgeLinks}</ul>
-        </GeneralKnowledgeContainer>
-        {/* knowledge links part ends*/}
-
-        {/* social media links starts*/}
-        <ContactSocialMediaContainer>
-          <ul className="contact-list">{createSocialMediaLinks}</ul>
-        </ContactSocialMediaContainer>
-        {/* social media links ends*/}
+    <StyledFooterContainer title="footer">
+      <section className="knowledge-and-language-section">
+        {createLanguageContainerAndKnowledgeList(
+          footerConstants.contactInWebsite,
+          "knowledge"
+        )}
+        <FooterDropdown constants={footerConstants.languages} />
       </section>
 
-      {/* company knowledge part starts*/}
-      <AboutCompanyContainer>
-        <ul className="about-company-list">
-          <li className="about-company_item">
-            {footerConstants.aboutCompany.companyName}
-          </li>
-          <li className="about-company_item city-list-container">
-            <ul className="company-city-list">{createCompanyCityList}</ul>
-          </li>
-          <li className="about-company_item about-company_last-item">
-            {footerConstants.aboutCompany.foundationYear}
-          </li>
-        </ul>
-      </AboutCompanyContainer>
-      {/* company knowledge part starts*/}
-    </FooterContainer>
+      <section className="website-social-media-section">
+        {createLanguageContainerAndKnowledgeList(
+          footerConstants.generalKnowledge,
+          "website"
+        )}
+        {createSocialMediaAndCityList(
+          footerConstants.contactSocialMedia,
+          true,
+          "social-media"
+        )}
+      </section>
+
+      <section className="company-section">
+        <p className="company_item company_first-item">
+          {footerConstants.aboutCompany.companyName}
+        </p>
+
+        {createSocialMediaAndCityList(
+          footerConstants.aboutCompany.cities,
+          false,
+          "company-city"
+        )}
+
+        <p className="company_item company_last-item">
+          {footerConstants.aboutCompany.foundationYear}
+        </p>
+      </section>
+    </StyledFooterContainer>
   );
 }
 

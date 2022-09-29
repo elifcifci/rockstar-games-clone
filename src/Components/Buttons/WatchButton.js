@@ -10,12 +10,12 @@ const WatchButton = ({ text, title, isForDownLoad }) => {
       className={isForDownLoad && "downLoad-button"}
       initial={{
         background: colors.primary,
-        color: "white",
-        border: "1px solid white",
+        color: colors.white,
+        border: `1px solid ${colors.white}`,
       }}
       whileHover={{
         background: colors.secondary,
-        color: "black",
+        color: colors.black,
         border: `1px solid ${colors.secondary}`,
       }}
       type="button"
