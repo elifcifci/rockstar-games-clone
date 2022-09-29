@@ -116,7 +116,7 @@ export const StyledGamesDropdownContainer = styled(DropdownCommonStyles)`
     background-color: none;
     margin: 0;
     position: absolute;
-    top: 0;
+    top: 0.5px;
     z-index: 2;
     padding-left: 0;
     border-bottom-left-radius: 5px;
@@ -125,14 +125,43 @@ export const StyledGamesDropdownContainer = styled(DropdownCommonStyles)`
 
   .games-list_item {
     margin: 0;
-    padding: 8px 16px 8px 16px;
+    padding: 8px 16px;
     width: 100%;
     background-color: ${colors.black};
     box-sizing: border-box;
+    font-size: 15px;
+    color: ${colors.tertiary};
 
     &:hover {
       color: ${colors.black};
       background-color: ${colors.secondary};
+    }
+  }
+
+  @media${screen.mobileM} {
+    .games-list_item {
+      font-size: 16px;
+    }
+  }
+
+  @media${screen.tablet} {
+    .games-list_item {
+      font-size: ${fontSizes.size18px};
+      padding: 9px 18px;
+    }
+  }
+
+  @media${screen.laptopS} {
+    .games-list_item {
+      font-size: ${fontSizes.size20px};
+      padding: 10px 20px;
+    }
+  }
+
+  @media${screen.biggestScreen} {
+    .games-list_item {
+      font-size: ${fontSizes.size22px};
+      padding: 11px 22px;
     }
   }
 `;

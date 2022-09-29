@@ -11,14 +11,14 @@ export const StyledHeaderContainer = styled(motion.nav)`
   align-items: center;
   top: 0;
   background-color: ${colors.black};
-  z-index: 4;
+  z-index: 6;
 
   .header-inner-container {
     height: 60px;
     width: 100%;
     position: relative;
     top: 0;
-    z-index: 3;
+    z-index: 6;
     display: flex;
     padding: 6px 32px 6px 32px;
     justify-content: space-between;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { screen } from "../../../styles/globalStyles";
 
 export const iconAnimationConfig = {
   open: {
@@ -14,7 +15,7 @@ export const iconAnimationConfig = {
 };
 
 export const StyledArrowIconContainer = styled(motion.svg)`
-  width: 32px;
+  width: 30px;
   height: 24px;
   fill: none;
 
@@ -23,5 +24,9 @@ export const StyledArrowIconContainer = styled(motion.svg)`
     stroke-width: 2;
     stroke-line-cap: round;
     stroke-line-join: round;
+  }
+
+  @media${screen.mobileS} {
+    width: 26px;
   }
 `;

@@ -16,7 +16,7 @@ export const StyledMenuItemContainer = styled(motion.div)`
   grid-gap: 2rem;
   height: 100vh;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   padding-top: 70px;
   box-sizing: border-box;
 
@@ -115,6 +115,8 @@ margin: 26px 2rem 5px 2rem;
 background-color: ${colors.searchArea};
 border-radius: 4px;
 box-sizing: border: box;
+position: relative;
+z-index: 4;
 
 svg{
   cursor: pointer;

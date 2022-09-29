@@ -16,7 +16,7 @@ function Newswire() {
 
     updatedRequest <= constantsLength
       ? setRequestedLimit(updatedRequest)
-      : setRequestedLimit(constantsLength);
+      : setRequestedLimit(constantsLength - 1);
   };
 
   let limitedNewswireConstant = getLimitedConstant(

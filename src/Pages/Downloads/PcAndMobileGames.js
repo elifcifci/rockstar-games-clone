@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { getLimitedConstant } from "../../helpers/getLimitedConstant";
 import { StyledPcAndMobileGamesContainer } from "./styles";
+
+//helpers
+import { getLimitedConstant } from "../../helpers/getLimitedConstant";
 
 //Components
 import GamesDropdown from "../../components/Dropdown/GamesDropdown";
@@ -8,16 +10,21 @@ import ArrowIconContainer from "../../components/UI/ArrowIcon";
 import ViewAndMoreButtons from "../../components/Buttons/ViewAndMoreButtons";
 
 function PcAndMobileGames({ constants, isPcGames }) {
-  let limitedConstant = getLimitedConstant(3, constants);
+  let [requestedLimit, setRequestedLimit] = useState(3);
+  let limitedConstant = getLimitedConstant(requestedLimit, constants);
 
   const [copyConstants, setCopyConstants] = useState(
     JSON.parse(JSON.stringify(limitedConstant))
   );
   const [selectedDropdownId, setSelectedDropdownId] = useState("");
-
   useEffect(() => {
     changeConstant(selectedDropdownId);
   }, [selectedDropdownId]);
+
+  useEffect(() => {
+    limitedConstant = getLimitedConstant(requestedLimit, constants);
+    setCopyConstants(JSON.parse(JSON.stringify(limitedConstant)));
+  }, [requestedLimit]);
 
   const handleClickDropdown = (id) => {
     if (id !== selectedDropdownId) {
@@ -28,12 +35,22 @@ function PcAndMobileGames({ constants, isPcGames }) {
     }
   };
 
+  //This is the part where it is decided whether dropdown is on or not.
   const changeConstant = (id) => {
     const updatedConstant = copyConstants.map((item) => {
       item.id === id ? (item.isOpen = true) : (item.isOpen = false);
       return item;
     });
     setCopyConstants([...updatedConstant]);
+  };
+
+  //It will say how many card you want to see and it wil update when you press view all button
+  const updateCounter = () => {
+    let updatedRequest = requestedLimit + 4;
+
+    updatedRequest <= constants.length
+      ? setRequestedLimit(updatedRequest)
+      : setRequestedLimit(constants.length - 1);
   };
 
   const renderGameCards = () => {
@@ -74,6 +91,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
       <div className="content-container">{renderGameCards()}</div>
       <ViewAndMoreButtons
         title="Click event didn't add"
+        click={updateCounter}
         isMoreStory={true}
         text="View All"
       />

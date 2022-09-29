@@ -240,21 +240,36 @@ export const StyledPcAndMobileGamesContainer = styled.div`
     position: relative;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     box-sizing: border-box;
     padding: 0 8px 8px 8px;
-    border-bottom: 1px solid ${colors.tertiary};
+    border-bottom: 1px solid ${colors.transparentTertiary};
     margin-top: 1rem;
+    width: 100%;
   }
 
   .games-dropdown-title {
     margin: 0;
     padding: 0px;
+    font-size: 14px;
+    color: ${colors.tertiary};
+    width: 100%;
+    text-align: left;
   }
 
   @media${screen.tablet} {
     padding: 0 72px 0 72px;
+
     .content-container {
       grid-row-gap: 4rem;
+    }
+
+    .title-container {
+      padding: 0 9px 9px 9px;
+    }
+
+    .games-dropdown-title {
+      font-size: ${fontSizes.size18px};
     }
   }
 
@@ -268,6 +283,24 @@ export const StyledPcAndMobileGamesContainer = styled.div`
 
     .content_title {
       font-size: ${fontSizes.size25px};
+    }
+
+    .title-container {
+      padding: 0 10px 10px 10px;
+    }
+
+    .games-dropdown-title {
+      font-size: ${fontSizes.size20px};
+    }
+  }
+
+  @media${screen.biggestScreen} {
+    .title-container {
+      padding: 0 11px 11px 11px;
+    }
+
+    .games-dropdown-title {
+      font-size: ${fontSizes.size22px};
     }
   }
 `;
