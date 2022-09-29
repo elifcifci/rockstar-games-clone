@@ -6,7 +6,7 @@ import SearchInput from "./SearchInput";
 import SquareWithArrow from "../UI/SquareWithArrow";
 
 //Styles
-import { MenuItemContainer } from "./styles";
+import { StyledMenuItemContainer } from "./styles";
 import { colors } from "../../styles/globalStyles";
 
 import { motion } from "framer-motion";
@@ -63,7 +63,7 @@ function MenuItem({ pageTitle, isOpen, toggle }) {
   });
 
   return (
-    <MenuItemContainer
+    <StyledMenuItemContainer
       ref={carouselWidth}
       variants={navbarMenuConfig}
       animate={isOpen ? "open" : "closed"}
@@ -72,7 +72,7 @@ function MenuItem({ pageTitle, isOpen, toggle }) {
       {isOpen && <div className="toggle-back-drop" onClick={toggle} />}
       <SearchInput />
       <div className="menu-list">{createMenuItem}</div>
-    </MenuItemContainer>
+    </StyledMenuItemContainer>
   );
 }
 

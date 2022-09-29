@@ -1,8 +1,8 @@
-import { AccountIconContainer } from "./styles";
+import { StyledAccountIconContainer } from "./styles";
 
 const AccountIcon = ({ click }) => {
   return (
-    <AccountIconContainer
+    <StyledAccountIconContainer
       onClick={click}
       className="svg1"
       xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ const AccountIcon = ({ click }) => {
         <use className="svgUse2" xlinkHref="#a" />
       </clipPath>
       <path className="svgPath" d="M8 7h31.458v34H8z" />
-    </AccountIconContainer>
+    </StyledAccountIconContainer>
   );
 };
 

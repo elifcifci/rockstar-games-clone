@@ -1,27 +1,27 @@
 import React from "react";
-import { Button, IconParts } from "./style";
+import { StyledButton, StyledIconParts } from "./style";
 
 const MenuToggleIcon = ({ toggle }) => (
-  <Button onClick={toggle}>
-    <IconParts
+  <StyledButton onClick={toggle}>
+    <StyledIconParts
       variants={{
         closed: { opacity: 1 },
         open: { y: 8 },
       }}
     />
-    <IconParts
+    <StyledIconParts
       variants={{
         closed: { opacity: 1 },
         open: { opacity: 1 },
       }}
     />
-    <IconParts
+    <StyledIconParts
       variants={{
         closed: { opacity: 1 },
         open: { y: -8 },
       }}
     />
-  </Button>
+  </StyledButton>
 );
 
 export default MenuToggleIcon;

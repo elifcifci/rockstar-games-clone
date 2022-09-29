@@ -59,7 +59,7 @@ export const Container = styled.div`
   }
 `;
 
-export const NewswirePreviewContainer = styled(Container)`
+export const StyledNewswirePreviewContainer = styled(Container)`
   grid-template-columns: 1fr;
   max-width: 1745px;
   margin-bottom: 2rem;
@@ -84,7 +84,7 @@ export const NewswirePreviewContainer = styled(Container)`
   }
 `;
 
-export const NewswireContainer = styled(Container)`
+export const StyledNewswireContainer = styled(Container)`
   display: grid;
 
   .newswire-img-2 {

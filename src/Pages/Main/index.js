@@ -1,5 +1,5 @@
 import React from "react";
-import { MainContainer } from "./styles";
+import { StyledMainContainer } from "./styles";
 
 //Components
 import Slider from "../../components/Slider";
@@ -9,13 +9,13 @@ import { mainConstants } from "../../constants/main";
 
 function Main() {
   return (
-    <MainContainer>
+    <StyledMainContainer>
       <Slider constants={mainConstants} isVisibleForTopPage={true} />
       <div className="previews-container">
         <NewswirePreview />
         <GamesPreview />
       </div>
-    </MainContainer>
+    </StyledMainContainer>
   );
 }
 

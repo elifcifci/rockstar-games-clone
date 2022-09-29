@@ -1,17 +1,20 @@
 import React from "react";
 import Cards from "./Cards";
-import { NewswireContainer, NewswirePreviewContainer } from "./styles";
+import {
+  StyledNewswireContainer,
+  StyledNewswirePreviewContainer,
+} from "./styles";
 
 function NewswireCardRenderer({ constants, isPreview, isTopCard }) {
   let copyConstant = [...constants];
   const cardTypes = isTopCard;
 
   return isPreview ? (
-    <NewswirePreviewContainer>
+    <StyledNewswirePreviewContainer>
       <Cards constants={constants} />
-    </NewswirePreviewContainer>
+    </StyledNewswirePreviewContainer>
   ) : (
-    <NewswireContainer firstCard={cardTypes}>
+    <StyledNewswireContainer firstCard={cardTypes}>
       <Cards
         firstCard={isTopCard}
         constants={
@@ -20,7 +23,7 @@ function NewswireCardRenderer({ constants, isPreview, isTopCard }) {
             : copyConstant.slice(1, copyConstant.length)
         }
       />
-    </NewswireContainer>
+    </StyledNewswireContainer>
   );
 }
 

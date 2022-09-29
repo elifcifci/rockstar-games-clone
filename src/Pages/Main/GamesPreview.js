@@ -1,5 +1,5 @@
 import React from "react";
-import { GameContainer } from "./styles";
+import { StyledGameContainer } from "./styles";
 import { getLimitedConstant } from "../../helpers/getLimitedConstant";
 
 //Components
@@ -16,11 +16,11 @@ function GamesPreview() {
   });
 
   return (
-    <GameContainer>
+    <StyledGameContainer>
       <h2>Featured Games</h2>
       <div className="imgContainer">{getPreviewGames}</div>
       <ViewAndMoreButtons text="View More" link="/games" />
-    </GameContainer>
+    </StyledGameContainer>
   );
 }
 

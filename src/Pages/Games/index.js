@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { gamesConstant } from "../../constants/games";
-import { GameContainer } from "./styles";
+import { StyledGameContainer } from "./styles";
 
 function Games() {
   const createGameCards = gamesConstant.map((game) => {
@@ -13,9 +13,9 @@ function Games() {
   });
 
   return (
-    <GameContainer>
+    <StyledGameContainer>
       <div className="game-items">{createGameCards}</div>
-    </GameContainer>
+    </StyledGameContainer>
   );
 }
 

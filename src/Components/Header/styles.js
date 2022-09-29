@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { colors, screen } from "../../styles/globalStyles";
 
-export const HeaderContainer = styled(motion.nav)`
+export const StyledHeaderContainer = styled(motion.nav)`
   height: 60px;
   display: flex;
   justify-content: center;

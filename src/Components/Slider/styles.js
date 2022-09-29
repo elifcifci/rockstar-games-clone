@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { screen, fontSizes, colors } from "../../styles/globalStyles";
 
-export const SliderContainer = styled.div`
+export const StyledSliderContainer = styled.div`
   .inside-carousel-container {
     max-width: 1920px;
     margin: 0 auto;
@@ -68,7 +68,7 @@ export const SliderContainer = styled.div`
   }
 `;
 
-export const Carousel = styled.div`
+export const StyledCarousel = styled.div`
   cursor: pointer;
   overflow: hidden;
   display: flex;
@@ -77,7 +77,7 @@ export const Carousel = styled.div`
   width: 100%;
 `;
 
-export const DetailContainer = styled.div`
+export const StyledDetailContainer = styled.div`
   box-sizing: border-box;
   padding: 2rem;
   padding-bottom: calc(2rem - 10px);
@@ -155,74 +155,12 @@ export const Container = styled.div`
   border: solid 9px red;
 `;
 
-//SliderButtons styles
-export const ButtonContainer = styled(motion.div)`
-  padding: 0;
-  display: flex;
-  padding: 0 2rem;
-  box-sizing: border-box;
-
-  .button-label {
-    height: 20px;
-    cursor: pointer;
-    width: 1.5rem;
-    margin-right: 8px;
-  }
-
-  .slider_button {
-    display: inline-block;
-    background-color: ${colors.inactiveButton};
-    margin-right: 8px;
-    height: 2px;
-    width: 1.5rem;
-    border-radius: 2px;
-    outline: none;
-  }
-
-  .active-slider_button {
-    background-color: white;
-  }
-
-  @media${screen.tablet} {
-    margin-bottom: 4rem;
-
-    .button-label {
-      height: 30px;
-      width: 4.6rem;
-    }
-
-    .slider_button {
-      margin-right: 10px;
-      height: 4px;
-      width: 4.6rem;
-    }
-  }
-
-  @media${screen.laptopM} {
-    margin: 0;
-    padding: 0;
-  }
-
-  @media${screen.laptopXL} {
-    align-items: flex-end;
-
-    .button-label {
-      width: 5.5rem;
-    }
-
-    .slider_button {
-      width: 5.5rem;
-    }
-  }
-`;
-//SliderButtons styles end
-
 //SliderContent styles start
-export const Content = styled(motion.div)`
+export const StyledContent = styled(motion.div)`
   width: 100%;
 `;
 
-export const HeaderContainer = styled.div`
+export const StyledHeaderContainer = styled.div`
   box-sizing: border-box;
   padding: 0rem 2rem 1.5rem 2rem;
   display: grid;
@@ -274,7 +212,7 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const InnerCarouselContainer = styled.div`
+export const StyledInnerCarouselContainer = styled.div`
   .motion-container {
     display: flex;
     width: 100%;

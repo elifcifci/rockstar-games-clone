@@ -1,11 +1,11 @@
 import React from "react";
-import { VideosContainer } from "./styles";
+import { StyledVideosContainer } from "./styles";
 import Slider from "../../components/Slider";
 import { videos } from "../../constants/video";
 
 function Videos() {
   return (
-    <VideosContainer>
+    <StyledVideosContainer>
       {videos.map((video) => {
         return (
           <Slider
@@ -16,7 +16,7 @@ function Videos() {
           />
         );
       })}
-    </VideosContainer>
+    </StyledVideosContainer>
   );
 }
 

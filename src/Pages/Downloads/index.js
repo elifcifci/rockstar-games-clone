@@ -1,15 +1,15 @@
 import React from "react";
 import { downloadsConstant } from "../../constants/downloads";
-import { DownloadsContainer } from "./styles";
+import { StyledDownloadsContainer } from "./styles";
 
 //Components
 import TopGame from "./TopGame";
-import MiscellaneousAndFeatured from "./MiscellaneousAndFeatured";
+import MiscellaneousAndFeatured from "./FeaturedAndMiscellaneous";
 import PcAndMobileGames from "./PcAndMobileGames";
 
 function Downloads() {
   return (
-    <DownloadsContainer>
+    <StyledDownloadsContainer>
       <TopGame constants={downloadsConstant.topGame} />
       <MiscellaneousAndFeatured
         constants={downloadsConstant.featuredDownloads}
@@ -27,7 +27,7 @@ function Downloads() {
         constants={downloadsConstant.miscellaneous}
         isFeatured={false}
       />
-    </DownloadsContainer>
+    </StyledDownloadsContainer>
   );
 }
 

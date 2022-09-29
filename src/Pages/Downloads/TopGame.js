@@ -1,10 +1,10 @@
 import React from "react";
-import { TopGameContainer } from "./styles";
+import { StyledTopGameContainer } from "./styles";
 import WatchButton from "../../components/Buttons/WatchButton";
 
 function TopGame({ constants }) {
   return (
-    <TopGameContainer>
+    <StyledTopGameContainer>
       <img className="top-game_img" src={constants.img} alt="" />
 
       <div className="top-game-detail">
@@ -17,7 +17,7 @@ function TopGame({ constants }) {
 
         <WatchButton isForDownLoad={true} text="DOWNLOAD NOW" />
       </div>
-    </TopGameContainer>
+    </StyledTopGameContainer>
   );
 }
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { colors } from "../../styles/globalStyles";
 
-export const VideosContainer = styled(motion.div)`
+export const StyledVideosContainer = styled(motion.div)`
   margin-bottom: 4rem;
   display: flex;
   flex-direction: column;

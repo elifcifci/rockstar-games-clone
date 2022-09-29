@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
-export const MenuItemContainer = styled(motion.div)`
+export const StyledMenuItemContainer = styled(motion.div)`
   padding: 0;
   background-color: ${colors.black};
   position: fixed;
@@ -108,7 +108,7 @@ export const MenuItemContainer = styled(motion.div)`
   }
 `;
 
-export const MenuSearchInput = styled(motion.form)`
+export const StyledMenuSearchInput = styled(motion.form)`
 display: flex;
 justify-content: center;
 margin: 26px 2rem 5px 2rem;

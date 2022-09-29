@@ -1,8 +1,8 @@
-import { LinkContainer } from "./styles";
+import { StyledLinkContainer } from "./styles";
 
 const RockstarGamesIcon = ({ isOpen, toggle }) => {
   return (
-    <LinkContainer
+    <StyledLinkContainer
       to="/"
       className="page-icon-link"
       onClick={isOpen && toggle}
@@ -25,7 +25,7 @@ const RockstarGamesIcon = ({ isOpen, toggle }) => {
           </g>
         </g>
       </svg>
-    </LinkContainer>
+    </StyledLinkContainer>
   );
 };
 

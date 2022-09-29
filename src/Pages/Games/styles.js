@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { screen, colors } from "../../styles/globalStyles";
 
-export const GameContainer = styled.div`
+export const StyledGameContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -4,7 +4,7 @@ import React from "react";
 import Carousel from "./Carousel";
 import SliderHeader from "./SliderHeader";
 
-import { InnerCarouselContainer, Content } from "./styles";
+import { StyledInnerCarouselContainer, StyledContent } from "./styles";
 import { motion } from "framer-motion";
 
 const SliderContent = ({
@@ -18,7 +18,7 @@ const SliderContent = ({
   slideWithArrows,
 }) => {
   return (
-    <Content>
+    <StyledContent>
       {/* This part will be visible when sliders aren't top of page */}
       {!isVisibleForTopPage && (
         <SliderHeader
@@ -29,7 +29,7 @@ const SliderContent = ({
         />
       )}
 
-      <InnerCarouselContainer isVisibleForTopPage={isVisibleForTopPage}>
+      <StyledInnerCarouselContainer isVisibleForTopPage={isVisibleForTopPage}>
         <motion.div
           drag="x"
           dragConstraints={
@@ -50,8 +50,8 @@ const SliderContent = ({
             title={title}
           />
         </motion.div>
-      </InnerCarouselContainer>
-    </Content>
+      </StyledInnerCarouselContainer>
+    </StyledContent>
   );
 };
 

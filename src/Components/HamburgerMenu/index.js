@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { HamburgerMenuContainer } from "./styles";
+import { StyledHamburgerMenuContainer } from "./styles";
 
 //Components
 import { menuItems } from "../../constants/Navbar";
-import MenuToggleIcon from "../MenuToggle";
+import MenuToggleIcon from "../UI/MenuToggleIcon";
 
 function HamburgerMenu({ click, toggle, isOpen }) {
   const [pageTitle, setPageTitle] = useState("");
@@ -20,7 +20,7 @@ function HamburgerMenu({ click, toggle, isOpen }) {
   }, [pathname]);
 
   return (
-    <HamburgerMenuContainer
+    <StyledHamburgerMenuContainer
       onClick={click}
       initial={false}
       animate={isOpen ? "open" : "closed"}
@@ -28,7 +28,7 @@ function HamburgerMenu({ click, toggle, isOpen }) {
     >
       <MenuToggleIcon toggle={toggle} />
       <span className="page-title">{pageTitle}</span>
-    </HamburgerMenuContainer>
+    </StyledHamburgerMenuContainer>
   );
 }
 

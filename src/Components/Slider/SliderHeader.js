@@ -1,9 +1,9 @@
 import React from "react";
-import { HeaderContainer } from "./styles";
+import { StyledHeaderContainer } from "./styles";
 
 function SliderHeader({ slideWithArrows, clicksCount, clickLimit, title }) {
   return (
-    <HeaderContainer>
+    <StyledHeaderContainer>
       <h2 className="slider-header_title">{title}</h2>
       <div className="arrow-container">
         <svg
@@ -36,7 +36,7 @@ function SliderHeader({ slideWithArrows, clicksCount, clickLimit, title }) {
           />
         </svg>
       </div>
-    </HeaderContainer>
+    </StyledHeaderContainer>
   );
 }
 

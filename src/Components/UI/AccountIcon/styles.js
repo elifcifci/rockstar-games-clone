@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AccountIconContainer = styled.svg`
+export const StyledAccountIconContainer = styled.svg`
   width: 36px;
   height: 36px;
   enable-background: new 0 0 48 48;

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { screen } from "../../styles/globalStyles";
 
-export const HamburgerMenuContainer = styled(motion.div)`
+export const StyledHamburgerMenuContainer = styled(motion.div)`
   position: relative;
   top: 0;
   z-index: 3;

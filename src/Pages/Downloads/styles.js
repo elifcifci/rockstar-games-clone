@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
-export const DownloadsContainer = styled.div`
+export const StyledDownloadsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@ export const DownloadsContainer = styled.div`
   }
 `;
 
-export const TopGameContainer = styled.div`
+export const StyledTopGameContainer = styled.div`
   padding: 32px;
   background-color: ${colors.black};
 
@@ -103,7 +103,7 @@ export const TopGameContainer = styled.div`
     }
   }
 `;
-export const FeaturedAndMiscellaneousContainer = styled.div`
+export const StyledFeaturedAndMiscellaneousContainer = styled.div`
   padding: 0 32px 0 32px;
   justify-self: center;
 
@@ -205,7 +205,7 @@ export const FeaturedAndMiscellaneousContainer = styled.div`
   }
 `;
 
-export const PcAndMobileGamesContainer = styled.div`
+export const StyledPcAndMobileGamesContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 32px 0 32px;

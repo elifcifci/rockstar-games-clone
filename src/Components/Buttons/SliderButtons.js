@@ -1,9 +1,9 @@
 import React from "react";
-import { ButtonContainer } from "./styles";
+import { StyledButtonContainer } from "./styles";
 
 function SliderButtons({ activeIndex, click, constants }) {
   return (
-    <ButtonContainer>
+    <StyledButtonContainer>
       {constants.map((constant, index) => {
         return (
           <label
@@ -22,7 +22,7 @@ function SliderButtons({ activeIndex, click, constants }) {
           </label>
         );
       })}
-    </ButtonContainer>
+    </StyledButtonContainer>
   );
 }
 

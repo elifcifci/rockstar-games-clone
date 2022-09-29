@@ -13,7 +13,7 @@ export const iconAnimationConfig = {
   },
 };
 
-export const ArrowIconContainer = styled(motion.svg)`
+export const StyledArrowIconContainer = styled(motion.svg)`
   width: 32px;
   height: 24px;
   fill: none;

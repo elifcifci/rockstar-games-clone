@@ -1,5 +1,5 @@
 import React from "react";
-import { FeaturedAndMiscellaneousContainer } from "./styles";
+import { StyledFeaturedAndMiscellaneousContainer } from "./styles";
 
 function MiscellaneousAndFeatured({ constants, isFeatured }) {
   let createContent = constants.map((constant) => {
@@ -16,7 +16,7 @@ function MiscellaneousAndFeatured({ constants, isFeatured }) {
   });
 
   return (
-    <FeaturedAndMiscellaneousContainer>
+    <StyledFeaturedAndMiscellaneousContainer>
       <h2 className="content_title">
         {isFeatured ? "Featured Downloads" : "Miscellaneous"}
       </h2>
@@ -25,7 +25,7 @@ function MiscellaneousAndFeatured({ constants, isFeatured }) {
       >
         {createContent}
       </div>
-    </FeaturedAndMiscellaneousContainer>
+    </StyledFeaturedAndMiscellaneousContainer>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getLimitedConstant } from "../../helpers/getLimitedConstant";
-import { PcAndMobileGamesContainer } from "./styles";
+import { StyledPcAndMobileGamesContainer } from "./styles";
 
 //Components
 import GamesDropdown from "../../components/Dropdown/GamesDropdown";
@@ -67,7 +67,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
   };
 
   return (
-    <PcAndMobileGamesContainer>
+    <StyledPcAndMobileGamesContainer>
       <h2 className="content_title">
         {isPcGames ? "PC & Mac Games" : "Mobile Games & Apps"}
       </h2>
@@ -77,7 +77,7 @@ function PcAndMobileGames({ constants, isPcGames }) {
         isMoreStory={true}
         text="View All"
       />
-    </PcAndMobileGamesContainer>
+    </StyledPcAndMobileGamesContainer>
   );
 }
 

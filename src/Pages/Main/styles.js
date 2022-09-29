@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { screen, colors, fontSizes } from "../../styles/globalStyles";
 
-export const MainContainer = styled.div`
+export const StyledMainContainer = styled.div`
   .previews-container {
     display: grid;
     grid-gap: 4rem;
@@ -28,7 +28,7 @@ export const MainContainer = styled.div`
   }
 `;
 
-export const NewswireCards = styled.div`
+export const StyledNewswireCards = styled.div`
   max-width: 1745px;
   margin: 0 auto;
 
@@ -44,7 +44,7 @@ export const NewswireCards = styled.div`
   }
 `;
 
-export const GameContainer = styled.div`
+export const StyledGameContainer = styled.div`
   max-width: 1745px;
   margin: 0 auto;
 

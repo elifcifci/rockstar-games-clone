@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container } from "./styles";
+import { StyledNewswireContainer } from "./styles";
 import { getLimitedConstant } from "../../helpers/getLimitedConstant";
 
 //Components
@@ -24,7 +24,7 @@ function Newswire() {
     newswireConstants
   );
   return (
-    <Container>
+    <StyledNewswireContainer>
       <NewswireCardRenderer isTopCard={true} constants={newswireConstants} />
       <div>
         <NewswireCardRenderer
@@ -38,7 +38,7 @@ function Newswire() {
         text="More Stories"
         link="/newswire"
       />
-    </Container>
+    </StyledNewswireContainer>
   );
 }
 

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import { menuItems } from "../../constants/Navbar";
-import { HeaderContainer } from "./styles";
+import { StyledHeaderContainer } from "./styles";
 
 //Components
 import Account from "../Account";
@@ -69,7 +69,7 @@ function Header({ isOpen, toggle }) {
   };
 
   return (
-    <HeaderContainer>
+    <StyledHeaderContainer>
       <motion.div
         className="header-inner-container"
         animate={isHeaderVisible ? "initial" : "animated"}
@@ -84,7 +84,7 @@ function Header({ isOpen, toggle }) {
         <Account isVisible={isVisible} click={updateVisibility} />
       </motion.div>
       <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
-    </HeaderContainer>
+    </StyledHeaderContainer>
   );
 }
 

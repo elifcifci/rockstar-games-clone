@@ -1,5 +1,5 @@
 import React from "react";
-import { NewswireCards } from "./styles";
+import { StyledNewswireCards } from "./styles";
 import { getLimitedConstant } from "../../helpers/getLimitedConstant";
 
 //Components
@@ -11,14 +11,14 @@ function NewswirePreview() {
   let limitedNewswireConstant = getLimitedConstant(5, newswireConstants);
 
   return (
-    <NewswireCards>
+    <StyledNewswireCards>
       <h2>Newswire</h2>
       <NewswireCardRenderer
         isPreview={true}
         constants={[...limitedNewswireConstant]}
       />
       <ViewAndMoreButtons text="View More" link="/newswire" />
-    </NewswireCards>
+    </StyledNewswireCards>
   );
 }
 

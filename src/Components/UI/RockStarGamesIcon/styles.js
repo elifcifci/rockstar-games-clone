@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const LinkContainer = styled(Link)`
+export const StyledLinkContainer = styled(Link)`
   .page-icon-link {
     display: flex;
     justify-content: center;

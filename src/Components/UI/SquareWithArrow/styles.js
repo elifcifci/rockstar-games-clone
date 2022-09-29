@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { screen } from "../../../styles/globalStyles";
 
-export const SquareIconContainer = styled.svg`
+export const StyledSquareIconContainer = styled.svg`
   fill: white;
   margin-left: 7px;
   width: 10px;

@@ -16,7 +16,7 @@ export const iconAnimationConfig = {
   },
 };
 
-export const WorldIconContainer = styled(motion.svg)`
+export const StyledWorldIconContainer = styled(motion.svg)`
   width: 24px;
   height: 24px;
   fill: none;

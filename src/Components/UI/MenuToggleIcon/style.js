@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Button = styled(motion.button)`
+export const StyledButton = styled(motion.button)`
   position: relative;
   z-index: 3;
   outline: none;
@@ -15,7 +15,7 @@ export const Button = styled(motion.button)`
   border-radius: 50%;
   background: transparent;
 `;
-export const IconParts = styled(motion.div)`
+export const StyledIconParts = styled(motion.div)`
   width: 24px;
   height: 2px;
   margin-bottom: ${(props) => (props.thirdPart ? "0px" : "6px")};
