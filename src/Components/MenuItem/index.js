@@ -6,7 +6,7 @@ import SearchInput from "./SearchInput";
 import SquareWithArrow from "../UI/SquareWithArrow";
 
 //Styles
-import { StyledMenuItemContainer } from "./styles";
+import { StyledMenuItemContainer, navbarMenuConfig } from "./styles";
 import { colors } from "../../styles/globalStyles";
 
 import { motion } from "framer-motion";
@@ -14,25 +14,6 @@ import { menuItems } from "../../constants/Navbar";
 
 function MenuItem({ pageTitle, isOpen, toggle }) {
   const carouselWidth = useRef();
-
-  const navbarMenuConfig = {
-    open: {
-      x: 0,
-      y: 0,
-      transition: {
-        type: "tween",
-        delay: 0.2,
-      },
-    },
-    closed: {
-      x: -770,
-      y: 0,
-      transition: {
-        type: "tween",
-        delay: 0.2,
-      },
-    },
-  };
 
   const menuItemConfig = {
     initial: { color: colors.white },
@@ -66,7 +47,7 @@ function MenuItem({ pageTitle, isOpen, toggle }) {
     <StyledMenuItemContainer
       ref={carouselWidth}
       variants={navbarMenuConfig}
-      animate={isOpen ? "open" : "closed"}
+      animate={isOpen ? "open" : ["closed", "displaying"]}
       title="Site"
     >
       {isOpen && <div className="toggle-back-drop" onClick={toggle} />}

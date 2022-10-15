@@ -40,6 +40,25 @@ export const StyledHeaderContainer = styled(motion.nav)`
 
   @media ${screen.laptopXL} {
     .header-inner-container {
-      padding: 6px  5.5rem 6px  5.5rem;
+      padding: 6px 5.5rem 6px 5.5rem;
   }
 `;
+
+export const NavbarVisibilityConfig = {
+  initial: {
+    position: "fixed",
+
+    y: 0,
+    transition: {
+      type: "tween",
+    },
+  },
+  animated: {
+    position: "fixed",
+
+    y: -65,
+    transition: {
+      type: "tween",
+    },
+  },
+};

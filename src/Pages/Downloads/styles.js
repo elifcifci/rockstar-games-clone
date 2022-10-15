@@ -215,7 +215,8 @@ export const StyledPcAndMobileGamesContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    row-gap: 32px;
+    column-gap: 24px;
     margin-bottom: 2rem;
   }
 
@@ -262,6 +263,7 @@ export const StyledPcAndMobileGamesContainer = styled.div`
 
     .content-container {
       grid-row-gap: 4rem;
+      column-gap: 24px;
     }
 
     .title-container {
@@ -278,7 +280,6 @@ export const StyledPcAndMobileGamesContainer = styled.div`
 
     .content-container {
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1.5rem;
     }
 
     .content_title {

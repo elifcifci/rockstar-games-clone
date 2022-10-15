@@ -2,12 +2,12 @@ import React from "react";
 
 //Components
 import Carousel from "./Carousel";
-import SliderHeader from "./SliderHeader";
+import SliderHeader from "./Header";
 
 import { StyledInnerCarouselContainer, StyledContent } from "./styles";
 import { motion } from "framer-motion";
 
-const SliderContent = ({
+const Content = ({
   limit,
   title,
   screenWidth,
@@ -55,4 +55,4 @@ const SliderContent = ({
   );
 };
 
-export default SliderContent;
+export default Content;

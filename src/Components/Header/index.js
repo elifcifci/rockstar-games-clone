@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import { menuItems } from "../../constants/Navbar";
-import { StyledHeaderContainer } from "./styles";
+import { StyledHeaderContainer, NavbarVisibilityConfig } from "./styles";
 
 //Components
 import Account from "../Account";
@@ -14,6 +14,7 @@ import RockstarGamesIcon from "../UI/RockStarGamesIcon";
 function Header({ isOpen, toggle }) {
   const [isVisible, setIsVisible] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isMenuItemVisible, setIsMenuItemVisible] = useState(false);
   const [pageTitle, setPageTitle] = useState("");
   const { pathname } = useLocation();
 
@@ -41,31 +42,21 @@ function Header({ isOpen, toggle }) {
     });
   }, [pathname]);
 
-  let updateVisibility = () => {
-    setIsVisible((previousState) => !previousState);
+  const updateMenuItemVisibility = () => {
+    setIsMenuItemVisible(true);
   };
 
-  let closeVisibility = () => {
+  const closeVisibility = () => {
     isVisible && setIsVisible((previousState) => !previousState);
   };
 
-  const NavbarVisibilityConfig = {
-    initial: {
-      position: "fixed",
+  const handleClick = () => {
+    updateMenuItemVisibility();
+    closeVisibility();
+  };
 
-      y: 0,
-      transition: {
-        type: "tween",
-      },
-    },
-    animated: {
-      position: "fixed",
-
-      y: -65,
-      transition: {
-        type: "tween",
-      },
-    },
+  const updateVisibility = () => {
+    setIsVisible((previousState) => !previousState);
   };
 
   return (
@@ -76,14 +67,17 @@ function Header({ isOpen, toggle }) {
         variants={NavbarVisibilityConfig}
       >
         <HamburgerMenu
+          handleClick={handleClick}
           isOpen={isOpen}
           toggle={toggle}
-          closeVisibility={closeVisibility}
         />
         <RockstarGamesIcon isOpen={isOpen} toggle={toggle} />
         <Account isVisible={isVisible} updateVisibility={updateVisibility} />
       </motion.div>
-      <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
+
+      {isMenuItemVisible && (
+        <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
+      )}
     </StyledHeaderContainer>
   );
 }

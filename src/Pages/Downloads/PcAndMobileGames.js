@@ -89,11 +89,13 @@ function PcAndMobileGames({ constants, isPcGames }) {
         {isPcGames ? "PC & Mac Games" : "Mobile Games & Apps"}
       </h2>
       <div className="content-container">{renderGameCards()}</div>
-      <ViewAndMoreButtons
-        updateCounter={updateCounter}
-        isMoreStory={true}
-        text="View All"
-      />
+      {requestedLimit !== constants.length - 1 && (
+        <ViewAndMoreButtons
+          updateCounter={updateCounter}
+          isMoreStory={true}
+          text="View All"
+        />
+      )}
     </StyledPcAndMobileGamesContainer>
   );
 }

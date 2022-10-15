@@ -7,7 +7,7 @@ import { StyledHamburgerMenuContainer } from "./styles";
 import { menuItems } from "../../constants/Navbar";
 import MenuToggleIcon from "../UI/MenuToggleIcon";
 
-function HamburgerMenu({ closeVisibility, toggle, isOpen }) {
+function HamburgerMenu({ handleClick, toggle, isOpen }) {
   const [pageTitle, setPageTitle] = useState("");
   const { pathname } = useLocation();
 
@@ -21,7 +21,7 @@ function HamburgerMenu({ closeVisibility, toggle, isOpen }) {
 
   return (
     <StyledHamburgerMenuContainer
-      onClick={closeVisibility}
+      onClick={handleClick}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       title="Open Menu"

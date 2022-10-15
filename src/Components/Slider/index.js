@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { StyledSliderContainer, StyledCarousel } from "./styles";
+import { StyledSliderContainer } from "./styles";
 
 //Components
 import Detail from "./Detail";
-import SliderContent from "./Content";
+import Content from "./Content";
 import SliderButtons from "../Buttons/SliderButtons";
 
 const Slider = ({ constants, sliderTitle, isVisibleForTopPage }) => {
@@ -47,8 +47,12 @@ const Slider = ({ constants, sliderTitle, isVisibleForTopPage }) => {
             : "inside-carousel-container"
         }
       >
-        <StyledCarousel ref={carouselWidth}>
-          <SliderContent
+        <div
+          id="slider-carousel"
+          className="slider-carousel"
+          ref={carouselWidth}
+        >
+          <Content
             isVisibleForTopPage={isVisibleForTopPage}
             limit={dragLimit}
             screenWidth={width}
@@ -58,7 +62,7 @@ const Slider = ({ constants, sliderTitle, isVisibleForTopPage }) => {
             slideWithArrows={slideWithArrows}
             title={sliderTitle}
           />
-        </StyledCarousel>
+        </div>
 
         {/* This part will be visible when slider is top of page */}
         {isVisibleForTopPage && (
