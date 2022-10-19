@@ -11,7 +11,7 @@ import HamburgerMenu from "../HamburgerMenu";
 import MenuItem from "../MenuItem";
 import RockstarGamesIcon from "../UI/RockStarGamesIcon";
 
-function Header({ isOpen, toggle }) {
+function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isMenuItemVisible, setIsMenuItemVisible] = useState(false);
@@ -66,18 +66,12 @@ function Header({ isOpen, toggle }) {
         animate={isHeaderVisible ? "initial" : "animated"}
         variants={NavbarVisibilityConfig}
       >
-        <HamburgerMenu
-          handleClick={handleClick}
-          isOpen={isOpen}
-          toggle={toggle}
-        />
-        <RockstarGamesIcon isOpen={isOpen} toggle={toggle} />
+        <HamburgerMenu handleClick={handleClick} />
+        <RockstarGamesIcon />
         <Account isVisible={isVisible} updateVisibility={updateVisibility} />
       </motion.div>
 
-      {isMenuItemVisible && (
-        <MenuItem toggle={toggle} isOpen={isOpen} pageTitle={pageTitle} />
-      )}
+      {isMenuItemVisible && <MenuItem pageTitle={pageTitle} />}
     </StyledHeaderContainer>
   );
 }

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { StyledBackdropContainer, BackDropConfig } from "./styles";
+import ToggleOpenCloseContext from "../../context/ToggleOpenCloseContext";
 
-const Backdrop = ({ isOpen }) => {
+const Backdrop = () => {
+  const data = useContext(ToggleOpenCloseContext);
+
   return (
     <StyledBackdropContainer
       variants={BackDropConfig}
-      animate={isOpen ? "open" : ["closed", "colorChange"]}
+      animate={data.isOpen ? "open" : ["closed", "colorChange"]}
     ></StyledBackdropContainer>
   );
 };

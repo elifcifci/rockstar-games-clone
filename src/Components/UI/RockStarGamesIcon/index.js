@@ -1,11 +1,15 @@
+import React, { useContext } from "react";
 import { StyledLinkContainer } from "./styles";
+import ToggleOpenCloseContext from "../../../context/ToggleOpenCloseContext";
 
-const RockstarGamesIcon = ({ isOpen, toggle }) => {
+const RockstarGamesIcon = () => {
+  const data = useContext(ToggleOpenCloseContext);
+
   return (
     <StyledLinkContainer
       to="/"
       className="page-icon-link"
-      onClick={isOpen && toggle}
+      onClick={data.isOpen && data.toggledOpen}
       title="Home"
     >
       <svg className="page-icon" viewBox="0 0 216 198.83">

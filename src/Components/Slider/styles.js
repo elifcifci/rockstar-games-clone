@@ -184,6 +184,7 @@ export const StyledHeaderContainer = styled.div`
 
   .slider-disabled-arrow {
     fill: ${colors.inactiveButton};
+    pointer-events: none;
   }
 
   @media ${screen.tablet} {
@@ -208,7 +209,10 @@ export const StyledHeaderContainer = styled.div`
 `;
 
 export const StyledInnerCarouselContainer = styled.div`
+  width: 100%;
+
   .motion-container {
+    box-sizing: border-box;
     display: flex;
     width: 100%;
   }
@@ -236,10 +240,10 @@ export const StyledInnerCarouselContainer = styled.div`
   }
 
   ${(props) =>
-    props.isVisibleForTopPage === false &&
+    props.isVisibleForInnerPage === true &&
     `
     .motion-container {
-      grid-gap: 2rem;
+      grid-gap: 1.5rem;
     }
 
     .slider-page-container{
@@ -313,7 +317,7 @@ export const StyledInnerCarouselContainer = styled.div`
       }
 
       .slider-inside-page-container {
-        width: 47%;
+        width: 35%;
       }
   
       .slider-page_detail {

@@ -1,42 +1,31 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useContext, useRef, useState } from "react";
 import { StyledSliderContainer } from "./styles";
 
 //Components
 import Detail from "./Detail";
-import Content from "./Content";
+import TopPageContent from "./TopPageContent";
+import InnerPageContent from "./InnerPageContent";
 import SliderButtons from "../Buttons/SliderButtons";
+import WindowSizeContext from "../../context/WindowSizeContext";
 
 const Slider = ({ constants, sliderTitle, isVisibleForTopPage }) => {
   const carouselWidth = useRef();
   const [activeIndex, setActiveIndex] = useState(0);
   const [width, setWidth] = useState(0);
   const [dragLimit, setDragLimit] = useState(0);
-  const [arrowClickCount, setArrowClickCount] = useState(0);
+  const windowSize = useContext(WindowSizeContext);
 
   useEffect(() => {
-    setWidth(
-      carouselWidth.current.scrollWidth - carouselWidth.current.offsetWidth
-    );
+    let updatedWidth =
+      carouselWidth.current.scrollWidth - carouselWidth.current.offsetWidth;
+
+    setWidth(updatedWidth);
   }, []);
 
   useEffect(() => {
     let slideAmount = activeIndex * carouselWidth.current.offsetWidth;
     setDragLimit(slideAmount);
-  }, [activeIndex]);
-
-  useEffect(() => {
-    let slideAmount =
-      arrowClickCount * (carouselWidth.current.offsetWidth - 30);
-    setDragLimit(slideAmount);
-  }, [arrowClickCount]);
-
-  const slideWithArrows = (event) => {
-    event.target.id == 0 && arrowClickCount !== 0
-      ? setArrowClickCount((previous) => previous - 1)
-      : event.target.id == 1 &&
-        arrowClickCount !== constants.length - 1 &&
-        setArrowClickCount((previous) => previous + 1);
-  };
+  }, [activeIndex, windowSize]);
 
   return (
     <StyledSliderContainer>
@@ -52,16 +41,24 @@ const Slider = ({ constants, sliderTitle, isVisibleForTopPage }) => {
           className="slider-carousel"
           ref={carouselWidth}
         >
-          <Content
-            isVisibleForTopPage={isVisibleForTopPage}
-            limit={dragLimit}
-            screenWidth={width}
-            constants={constants}
-            clicksCount={arrowClickCount}
-            clickLimit={constants.length - 1}
-            slideWithArrows={slideWithArrows}
-            title={sliderTitle}
-          />
+          {isVisibleForTopPage ? (
+            <TopPageContent
+              isVisibleForTopPage={isVisibleForTopPage}
+              limit={dragLimit}
+              screenWidth={width}
+              constants={constants}
+              title={sliderTitle}
+            />
+          ) : (
+            <InnerPageContent
+              isVisibleForTopPage={isVisibleForTopPage}
+              carouselWidth={carouselWidth}
+              screenWidth={width}
+              constants={constants}
+              clickLimit={constants.length - 1}
+              title={sliderTitle}
+            />
+          )}
         </div>
 
         {/* This part will be visible when slider is top of page */}

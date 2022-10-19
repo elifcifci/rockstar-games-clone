@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+import ToggleOpenCloseContext from "../../context/ToggleOpenCloseContext";
 
 //Components
 import SearchInput from "./SearchInput";
@@ -12,7 +13,8 @@ import { colors } from "../../styles/globalStyles";
 import { motion } from "framer-motion";
 import { menuItems } from "../../constants/Navbar";
 
-function MenuItem({ pageTitle, isOpen, toggle }) {
+function MenuItem({ pageTitle }) {
+  const data = useContext(ToggleOpenCloseContext);
   const carouselWidth = useRef();
 
   const menuItemConfig = {
@@ -26,7 +28,7 @@ function MenuItem({ pageTitle, isOpen, toggle }) {
         to={item.link}
         className="list-item"
         key={item.title}
-        onClick={toggle}
+        onClick={data.toggledOpen}
       >
         <motion.span
           className={
@@ -47,10 +49,12 @@ function MenuItem({ pageTitle, isOpen, toggle }) {
     <StyledMenuItemContainer
       ref={carouselWidth}
       variants={navbarMenuConfig}
-      animate={isOpen ? "open" : ["closed", "displaying"]}
+      animate={data.isOpen ? "open" : ["closed", "displaying"]}
       title="Site"
     >
-      {isOpen && <div className="toggle-back-drop" onClick={toggle} />}
+      {data.isOpen && (
+        <div className="toggle-back-drop" onClick={data.toggledOpen} />
+      )}
       <SearchInput />
       <div className="menu-list">{createMenuItem}</div>
     </StyledMenuItemContainer>

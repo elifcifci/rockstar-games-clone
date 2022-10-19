@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useLocation } from "react-router-dom";
-
-import { StyledHamburgerMenuContainer } from "./styles";
 
 //Components
 import { menuItems } from "../../constants/Navbar";
 import MenuToggleIcon from "../UI/MenuToggleIcon";
 
-function HamburgerMenu({ handleClick, toggle, isOpen }) {
+import { StyledHamburgerMenuContainer } from "./styles";
+import ToggleOpenCloseContext from "../../context/ToggleOpenCloseContext";
+
+function HamburgerMenu({ handleClick }) {
   const [pageTitle, setPageTitle] = useState("");
   const { pathname } = useLocation();
 
+  const data = useContext(ToggleOpenCloseContext);
   useEffect(() => {
     menuItems[1].forEach((item) => {
       if (item.link === pathname || item.link === "") {
@@ -23,10 +25,10 @@ function HamburgerMenu({ handleClick, toggle, isOpen }) {
     <StyledHamburgerMenuContainer
       onClick={handleClick}
       initial={false}
-      animate={isOpen ? "open" : "closed"}
+      animate={data.isOpen ? "open" : "closed"}
       title="Open Menu"
     >
-      <MenuToggleIcon toggle={toggle} />
+      <MenuToggleIcon toggle={data.toggledOpen} />
       <span className="page-title">{pageTitle}</span>
     </StyledHamburgerMenuContainer>
   );
