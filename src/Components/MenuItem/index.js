@@ -7,11 +7,15 @@ import SearchInput from "./SearchInput";
 import SquareWithArrow from "../UI/SquareWithArrow";
 
 //Styles
-import { StyledMenuItemContainer, navbarMenuConfig } from "./styles";
+import {
+  StyledMenuItemContainer,
+  navbarMenuConfig,
+  StyledLinks,
+} from "./styles";
 import { colors } from "../../styles/globalStyles";
 
 import { motion } from "framer-motion";
-import { menuItems } from "../../constants/Navbar";
+import { navbar } from "../../constants/navbar";
 
 function MenuItem({ pageTitle }) {
   const data = useContext(ToggleOpenCloseContext);
@@ -22,13 +26,14 @@ function MenuItem({ pageTitle }) {
     animate: { color: colors.secondary },
   };
 
-  let createMenuItem = menuItems[0].map((item) => {
+  let createMenuItem = navbar[0].map((item) => {
     return (
-      <Link
+      <StyledLinks
         to={item.link}
         className="list-item"
         key={item.title}
         onClick={data.toggledOpen}
+        isIconVisible={item.isIconVisible}
       >
         <motion.span
           className={
@@ -41,7 +46,7 @@ function MenuItem({ pageTitle }) {
           {item.title}
           {item.isIconVisible && <SquareWithArrow isForMenuItem={true} />}
         </motion.span>
-      </Link>
+      </StyledLinks>
     );
   });
 

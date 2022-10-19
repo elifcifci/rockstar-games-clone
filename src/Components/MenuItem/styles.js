@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 //Styles
 import styled from "styled-components";
@@ -193,6 +194,15 @@ svg{
       padding: 22px 0px 22px 6px;
     }
   }
+`;
+
+export const StyledLinks = styled(Link)`
+  ${(prop) =>
+    prop.isIconVisible &&
+    `
+  pointer-events: none;
+  
+  `}
 `;
 
 export const navbarMenuConfig = {

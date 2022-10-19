@@ -1,4 +1,4 @@
-export const menuItems = [
+export const navbar = [
   [
     {
       id: "newswire",
@@ -27,25 +27,25 @@ export const menuItems = [
     {
       id: "support",
       title: "Support",
-      link: "/support",
+      link: "",
       isIconVisible: true,
     },
     {
       id: "socialClub",
       title: "Social Club",
-      link: "/socialClub",
+      link: "",
       isIconVisible: true,
     },
     {
       id: "launcher",
       title: "Launcher",
-      link: "/launcher",
+      link: "",
       isIconVisible: true,
     },
     {
       id: "store",
       title: "Store",
-      link: "/store",
+      link: "",
       isIconVisible: true,
     },
   ],

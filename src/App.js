@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <GlobalStyle />
-      <Router>
+      <Router basename="/rockstar-games-clone">
         <WindowSizeProvider>
           <ToggleOpenCloseProvider>
             <Header />

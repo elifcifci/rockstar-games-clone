@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useLocation } from "react-router-dom";
 
 //Components
-import { menuItems } from "../../constants/Navbar";
+import { navbar } from "../../constants/navbar";
 import MenuToggleIcon from "../UI/MenuToggleIcon";
 
 import { StyledHamburgerMenuContainer } from "./styles";
@@ -14,7 +14,7 @@ function HamburgerMenu({ handleClick }) {
 
   const data = useContext(ToggleOpenCloseContext);
   useEffect(() => {
-    menuItems[1].forEach((item) => {
+    navbar[1].forEach((item) => {
       if (item.link === pathname || item.link === "") {
         setPageTitle(item.title);
       }

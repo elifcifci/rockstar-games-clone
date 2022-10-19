@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import { menuItems } from "../../constants/Navbar";
+import { navbar } from "../../constants/navbar";
 import { StyledHeaderContainer, NavbarVisibilityConfig } from "./styles";
 
 //Components
@@ -35,7 +35,7 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    menuItems[1].forEach((item) => {
+    navbar[1].forEach((item) => {
       if (item.link === pathname || item.link === "") {
         setPageTitle(item.title);
       }
