@@ -4,18 +4,26 @@ Clone of Rockstar Games Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Used Technologies:
 
-In the project directory, you can run:
+- React
+- Styled Component
+- Framer-motion
 
-### `npm start`
+## How to Install and Run the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone** the project
+2. **Run** npm install
+3. **Run** npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Not:** The project run "http://localhost:3000/rockstar-games-clone"
 
 ## Issues
 
 Sliders in videos page do not show pictures middle of the page.
+
+## How the Project Looks
+
+![Main page](./public/rockstar-games.png)
+
+![Download page](./public/rockstar-games-download-page.png)
