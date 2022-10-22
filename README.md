@@ -16,13 +16,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. **Run** npm install
 3. **Run** npm start
 
-**Not:** The project run "http://localhost:3000/rockstar-games-clone"
+**Not:** The project run "http://localhost:3000"
 
 ## Issues
 
 Sliders in videos page do not show pictures middle of the page.
 
 ## How the Project Looks
+
+- To see the project click [here](https://rockstar-games-clone-website.netlify.app/)
 
 ![Main page](./public/rockstar-games.png)
 
