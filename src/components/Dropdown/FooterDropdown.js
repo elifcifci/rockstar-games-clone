@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 
 //Components
 import ArrowIconContainer from "../UI/ArrowIcon";
@@ -65,7 +65,7 @@ const FooterDropdown = ({ constants }) => {
           {selectedLanguage}
         </motion.h4>
 
-        <ArrowIconContainer constant={constants} />
+        <ArrowIconContainer isFooter={true} constant={isVisible} />
       </div>
 
       {isVisible && (

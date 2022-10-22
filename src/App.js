@@ -16,6 +16,7 @@ import { ToggleOpenCloseProvider } from "./context/ToggleOpenCloseContext";
 
 import GlobalStyle from "./styles/globalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
 
 function App() {
   return (

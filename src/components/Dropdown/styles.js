@@ -171,6 +171,6 @@ export const dropdownAnimationConfig = {
   },
 
   inactive: {
-    color: colors.transparentTertiary,
+    color: "rgba(232, 232, 232, 0.8)",
   },
 };

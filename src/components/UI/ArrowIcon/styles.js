@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { screen } from "../../../styles/globalStyles";
+import { colors } from "../../../styles/globalStyles";
 
 export const iconAnimationConfig = {
   open: {
@@ -9,6 +10,16 @@ export const iconAnimationConfig = {
   },
 
   close: {
+    rotate: 0,
+    transition: { type: "teen" },
+  },
+
+  true: {
+    rotate: 180,
+    transition: { type: "teen" },
+  },
+
+  false: {
     rotate: 0,
     transition: { type: "teen" },
   },
@@ -26,6 +37,9 @@ export const StyledArrowIconContainer = styled(motion.svg)`
     stroke-line-join: round;
   }
 
+  .footer-dropdown-arrow-path {
+    stroke: rgba(232, 232, 232, 0.9);
+  }
   @media ${screen.mobileS} {
     width: 26px;
   }

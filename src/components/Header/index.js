@@ -19,19 +19,28 @@ function Header() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    let visibilityCondition;
-    window.addEventListener("scroll", () => {
-      const position = window.scrollY;
-      if (position <= 70) {
-        visibilityCondition = true;
-      } else {
-        visibilityCondition = false;
-      }
+    document.title = `${pageTitle} ${
+      pageTitle === "" ? "" : "-"
+    } Rockstar Games`;
+  }, [pageTitle]);
+
+  useEffect(() => {
+    const calculateScrollAmount = () => {
+      let visibilityCondition;
+
+      window.scrollY <= 70
+        ? (visibilityCondition = true)
+        : (visibilityCondition = false);
 
       visibilityCondition
         ? setIsHeaderVisible(true)
         : setIsHeaderVisible(false);
-    });
+    };
+
+    window.addEventListener("scroll", calculateScrollAmount);
+    return (_) => {
+      window.removeEventListener("scroll", calculateScrollAmount);
+    };
   }, []);
 
   useEffect(() => {

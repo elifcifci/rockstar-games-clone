@@ -11,8 +11,8 @@ export const iconAnimationConfig = {
   },
 
   inactive: {
-    stroke: colors.transparentTertiary,
-    color: colors.transparentTertiary,
+    stroke: "rgba(232, 232, 232, 0.8)",
+    color: "rgba(232, 232, 232, 0.8)",
   },
 };
 

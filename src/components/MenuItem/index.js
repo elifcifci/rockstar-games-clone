@@ -1,21 +1,17 @@
 import React, { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
-import ToggleOpenCloseContext from "../../context/ToggleOpenCloseContext";
 
 //Components
 import SearchInput from "./SearchInput";
 import SquareWithArrow from "../UI/SquareWithArrow";
 
 //Styles
-import {
-  StyledMenuItemContainer,
-  navbarMenuConfig,
-  StyledLinks,
-} from "./styles";
+import { StyledMenuItemContainer, navbarMenuConfig } from "./styles";
 import { colors } from "../../styles/globalStyles";
 
 import { motion } from "framer-motion";
 import { navbar } from "../../constants/navbar";
+import ToggleOpenCloseContext from "../../context/ToggleOpenCloseContext";
 
 function MenuItem({ pageTitle }) {
   const data = useContext(ToggleOpenCloseContext);
@@ -28,12 +24,11 @@ function MenuItem({ pageTitle }) {
 
   let createMenuItem = navbar[0].map((item) => {
     return (
-      <StyledLinks
+      <Link
         to={item.link}
-        className="list-item"
         key={item.title}
         onClick={data.toggledOpen}
-        isIconVisible={item.isIconVisible}
+        className={`list-item ${item.isIconVisible && "displayed-list-item"}`}
       >
         <motion.span
           className={
@@ -46,7 +41,7 @@ function MenuItem({ pageTitle }) {
           {item.title}
           {item.isIconVisible && <SquareWithArrow isForMenuItem={true} />}
         </motion.span>
-      </StyledLinks>
+      </Link>
     );
   });
 
