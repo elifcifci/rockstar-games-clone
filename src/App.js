@@ -10,7 +10,6 @@ import Header from "./components/Header";
 import BackDrop from "./components/Backdrop";
 import Footer from "./components/Footer/index";
 
-import { useCycle } from "framer-motion";
 //Context
 import { WindowSizeProvider } from "./context/WindowSizeContext";
 import { ToggleOpenCloseProvider } from "./context/ToggleOpenCloseContext";
